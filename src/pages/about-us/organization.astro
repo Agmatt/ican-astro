@@ -1,0 +1,267 @@
+---
+import BaseLayout from '../../layout/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+
+const breadcrumbItems = [
+  { href: '/', label: 'Home' },
+  { href: '/about-us', label: 'About us' },
+  { href: '/about-us/organization', label: 'Organization' },
+];
+---
+
+<BaseLayout title='Organization'>
+  <main>
+    <!-- Breadcrumps -->
+    <Breadcrumb items={breadcrumbItems} />
+    <!-- Organization Structure -->
+    <section
+      class='bg-white py-20 px-4 lg:px-24'
+      id='organization-structure'
+      data-aos='fade-up'>
+      <div class='max-w-6xl mx-auto text-center mb-12'>
+        <h2 class='text-4xl font-bold text-[#074351]'>Our Organization</h2>
+        <p class='mt-4 text-lg text-gray-700'>
+          ICAN was officially founded in <span
+            class='font-semibold text-[#185a69]'>2022</span
+          > with a mission to empower communities through health, sustainability,
+          and economic advancement.
+        </p>
+      </div>
+
+      <div class='grid md:grid-cols-2 gap-12 items-center mb-16'>
+        <!-- Founder -->
+        <div class='flex flex-col items-center text-center px-4'>
+          <img
+            src='/img/founder-min.jpg'
+            alt='Founder'
+            class='w-40 h-40 rounded-full object-cover shadow-md mb-4'
+          />
+          <h3 class='text-xl font-semibold text-[#074351] mb-2'>
+            Frank Ochieng
+          </h3>
+          <p class='text-sm text-gray-500 mb-4'>Founder, ICAN</p>
+          <blockquote class='text-gray-700 text-base italic max-w-md'>
+            "Our journey began with a vision to build resilient communities from
+            the ground up. Every step forward is guided by compassion,
+            sustainability, and purpose."
+          </blockquote>
+        </div>
+
+        <!-- Co-Founder -->
+        <div class='flex flex-col items-center text-center px-4'>
+          <img
+            src='/img/edna.jpg'
+            alt='Co-Founder'
+            class='w-40 h-40 rounded-full object-cover shadow-md mb-4'
+          />
+          <h3 class='text-xl font-semibold text-[#074351] mb-2'>Edna Awuor</h3>
+          <p class='text-sm text-gray-500 mb-4'>Co-Founder, ICAN</p>
+          <blockquote class='text-gray-700 text-base italic max-w-md'>
+            "ICAN is a platform of hope and transformation. Together with our
+            communities, we co-create solutions that make a lasting difference."
+          </blockquote>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div class='text-center'>
+        <h3 class='text-2xl font-semibold text-[#074351] mb-4'>
+          Want to be part of our mission?
+        </h3>
+        <a
+          href='/about-us/membership'
+          class='inline-block btn-primary font-medium px-6 py-3 rounded-full transition'>
+          Become a Member
+        </a>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class='py-16 bg-teal-50'>
+      <div class='max-w-7xl mx-auto px-4'>
+        <div class='text-center mb-12'>
+          <h2 class='text-3xl md:text-4xl font-bold stories-header'>
+            Our Team
+          </h2>
+          <p class='my-6 text-lg text-gray-950'>Meet Our Team Members</p>
+        </div>
+
+        <div class='grid grid-cols-2 md:grid-cols-4 gap-4'>
+          <!-- Team Member -->
+          <div class='text-center'>
+            <img
+              src='/img/frank-min.jpg'
+              alt='Frank Ochieng'
+              class='w-28 h-28 md:w-36 md:h-36 rounded-full object-cover mx-auto mb-4'
+            />
+            <h5 class='text-lg font-semibold text-gray-800'>Frank Ochieng</h5>
+            <p class='text-sm text-gray-600'>Founder</p>
+          </div>
+
+          <div class='text-center'>
+            <img
+              src='/img/edna.jpg'
+              alt='Edna Awuor'
+              class='w-28 h-28 md:w-36 md:h-36 rounded-full object-cover mx-auto mb-4'
+            />
+            <h5 class='text-lg font-semibold text-gray-800'>Edna Awuor</h5>
+            <p class='text-sm text-gray-600'>CO-Founder</p>
+          </div>
+
+          <div class='text-center'>
+            <img
+              src='/img/ben-min.jpg'
+              alt='Ben Otieno'
+              class='w-28 h-28 md:w-36 md:h-36 rounded-full object-cover mx-auto mb-4'
+            />
+            <h5 class='text-lg font-semibold text-gray-800'>Ben Otieno</h5>
+            <p class='text-sm text-gray-600'>M.E.A.R.L.A Officer</p>
+          </div>
+
+          <div class='text-center'>
+            <img
+              src='/img/collince-min.jpg'
+              alt='Collince Ochieng'
+              class='w-28 h-28 md:w-36 md:h-36 rounded-full object-cover mx-auto mb-4'
+            />
+            <h5 class='text-lg font-semibold text-gray-800'>
+              Collince Ochieng
+            </h5>
+            <p class='text-sm text-gray-600'>Finance Officer</p>
+          </div>
+
+          <div class='text-center'>
+            <img
+              src='/img/grace-min.jpg'
+              alt='Grace Onyango'
+              class='w-28 h-28 md:w-36 md:h-36 rounded-full object-cover mx-auto mb-4'
+            />
+            <h5 class='text-lg font-semibold text-gray-800'>Grace Onyango</h5>
+            <p class='text-sm text-gray-600'>Secretary</p>
+          </div>
+
+          <div class='text-center'>
+            <img
+              src='/img/matt-min.jpg'
+              alt='Mathews Agumba'
+              class='w-28 h-28 md:w-36 md:h-36 rounded-full object-cover mx-auto mb-4'
+            />
+            <h5 class='text-lg font-semibold text-gray-800'>Mathews Agumba</h5>
+            <p class='text-sm text-gray-600'>Health Officer</p>
+          </div>
+
+          <div class='text-center'>
+            <img
+              src='/img/baroness-min.jpg'
+              alt='Baroness Atieno'
+              class='w-28 h-28 md:w-36 md:h-36 rounded-full object-cover mx-auto mb-4'
+            />
+            <h5 class='text-lg font-semibold text-gray-800'>Baroness Atieno</h5>
+            <p class='text-sm text-gray-600'>Environment Advocate</p>
+          </div>
+          <div class='text-center'>
+            <img
+              src='/img/phenny-min.jpg'
+              alt='Baroness Atieno'
+              class='w-28 h-28 md:w-36 md:h-36 rounded-full object-cover mx-auto mb-4'
+            />
+            <h5 class='text-lg font-semibold text-gray-800'>Phenny Awuor</h5>
+            <p class='text-sm text-gray-600'>SRH Advocate</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grids -->
+    <section
+      class='py-20 px-4 lg:px-24 bg-gray-50'
+      id='ican-resources'
+      data-aos='fade-up'>
+      <div class='max-w-6xl mx-auto text-center mb-12'>
+        <h2 class='text-4xl font-bold text-[#074351]'>Explore ICAN</h2>
+        <p class='mt-4 text-lg text-gray-700'>
+          Dive deeper into our journey, guiding principles, and official
+          documentation.
+        </p>
+      </div>
+
+      <div class='grid gap-8 md:grid-cols-3'>
+        <!-- Card 1: Annual Reports -->
+        <div
+          class='group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 flex flex-col'>
+          <div class='overflow-hidden'>
+            <img
+              src='/img/report.jpg'
+              alt='Annual Reports'
+              class='w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105'
+            />
+          </div>
+          <div class='p-5 flex flex-col justify-between flex-grow'>
+            <h3 class='text-xl font-semibold text-[#074351] mb-2'>
+              Annual Reports
+            </h3>
+            <p class='text-gray-600 text-sm mb-4'>
+              Review our performance and impact metrics from previous years.
+            </p>
+            <a
+              href='#reports'
+              class='mt-auto inline-block btn-primary  transition px-4 py-2 rounded-full text-sm font-medium'>
+              Read More
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2: ICAN History -->
+        <div
+          class='group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 flex flex-col'>
+          <div class='overflow-hidden'>
+            <img
+              src='/gallery/35.jpg'
+              alt='ICAN History'
+              class='w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105'
+            />
+          </div>
+          <div class='p-5 flex flex-col justify-between flex-grow'>
+            <h3 class='text-xl font-semibold text-[#074351] mb-2'>
+              Our History
+            </h3>
+            <p class='text-gray-600 text-sm mb-4'>
+              Discover how ICAN began and the milestones that shaped our growth.
+            </p>
+            <a
+              href='/about-us/our-history'
+              class='mt-auto inline-block btn-primary transition px-4 py-2 rounded-full text-sm font-medium'>
+              Read More
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3: Mission, Vision & Values -->
+        <div
+          class='group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 flex flex-col'>
+          <div class='overflow-hidden'>
+            <img
+              src='/gallery/26.jpg'
+              alt='Mission Vision Values'
+              class='w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105'
+            />
+          </div>
+          <div class='p-5 flex flex-col justify-between flex-grow'>
+            <h3 class='text-xl font-semibold text-[#074351] mb-2'>
+              Mission, Vision & Values
+            </h3>
+            <p class='text-gray-600 text-sm mb-4'>
+              Understand our purpose, long-term goals, and the core values that
+              guide ICAN.
+            </p>
+            <a
+              href='/about-us/mission-vision-values'
+              class='mt-auto inline-block btn-primary transition px-4 py-2 rounded-full text-sm font-medium'>
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

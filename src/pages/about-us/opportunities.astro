@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../../layout/BaseLayout.astro';
+---
+
+<BaseLayout title='Opportunities'>
+  <!-- Hero -->
+  <section class='bg-[#074351] text-white py-20 text-center px-6'>
+    <h1 class='text-4xl text-white md:text-5xl font-bold mb-4'>
+      Join ICAN in Driving Change
+    </h1>
+    <p class='text-lg max-w-2xl mx-auto mb-6'>
+      We’re looking for passionate individuals who want to create real impact in
+      communities through health, sustainability, and innovation.
+    </p>
+    <a
+      href='#open-roles'
+      class='bg-white text-[#074351] font-semibold px-6 py-3 rounded-lg inline-block hover:bg-gray-100 transition'>
+      Explore Opportunities
+    </a>
+  </section>
+
+  <!-- Why Work With Us -->
+  <section class='py-16 px-6 max-w-5xl mx-auto text-center'>
+    <h2 class='text-3xl font-bold text-[#074351] mb-6'>Why Work With ICAN?</h2>
+    <p class='text-lg text-gray-700 mb-4'>
+      At ICAN, we don’t just work — we build. We believe in empowering people,
+      promoting equality, and supporting communities to thrive. Join a
+      mission-driven team where your voice matters and your impact multiplies.
+    </p>
+  </section>
+
+  <!-- Open Roles -->
+  <section id='open-roles' class='py-16 px-6 bg-gray-100'>
+    <div class='max-w-6xl mx-auto'>
+      <h2 class='text-3xl font-bold text-[#074351] mb-10 text-center'>
+        Open Opportunities
+      </h2>
+
+      <!-- Sample role cards -->
+      <div class='grid gap-8 md:grid-cols-2'>
+        <!-- ROLE 1 -->
+        <div class='bg-white p-6 rounded-xl shadow-md'>
+          <h3 class='text-xl font-bold text-[#074351] mb-2'>
+            Field Outreach Officer
+          </h3>
+          <p class='text-gray-700 mb-2'>
+            Type: Full-time | Location: Homa Bay | Deadline: Aug 15, 2025
+          </p>
+          <p class='text-sm text-gray-600 mb-4'>
+            Lead community health education efforts and assist in coordination
+            of local medical camps.
+          </p>
+          <a
+            href='/apply/field-officer'
+            class='text-white bg-[#074351] px-4 py-2 rounded-lg inline-block'
+            >Apply Now</a
+          >
+        </div>
+
+        <!-- ROLE 2 -->
+        <div class='bg-white p-6 rounded-xl shadow-md'>
+          <h3 class='text-xl font-bold text-[#074351] mb-2'>
+            Communications Intern
+          </h3>
+          <p class='text-gray-700 mb-2'>
+            Type: Internship | Remote | Deadline: Aug 10, 2025
+          </p>
+          <p class='text-sm text-gray-600 mb-4'>
+            Support content creation, social media campaigns, and community
+            storytelling.
+          </p>
+          <a
+            href='/apply/comms-intern'
+            class='text-white bg-[#074351] px-4 py-2 rounded-lg inline-block'
+            >Apply Now</a
+          >
+        </div>
+      </div>
+
+      <!-- No roles notice -->
+      <!--
+      <p class="text-center mt-10 text-gray-600">There are currently no open opportunities. Please check back later or express interest below.</p>
+      -->
+    </div>
+  </section>
+
+  <!-- Express Interest -->
+  <section class='py-16 px-6 text-center'>
+    <h2 class='text-2xl font-bold text-[#074351] mb-4'>
+      Didn’t Find a Role That Fits?
+    </h2>
+    <p class='mb-6 text-gray-700 max-w-xl mx-auto'>
+      If you're passionate about our mission, we’d still love to hear from you!
+      Submit your CV or volunteer profile and we’ll be in touch when something
+      opens up.
+    </p>
+    <a
+      href='/contact'
+      class='inline-block bg-[#074351] text-white px-6 py-3 rounded-lg hover:bg-[#06353f] transition'
+      >Submit Your Profile</a
+    >
+  </section>
+</BaseLayout>

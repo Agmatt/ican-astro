@@ -1,0 +1,113 @@
+---
+import BaseLayout from '../../../layout/BaseLayout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+
+const breadcrumbItems = [
+  { href: '/', label: 'Home' },
+  { href: '/what-we-do', label: 'What We Do' },
+  { href: '/what-we-do/projects', label: 'Projects' },
+  { href: '', label: 'Sparkling Smiles' },
+];
+---
+
+<BaseLayout title='Sparkling Smiles'>
+  <Breadcrumb items={breadcrumbItems} />
+
+  <section class='py-13'>
+    <div class='max-w-7xl mx-auto px-8'>
+      <div class='grid grid-cols-1 md:grid-cols-12 gap-8'>
+        <!-- Main blog content -->
+        <main class='md:col-span-7 lg:col-span-8'>
+          <h1 class='text-4xl hist font-bold mb-4'>Sparkling Smiles:</h1>
+          <p class='text-2xl font-semibold mb-6'>
+            Our Joyful Oral Hygiene Drive at Pedo Primary
+          </p>
+
+          <p class='mb-4 text-gray-700 leading-relaxed'>
+            At Pedo Primary School, something magical happened—an ordinary day
+            turned into an unforgettable celebration of health, happiness, and
+            radiant smiles. Our recent oral hygiene drive wasn’t just about
+            toothbrushes and toothpaste—it was about inspiring young minds to
+            take pride in their well-being and shine from the inside out.
+          </p>
+
+          <p class='mb-4 text-gray-700 leading-relaxed'>
+            We kicked off with a lively, hands-on workshop that transformed
+            dental care into a fun-filled adventure. With the help of our
+            enthusiastic team and dedicated volunteers, the students learned how
+            to brush like pros, floss with confidence, and keep their smiles
+            sparkling. We busted common myths, answered curious questions, and
+            turned dental hygiene into something exciting and empowering. The
+            classroom buzzed with laughter, raised hands, and wide-eyed wonder.
+          </p>
+
+          <div class='my-6'>
+            <img
+              src='/gallery/29.jpg'
+              alt='Partnership success'
+              class='rounded w-full object-cover'
+            />
+          </div>
+
+          <p class='mb-4 text-gray-700 leading-relaxed'>
+            Then came the moment that lit up the entire schoolyard: every child
+            received a brand-new toothbrush and a tube of minty-fresh
+            toothpaste. But these weren’t just dental supplies—they were bright
+            tokens of self-care, confidence, and the belief that every child
+            deserves to feel good about themselves. The energy was contagious as
+            the students clutched their colorful kits, eager to start a new
+            brushing routine that felt more like a superpower than a chore.
+          </p>
+          <p class='mb-4 text-gray-700 leading-relaxed'>
+            One shy little girl, holding her bright blue toothbrush close, said
+            something that melted our hearts: “I’m going to make my smile the
+            best in class!” Her eyes sparkled with pride and determination—and
+            in that moment, we knew this drive had made a lasting impact.
+          </p>
+          <p class='mb-4 text-gray-700 leading-relaxed'>
+            Our visit to Pedo Primary wasn’t just a one-time event. It was a
+            promise to these children that their health matters, that their
+            smiles are worth celebrating, and that their futures deserve
+            investment and care.
+          </p>
+          <p class='mb-4 text-gray-700 leading-relaxed'>
+            Now we need you. Help us keep this momentum going—whether it’s
+            through donating, volunteering, or simply sharing this story, you
+            can help us bring more smiles to more schools, one toothbrush at a
+            time.
+          </p>
+
+          <p class='mb-4 font-bold text-gray-800'>
+            Together, let’s make sure every child has a reason to smile—and the
+            tools to make it shine.
+          </p>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class='md:col-span-5 lg:col-span-4 space-y-6 mt-8 md:mt-0'>
+          <div class='bg-gray-100 rounded overflow-hidden shadow'>
+            <img
+              src='/gallery/26.jpg'
+              alt='Partnership success'
+              class='w-full object-cover'
+            />
+          </div>
+          <div class='bg-gray-100 rounded overflow-hidden shadow'>
+            <img
+              src='/gallery/24.jpg'
+              alt='Partnership success'
+              class='w-full object-cover'
+            />
+          </div>
+          <div class='bg-gray-100 rounded overflow-hidden shadow'>
+            <img
+              src='/gallery/25.jpg'
+              alt='Partnership success'
+              class='w-full object-cover'
+            />
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

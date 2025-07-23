@@ -1,0 +1,113 @@
+---
+import BaseLayout from '../layout/BaseLayout.astro';
+---
+
+<BaseLayout title='Donate'>
+  <section class='bg-[#074351] text-white py-20 px-6 text-center'>
+    <div class='max-w-4xl mx-auto'>
+      <h1 class='text-4xl text-white font-bold mb-4'>Support Our Mission</h1>
+      <p class='text-lg mb-6'>
+        Your donation helps ICAN empower communities through Health & Wellbeing,
+        Environmental Sustainability, and Economic Development.
+      </p>
+      <a
+        href='#donation-options'
+        class='inline-block btn-secondary font-semibold py-3 px-6 rounded-md transition'>
+        Donate Now
+      </a>
+    </div>
+  </section>
+
+  <section id='donation-options' class='py-20 px-6 bg-white'>
+    <div
+      class='max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center'>
+      <div class='border rounded-xl p-6 shadow hover:shadow-lg transition'>
+        <h3 class='text-xl font-semibold mb-2'>One-Time Gift</h3>
+        <p class='mb-4'>Make a one-time donation to support our programs.</p>
+        <a href='#donate' class='hover:text-[#248d87] text-[#b9bc23]'
+          >Donate</a
+        >
+      </div>
+      <div class='border rounded-xl p-6 shadow hover:shadow-lg transition'>
+        <h3 class='text-xl font-semibold mb-2'>Monthly Support</h3>
+        <p class='mb-4'>
+          Join our monthly giving community and create lasting change.
+        </p>
+        <a href='/monthly-giving' class='hover:text-[#248d87] text-[#b9bc23]'
+          >Become a Donor</a
+        >
+      </div>
+      <div class='border rounded-xl p-6 shadow hover:shadow-lg transition'>
+        <h3 class='text-xl font-semibold mb-2'>In-Kind Donation</h3>
+        <p class='mb-4'>Support us with resources, supplies, or services.</p>
+        <a href='/about-us/contact' class='hover:text-[#248d87] text-[#b9bc23]'>Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <section class='py-16 px-4 lg:px-24 bg-gray-50'>
+    <div class='max-w-3xl mx-auto text-center'>
+      <h1 class='text-4xl font-bold mb-6 text-[#074351]'>Support Our Work</h1>
+      <p class='text-lg text-gray-700 mb-10'>
+        Your donation empowers ICAN to drive impact through health,
+        sustainability, and economic development. Choose a method that works
+        best for you.
+      </p>
+    </div>
+
+    <!-- Bank Transfer Section -->
+    <div class='max-w-2xl mx-auto bg-white shadow-lg rounded-lg p-6 mb-12'>
+      <h2 class='text-2xl font-bold text-[#074351] mb-4'>
+        Donate via Bank Transfer
+      </h2>
+      <p class='mb-2'><strong>Bank Name:</strong> Equity Bank Kenya</p>
+      <p class='mb-2'><strong>Account Name:</strong> ICAN Foundation</p>
+      <p class='mb-2'><strong>Account Number:</strong> 1234567890</p>
+      <p class='mb-2'><strong>SWIFT/BIC:</strong> EQBLKENA</p>
+      <p class='mb-2'><strong>Branch:</strong> Nairobi West</p>
+      <p class='mt-4 text-sm text-gray-600'>
+        After completing the transfer, please email your confirmation to <a
+          href='mailto:donate@ican.org'
+          class='text-blue-600 underline'>donate@ican.org</a
+        >.
+      </p>
+    </div>
+
+    <!-- M-Pesa Section -->
+    <div class='max-w-2xl mx-auto bg-white shadow-lg rounded-lg p-6'>
+      <h2 class='text-2xl font-bold text-[#074351] mb-4'>Donate via M-Pesa</h2>
+      <ul class='text-left list-decimal ml-6 text-gray-700 mb-4'>
+        <li>Go to your M-Pesa menu</li>
+        <li>Select <strong>Lipa na M-Pesa</strong></li>
+        <li>Choose <strong>Paybill</strong></li>
+        <li>Enter Business Number: <strong>123456</strong></li>
+        <li>Enter Account Number: <strong>ICANDONATE</strong></li>
+        <li>Enter the amount you wish to donate</li>
+        <li>Enter your M-Pesa PIN and confirm</li>
+      </ul>
+      <p class='mt-4 text-sm text-gray-600'>
+        After donating, kindly send your confirmation to <a
+          href='mailto:donate@ican.org'
+          class='text-blue-600 underline'>donate@ican.org</a
+        >.
+      </p>
+    </div>
+  </section>
+
+  <section class='py-20 px-6 bg-gray-100 text-center'>
+    <div class='max-w-4xl mx-auto'>
+      <h2 class='text-3xl font-bold mb-4'>Where Your Money Goes</h2>
+      <p class='mb-8 text-gray-700'>
+        We are committed to transparency and impact. Every contribution helps us
+        fund:
+      </p>
+      <ul
+        class='text-left list-disc list-inside text-gray-700 space-y-2 max-w-md mx-auto'>
+        <li>Community health outreach and education</li>
+        <li>Climate-smart agriculture and clean energy</li>
+        <li>Youth and women economic empowerment</li>
+        <li>Research, advocacy, and policy engagement</li>
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

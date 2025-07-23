@@ -1,0 +1,255 @@
+---
+// Update the path below if BaseLayout.astro is located elsewhere, for example:
+import BaseLayout from '../../layout/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+const breadcrumbItems = [
+  { href: '/', label: 'Home' },
+  { href: '/about-us', label: 'About us' },
+  { href: '/about-us/organization', label: 'Strategic Framework' },
+];
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+---
+
+<head>
+  <title>Strategic Framework | ICAN</title>
+  <script is:inline>
+    import('aos').then((AOS) => AOS.init({ once: true }));
+  </script>
+</head>
+<BaseLayout title='Strategic Framework'>
+  <Breadcrumb items={breadcrumbItems} />
+  <main>
+    <section class='px-2 sm:px-4 md:px-2 lg:px-6 my-8'>
+      <div class='container mx-auto bg-green-50 my-10'>
+        <div
+          class='flex flex-col md:flex-row gap-4 justify-center items-center'>
+          <div class='flex-1 p-4' data-aos='fade-right'>
+            <h2 class='text-4xl font-bold mb-2 hist uppercase'>
+              strategic framework
+            </h2>
+            <p class='my-6 text-lg md:text-xl'>
+              Read about ICAN's strategic framework.
+            </p>
+          </div>
+          <div class='flex-1' data-aos='zoom-in'>
+            <img
+              src='/gallery/mr2.jpg'
+              alt='Pose'
+              class='w-full h-auto md:h-[500px] object-cover'
+              loading='lazy'
+              decoding='async'
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section
+      class='py-20 px-4 lg:px-24 bg-[#b9bc23] text-[#074251] text-center'
+      data-aos='fade-down'>
+      <h1 class='text-4xl font-bold mb-4'>Strategic Framework (2025-2027)</h1>
+      <p class='text-lg max-w-3xl mx-auto'>
+        A roadmap for impact-measurable goals, real change, and a future we're
+        building together.
+      </p>
+    </section>
+
+    <!-- Intro -->
+    <section class='py-16 px-4 lg:px-24' data-aos='fade-up'>
+      <div class='max-w-4xl mx-auto text-center'>
+        <p class='text-lg mb-4'>
+          ICAN's strategic plan focuses on community-driven transformation
+          across health, environment, economic empowerment, and inclusive
+          participation.
+        </p>
+        <p class='text-lg'>
+          Our targets are grounded in local realities -and driven by
+          partnerships, innovation, and shared purpose.
+        </p>
+      </div>
+    </section>
+
+    <!-- Goals -->
+    <section
+      class='max-w-6xl mx-auto px-4 lg:px-24 py-12 grid gap-12 md:grid-cols-2'>
+      <!-- Goal 1 -->
+      <div class='bg-teal-50 p-8 rounded-xl shadow-md' data-aos='fade-right'>
+        <div class='flex items-start gap-4'>
+          <!-- Health Icon -->
+
+          <div>
+            <h3 class='text-2xl font-bold text-[#074351] mb-2'>
+              Health & Wellbeing
+            </h3>
+            <p>
+              Reduce preventable diseases (malaria, HIV/AIDS, waterborne
+              illnesses) by <strong>20%</strong> through health education, medical
+              camps, and better access to care.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Goal 2 -->
+      <div class='bg-teal-50 p-8 rounded-xl shadow-md' data-aos='fade-left'>
+        <div class='flex items-start gap-4'>
+          <!-- Tree Icon -->
+
+          <div>
+            <h3 class='text-2xl font-bold text-[#074351] mb-2'>
+              Environmental Sustainability
+            </h3>
+            <p>
+              Increase tree cover by planting <strong>10,000+</strong> trees and
+              support eco-friendly farming practices to protect soil and biodiversity.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Goal 3 -->
+      <div class='bg-teal-50 p-8 rounded-xl shadow-md' data-aos='fade-right'>
+        <div class='flex items-start gap-4'>
+          <!-- Briefcase Icon -->
+
+          <div>
+            <h3 class='text-2xl font-bold text-[#074351] mb-2'>
+              Economic Development
+            </h3>
+            <p>
+              Support <strong>200+ local entrepreneurs</strong> and establish <strong
+                >2+ community enterprises</strong
+              >
+              through training and micro-capital access.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Goal 4 -->
+      <div class='bg-teal-50 p-8 rounded-xl shadow-md' data-aos='fade-left'>
+        <div class='flex items-start gap-4'>
+          <!-- Users/Community Icon -->
+          <div>
+            <h3 class='text-2xl font-bold text-[#074351] mb-2'>
+              Community Participation
+            </h3>
+            <p>
+              Increase participation in development activities by <strong
+                >50%</strong
+              > through grassroots forums, volunteer programs, and public engagement
+              campaigns.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Principles -->
+    <section class='bg-white py-20 px-4 sm:px-8 lg:px-24'>
+      <div class='max-w-6xl mx-auto'>
+        <h2
+          class='text-4xl font-bold text-center text-[#074351] mb-16'
+          data-aos='fade-up'>
+          Our Organizational Principles
+        </h2>
+
+        <!-- Grid wrapper for first four items with vertical line -->
+        <div class='relative grid md:grid-cols-2 gap-12 mb-12'>
+          <!-- Vertical line (only inside this wrapper) -->
+          <div
+            class='hidden md:block absolute left-1/2 top-0 h-full border-l-2 border-gray-200 transform -translate-x-1/2 z-0'>
+          </div>
+
+          <!-- Principle 1 -->
+          <div class='relative z-10' data-aos='fade-up' data-aos-delay='100'>
+            <h3 class='text-2xl font-semibold text-[#074351] mb-2'>
+              🌍 Prioritize Accountability
+            </h3>
+            <p class='text-gray-700 leading-relaxed'>
+              We believe that those closest to the challenge should be closest
+              to the solution. ICAN is committed to transparent governance and
+              community-centered decision-making.
+            </p>
+          </div>
+
+          <!-- Principle 2 -->
+          <div class='relative z-10' data-aos='fade-up' data-aos-delay='200'>
+            <h3 class='text-2xl font-semibold text-[#074351] mb-2'>
+              🤝 Empower Local Leadership
+            </h3>
+            <p class='text-gray-700 leading-relaxed'>
+              True change is driven from within. ICAN invests in local knowledge
+              and infrastructure to foster sustainable community development.
+            </p>
+          </div>
+
+          <!-- Principle 3 -->
+          <div class='relative z-10' data-aos='fade-up' data-aos-delay='300'>
+            <h3 class='text-2xl font-semibold text-[#074351] mb-2'>
+              🌱 Champion Environmental Stewardship
+            </h3>
+            <p class='text-gray-700 leading-relaxed'>
+              ICAN promotes eco-conscious practices and supports green growth
+              and climate resilience within every community we work in.
+            </p>
+          </div>
+
+          <!-- Principle 4 -->
+          <div class='relative z-10' data-aos='fade-up' data-aos-delay='400'>
+            <h3 class='text-2xl font-semibold text-[#074351] mb-2'>
+              💡 Embrace Digital Innovation
+            </h3>
+            <p class='text-gray-700 leading-relaxed'>
+              We use technology thoughtfully to improve access, efficiency, and
+              transparency—while always keeping human dignity at the center.
+            </p>
+          </div>
+        </div>
+
+        <!-- Principle 5 (outside the grid with no vertical line) -->
+        <div class='relative z-10' data-aos='fade-up' data-aos-delay='500'>
+          <h3 class='text-2xl font-semibold text-[#074351] mb-2'>
+            🫱🏾‍🫲🏼 Advance Equity and Inclusion
+          </h3>
+          <p class='text-gray-700 leading-relaxed'>
+            Inclusion is not optional—it’s essential. ICAN is committed to
+            breaking down systemic barriers and ensuring that no one is left
+            behind.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section
+      class='py-16 px-4 lg:px-24 bg-gray-100 text-center'
+      data-aos='fade-up'>
+      <h3 class='text-3xl font-bold text-[#074351] mb-4'>
+        Your Support Drives Impact
+      </h3>
+      <p class='text-lg mb-6 max-w-2xl mx-auto'>
+        Every tree planted, clinic hosted, and entrepreneur empowered is a
+        result of collaborative effort. Join us as we turn these strategic goals
+        into real outcomes.
+      </p>
+      <div class='flex justify-center flex-wrap gap-4'>
+        <a
+          href='
+        /about-us/partner'
+          class='inline-block btn-primary text-white px-6 py-3 rounded-lg font-medium transition'>
+          Partner With ICAN
+        </a>
+        <a
+          href='/forms/ICAN STRATEGIC PLAN 2024_2027.pdf'
+          target='_blank'
+          class='inline-block btn-primary text-white px-6 py-3 rounded-lg font-medium transition'>
+          Read more about our plan
+        </a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

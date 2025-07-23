@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../../layout/BaseLayout.astro';
+---
+
+<BaseLayout title='Mission Visio Values'>
+  <main>
+    <!-- Mission & Vision Section -->
+    <section class='px-4 lg:px-8 py-20 bg-[#f0fdf4]'>
+      <div class='max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center'>
+        <!-- Image -->
+        <div>
+          <img
+            src='/gallery/3.jpg'
+            alt='Community gathering'
+            class='rounded-xl shadow-md w-full h-auto object-cover max-h-[500px]'
+          />
+        </div>
+
+        <!-- Content -->
+        <div class='space-y-10'>
+          <div data-aos='fade-up'>
+            <h2 class='text-4xl font-bold text-[#074351] uppercase'>
+              Our Vision
+            </h2>
+            <p class='text-lg md:text-xl text-gray-700 mt-4'>
+              A healthier, more prosperous, and empowered rural community in
+              Kenya, where every individual thrives.
+            </p>
+          </div>
+
+          <div data-aos='fade-up' data-aos-delay='150'>
+            <h2 class='text-4xl font-bold text-[#074351] uppercase'>
+              Our Mission
+            </h2>
+            <p class='text-lg md:text-xl text-gray-700 mt-4'>
+              Enhancing community wellbeing by tackling health, economic, and
+              social challenges through innovative grassroots programs and
+              impactful partnerships.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class='py-16 bg-gray-100'>
+      <div class='max-w-7xl mx-auto px-4'>
+        <div class='text-center mb-12'>
+          <h2 class='text-4xl font-bold text-[#074351] mb-4'>Our Values</h2>
+          <p class='text-lg text-gray-600 max-w-2xl mx-auto'>
+            The foundation of ICAN is built upon guiding principles that reflect
+            our deep-rooted commitment to community empowerment, sustainability,
+            and ethical leadership.
+          </p>
+        </div>
+
+        <div class='grid gap-6 sm:grid-cols-2 lg:grid-cols-3'>
+          <!-- Card Template -->
+          {
+            [
+              {
+                icon: 'community-building-min',
+                title: 'Community-Centered',
+                desc: 'We prioritize the needs and aspirations of the community we serve.',
+              },
+              {
+                icon: 'equity-min',
+                title: 'Integrity',
+                desc: 'We operate with transparency, accountability, and ethical principles.',
+              },
+              {
+                icon: 'integrity-min',
+                title: 'Equity',
+                desc: 'We bridge gaps and create equitable opportunities for underserved groups.',
+              },
+              {
+                icon: 'empower-min',
+                title: 'Empowerment',
+                desc: 'We unlock the potential within every individual.',
+              },
+              {
+                icon: 'climate-control-min',
+                title: 'Sustainability',
+                desc: 'We’re committed to long-term positive environmental and social impact.',
+              },
+              {
+                icon: 'collaborate-min',
+                title: 'Collaboration',
+                desc: 'We work closely with stakeholders to maximize collective impact.',
+              },
+            ].map(({ icon, title, desc }) => (
+              <div class='bg-white rounded-2xl shadow-lg p-6 text-center hover:scale-105 transition-all duration-300'>
+                <img
+                  src={`/icons/${icon}.png`}
+                  alt={title}
+                  class='w-16 h-16 mx-auto mb-4'
+                />
+                <h4 class='text-xl font-semibold text-[#074351] mb-2'>
+                  {title}
+                </h4>
+                <p class='text-gray-600 text-base'>{desc}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

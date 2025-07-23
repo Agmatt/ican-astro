@@ -1,0 +1,150 @@
+---
+import BaseLayout from '../../layout/BaseLayout.astro';
+
+import Breadcrumb from '../../components/Breadcrumb.astro';
+
+const breadcrumbItems = [
+  { href: '/', label: 'Home' },
+  { href: '/about-us', label: 'About us' },
+  { href: '/about-us/membership', label: 'Membership' },
+];
+---
+
+<BaseLayout title='Membership'>
+  <Breadcrumb items={breadcrumbItems} />;
+
+  <section class='bg-gray-50 py-20 px-4 sm:px-8 lg:px-24'>
+    <div class='max-w-3xl mx-auto'>
+      <h1 class='text-3xl font-bold mb-6 text-center'>
+        Become a Member of ICAN
+      </h1>
+      <p class='text-lg text-gray-600 mb-10 text-center'>
+        Fill out the form below to apply for ICAN membership. We welcome
+        individuals and organizations who share our commitment to community
+        transformation.
+      </p>
+      <p class='text-lg text-gray-600 mb-10 text-center'>
+        The membership application will be reviewed by the Executive and once
+        satisfactory, it will be approved.kl
+      </p>
+
+      <form
+        id='contactForm'
+        action='https://usebasin.com/f/0f3b05b0860a'
+        method='POST'
+        data-basin-form
+        class='bg-white p-8 rounded-xl shadow-md space-y-6'>
+        <!-- Full Name -->
+        <div>
+          <label
+            for='fullName'
+            class='block text-sm font-medium text-gray-700 mb-1'>
+            Full Name <span class='text-red-500'>*</span>
+          </label>
+          <input
+            type='text'
+            id='fullName'
+            name='fullName'
+            required
+            class='w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-[#074351] focus:border-[#074351]'
+          />
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label
+            for='email'
+            class='block text-sm font-medium text-gray-700 mb-1'>
+            Email Address <span class='text-red-500'>*</span>
+          </label>
+          <input
+            type='email'
+            id='email'
+            name='email'
+            required
+            class='w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-[#074351] focus:border-[#074351]'
+          />
+        </div>
+
+        <!-- Phone -->
+        <div>
+          <label
+            for='phone'
+            class='block text-sm font-medium text-gray-700 mb-1'>
+            Phone Number <span class='text-red-500'>*</span>
+          </label>
+          <input
+            type='tel'
+            id='phone'
+            name='phone'
+            placeholder='+254712345678'
+            required
+            pattern='^\+?\d{7,15}$'
+            class='w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-[#074351] focus:border-[#074351]'
+          />
+          <p class='text-sm text-gray-500 mt-1'>
+            Enter full phone number including country code
+          </p>
+        </div>
+
+        <!-- Membership Type -->
+        <div>
+          <label
+            for='membershipType'
+            class='block text-sm font-medium text-gray-700 mb-1'>
+            Membership Type <span class='text-red-500'>*</span>
+          </label>
+          <select
+            id='membershipType'
+            name='membershipType'
+            required
+            class='w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-[#074351] focus:border-[#074351]'>
+            <option value=''>-- Select an option --</option>
+            <option value='individual'>Individual</option>
+            <option value='organization'>Organization</option>
+            <option value='youth'>Youth Group</option>
+          </select>
+        </div>
+
+        <!-- Location -->
+        <div>
+          <label
+            for='location'
+            class='block text-sm font-medium text-gray-700 mb-1'>
+            County / Location
+          </label>
+          <input
+            type='text'
+            id='location'
+            name='location'
+            class='w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-[#074351] focus:border-[#074351]'
+          />
+        </div>
+
+        <!-- Motivation -->
+        <div>
+          <label
+            for='motivation'
+            class='block text-sm font-medium text-gray-700 mb-1'>
+            Why do you want to join ICAN?
+          </label>
+          <textarea
+            id='motivation'
+            name='motivation'
+            rows='4'
+            class='w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-[#074351] focus:border-[#074351]'
+          ></textarea>
+        </div>
+
+        <!-- Submit -->
+        <div class='text-center'>
+          <button
+            type='submit'
+            class='btn-primary font-semibold px-8 py-3 rounded-md transition duration-300'>
+            Submit Application
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+</BaseLayout>

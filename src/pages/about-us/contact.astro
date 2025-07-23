@@ -1,0 +1,197 @@
+---
+import BaseLayout from '../../layout/BaseLayout.astro';
+---
+
+<BaseLayout title='Contact'>
+  <section class='py-16 bg-gray-50'>
+    <div class='max-w-6xl mx-auto px-4'>
+      <!-- Contact Details Cards -->
+      <div class='grid gap-6 md:grid-cols-3 mb-16'>
+        <!-- Phone -->
+        <div
+          class='bg-[#e0e4a9bb] border border-gray-200 rounded-xl p-6 shadow-lg'>
+          <h4 class='text-xl font-bold text-[#074351] mb-2'>
+            ICAN's Phone Number
+          </h4>
+          <p class='text-gray-700'>
+            <a href='tel:+254738394575' class='hover:bg-[#185a69e6'>+254727455790</a
+            >,
+            <a href='tel:+254704688003' class='hover:bg-[#185a69e6'>
+              +254797451260</a
+            >
+          </p>
+        </div>
+
+        <!-- Donation Mailing Box -->
+        <div
+          class='bg-[#185a69e6] text-white border border-gray-200 rounded-xl p-6 shadow-lg'>
+          <h4 class='text-xl text-white font-bold mb-2'>
+            Donation Mailing Box
+          </h4>
+          <p>BOX 315-40300<br />Asego Primary, Homabay</p>
+        </div>
+
+        <!-- FAQ -->
+        <div
+          class='bg-[#e0e4a9bb] border border-gray-200 rounded-xl p-6 shadow-lg'>
+          <h4 class='text-xl font-bold text-[#074351] mb-2'>More Questions?</h4>
+          <p>
+            <a href='/faq' class='text-[#074351] font-medium '
+              >See our FAQ</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form -->
+  <section class='py-16 bg-white'>
+    <div class='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
+      <div class='grid md:grid-cols-2 gap-12 items-start'>
+        <!-- Left Text Content -->
+        <div>
+          <h2 class='text-3xl font-bold text-[#074351] mb-4'>Get in Touch</h2>
+          <p class='text-gray-700 mb-4 text-lg leading-relaxed'>
+            We are an organization built on partnerships, and we would love to
+            hear from you!
+          </p>
+          <p class='text-gray-800 font-medium mb-4'>
+            For job, internship, volunteer, partnership, or press inquiries,
+            please contact us using the emails listed above.
+          </p>
+          <p class='text-gray-600 text-base'>
+            If you have additional questions, please submit a message to us
+            through our online form.
+          </p>
+        </div>
+
+        <!-- Contact Form -->
+        <div class='bg-gray-50 border border-gray-200 rounded-xl shadow-xl p-8'>
+          <form
+            id='contactForm'
+            action='https://usebasin.com/f/0f3b05b0860a'
+            method='POST'
+            data-basin-form
+            class='space-y-6'>
+            <!-- Grid of 2 Inputs -->
+            <div class='grid md:grid-cols-2 gap-6'>
+              <!-- First Name -->
+              <div>
+                <label
+                  for='firstName'
+                  class='block text-sm font-semibold text-gray-700 mb-1'
+                  >First Name</label
+                >
+                <input
+                  type='text'
+                  id='firstName'
+                  name='firstName'
+                  required
+                  placeholder='e.g. Jane'
+                  class='w-full rounded-md border border-gray-300 px-4 py-2 shadow-sm focus:ring-[#074351] focus:border-[#074351] transition'
+                />
+              </div>
+
+              <!-- Last Name -->
+              <div>
+                <label
+                  for='lastName'
+                  class='block text-sm font-semibold text-gray-700 mb-1'
+                  >Last Name</label
+                >
+                <input
+                  type='text'
+                  id='lastName'
+                  name='lastName'
+                  required
+                  placeholder='e.g. Doe'
+                  class='w-full rounded-md border border-gray-300 px-4 py-2 shadow-sm focus:ring-[#074351] focus:border-[#074351] transition'
+                />
+              </div>
+
+              <!-- Email -->
+              <div>
+                <label
+                  for='email'
+                  class='block text-sm font-semibold text-gray-700 mb-1'
+                  >Email</label
+                >
+                <input
+                  type='email'
+                  id='email'
+                  name='email'
+                  required
+                  placeholder='e.g. jane.doe@example.com'
+                  class='w-full rounded-md border border-gray-300 px-4 py-2 shadow-sm focus:ring-[#074351] focus:border-[#074351] transition'
+                />
+              </div>
+
+              <!-- Phone -->
+              <div>
+                <label
+                  for='phone'
+                  class='block text-sm font-semibold text-gray-700 mb-1'
+                  >Phone</label
+                >
+                <input
+                  type='tel'
+                  id='phone'
+                  name='phone'
+                  placeholder='e.g. +254712345678'
+                  class='w-full rounded-md border border-gray-300 px-4 py-2 shadow-sm focus:ring-[#074351] focus:border-[#074351] transition'
+                />
+              </div>
+            </div>
+
+            <!-- Category -->
+            <div>
+              <label
+                for='category'
+                class='block text-sm font-semibold text-gray-700 mb-1'
+                >Category</label
+              >
+              <select
+                id='category'
+                name='category'
+                required
+                class='w-full rounded-md border border-gray-300 px-4 py-2 shadow-sm focus:ring-[#074351] focus:border-[#074351] transition'>
+                <option value=''>-- Choose a reason --</option>
+                <option>Donation</option>
+                <option>Partnership</option>
+                <option>Volunteering</option>
+                <option>Jobs</option>
+              </select>
+            </div>
+
+            <!-- Message -->
+            <div>
+              <label
+                for='message'
+                class='block text-sm font-semibold text-gray-700 mb-1'
+                >Message</label
+              >
+              <textarea
+                id='message'
+                name='message'
+                rows='4'
+                required
+                placeholder='Type your message here...'
+                class='w-full rounded-md border border-gray-300 px-4 py-2 shadow-sm focus:ring-[#074351] focus:border-[#074351] transition'
+              ></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class='text-end'>
+              <button
+                type='submit'
+                class='inline-block bg-[#074351] hover:bg-[#062f3b] text-white font-semibold text-sm px-6 py-3 rounded-md shadow transition-all duration-300'>
+                Submit Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

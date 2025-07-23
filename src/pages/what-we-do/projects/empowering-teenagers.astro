@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../../layout/BaseLayout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+
+const breadcrumbItems = [
+  { href: '/', label: 'Home' },
+  { href: '/what-we-do', label: 'What We Do' },
+  { href: '/what-we-do/projects', label: 'Projects' },
+  { href: '', label: 'Empowering Teenagers' },
+];
+---
+
+<BaseLayout title='Empowering Teenagers'>
+  <Breadcrumb items={breadcrumbItems} />
+
+  <section class='py-13'>
+    <div class='max-w-7xl mx-auto px-8'>
+      <div class='grid grid-cols-1 md:grid-cols-12 gap-8'>
+        <!-- Main blog content -->
+        <main class='md:col-span-7 lg:col-span-8'>
+          <h1 class='text-4xl hist font-bold mb-4'>Empowering Teenagers:</h1>
+          <p class='text-2xl font-semibold mb-6'>
+            A Vibrant Day of Learning and Inspiration in Shauri Yako Estate.
+          </p>
+
+          <p class='mb-4 text-gray-700 leading-relaxed'>
+            In the heart of Homa Bay Town, the lively neighborhood of Shauri
+            Yako Estate burst into a celebration of youth, knowledge, and
+            empowerment as the organization hosted a transformative day tailored
+            for teenagers and adolescents. Designed to be both engaging and
+            impactful, the event addressed critical challenges facing the
+            youth—ranging from drug abuse and teenage pregnancy to school
+            dropout, environmental conservation, and sexual and reproductive
+            health.
+          </p>
+
+          <p class='mb-4 text-gray-700 leading-relaxed'>
+            The day began with high energy and warm welcomes from ICAN
+            volunteers, creating an atmosphere of excitement and inclusivity.
+            Icebreaker games helped dissolve barriers, encouraging laughter and
+            new friendships while setting a positive tone for the day ahead.
+          </p>
+
+          <div class='my-6'>
+            <img
+              src='/img/CD2-min.jpg'
+              alt='Partnership success'
+              class='rounded w-full object-cover'
+            />
+          </div>
+
+          <p class='mb-4 text-gray-700 leading-relaxed'>
+            Beyond the learning, the event celebrated creativity and physical
+            well-being through a vibrant mix of recreational activities. Sports
+            tournaments, dance-offs, and talent showcases allowed teenagers to
+            shine, building confidence and camaraderie while highlighting the
+            rich pool of talent within the community.
+          </p>
+          <p class='mb-4 text-gray-700 leading-relaxed'>
+            As the sun set over Shauri Yako Estate, the day concluded with a
+            spirited community celebration. Teenagers, volunteers, and residents
+            came together to reflect, celebrate, and affirm the strength of
+            their shared experiences. It was a powerful reminder that change
+            begins with connection—and that young people, when supported and
+            heard, can shape a brighter future.
+          </p>
+          <p class='mb-4 text-gray-700 leading-relaxed'>
+            Thanks to the unwavering efforts of ICAN and the enthusiastic
+            participation of local youth, the event was more than just a day of
+            fun—it was a launchpad for growth, awareness, and positive action.
+            The empowered teenagers of Shauri Yako Estate now carry with them
+            not just memories, but a renewed sense of confidence, purpose, and
+            hope.
+          </p>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class='md:col-span-5 lg:col-span-4 space-y-6 mt-8 md:mt-0'>
+          <div class='bg-gray-100 rounded overflow-hidden shadow'>
+            <img
+              src='/img/CD1-min.jpg'
+              alt='Partnership success'
+              class='w-full object-cover'
+            />
+          </div>
+          
+        </aside>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

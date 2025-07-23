@@ -1,0 +1,131 @@
+@import 'tailwindcss';
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+
+@layer base {
+  body {
+    font-family: 'Cabin', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: #185a69;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-block px-5 py-2 rounded-lg text-white bg-[#248d87] hover:bg-[#248d88ec] transition duration-700 ease-in-out shadow;
+  }
+  .btn-secondary {
+    @apply inline-block px-5 py-2 rounded-lg bg-[#b9bc23] hover:bg-[#248d87] hover:text-white transition duration-700 ease-in-out shadow;
+  }
+  .btn-tertiary {
+    @apply inline-block px-5 py-2 rounded-lg bg-[#b9bc23] text-white  hover:bg-[#a3a622] font-medium hover:text-white transition duration-700 ease-in-out shadow;
+  }
+}
+
+/* @layer components {
+  .navbar a {
+    @apply relative inline-block;
+  }
+
+  .navbar a::before {
+    content: '';
+    position: absolute;
+    background-color: #bfb926;
+    height: 4px;
+    width: 100%;
+    left: 0;
+    bottom: -4px;
+    margin: 0 auto;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .navbar a:hover::before {
+    opacity: 1;
+  }
+} */
+
+@layer components {
+  .hist {
+    position: relative;
+    color: #185a69;
+  }
+
+  .hist::before {
+    content: '';
+    position: absolute;
+    background-color: #185a69;
+    height: 4px;
+    width: 8%;
+    left: 0;
+    bottom: -8px;
+    margin: auto;
+  }
+  .stories-header {
+    position: relative;
+  }
+
+  .stories-header::before {
+    content: '';
+    position: absolute;
+    background-color: #185a69;
+    height: 4px;
+    width: 6%;
+    /* left: 25%; */
+    top: 0;
+    bottom: -60px;
+    margin: auto;
+  }
+
+  .spacer-small {
+    position: relative;
+    height: 6px;
+    /* Optional: adjust as needed */
+  }
+
+  .spacer-small::before {
+    content: '';
+    position: absolute;
+    background-color: #185a69;
+    height: 4px;
+    width: 50%;
+    left: 25%;
+    bottom: 0;
+    margin: auto;
+  }
+}
+
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-in forwards;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+
+@layer utilities {
+  @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 30s linear infinite;
+  }
+}

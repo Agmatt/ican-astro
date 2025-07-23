@@ -1,0 +1,49 @@
+<footer class='bg-[#074351] text-gray-200 w-full shadow-inner'>
+  <div
+    class='max-w-screen-xl mx-auto px-6 pt-6 pb-4 flex flex-col items-center md:flex-row md:items-center md:justify-between gap-4 text-center md:text-left'>
+    <!-- Left: Copyright and Links -->
+    <div
+      class='flex flex-col md:flex-row items-center gap-2 text-center md:text-left'>
+      <span id='copyrightText' class='text-sm'>
+        © 2025 ICAN. All Rights Reserved.
+      </span>
+
+      <!-- Divider (only on md and up) -->
+      <div class='h-5 border-l border-gray-400 hidden md:block'></div>
+
+      <ul
+        class='flex flex-wrap justify-center md:justify-start text-sm font-medium text-gray-300 gap-4'>
+        <li><a href='/privacy-policy' class='hover:underline'>Privacy Policy</a></li>
+        <li><a href="/faq" class='hover:underline'>FAQ</a></li>
+      </ul>
+    </div>
+
+    <!-- Center: Designed by -->
+    <div><span class='text-teal-400'>Designed by ICAN</span></div>
+
+    <!-- Right: Social Icons -->
+    <div class='flex items-center justify-center gap-4 text-xl'>
+      <a href='#' class='hover:text-[#b9bc23] transition'>
+        <i class='fab fa-facebook-f'></i>
+      </a>
+      <a href='#' class='hover:text-[#b9bc23] transition'>
+        <i class='fab fa-instagram'></i>
+      </a>
+      <a href='#' class='hover:text-[#b9bc23] transition'>
+        <i class='fab fa-tiktok'></i>
+      </a>
+      <a href='#' class='hover:text-[#b9bc23] transition'>
+        <i class='fab fa-twitter'></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- Dynamic Year Script -->
+<script>
+  const year = new Date().getFullYear();
+  const copyrightEl = document.getElementById('copyrightText');
+  if (copyrightEl) {
+    copyrightEl.textContent = `© ${year} ICAN. All Rights Reserved.`;
+  }
+</script>

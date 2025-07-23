@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../../../layout/BaseLayout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+
+const breadcrumbItems = [
+  { href: '/', label: 'Home' },
+  { href: '/what-we-do', label: 'What We Do' },
+  { href: '/what-we-do/projects', label: 'Projects' },
+  { href: '', label: 'World Wetlands Day' },
+];
+---
+
+<BaseLayout title='World Wetlands'>
+  <Breadcrumb items={breadcrumbItems} />
+
+  <section class='py-13'>
+    <div class='max-w-7xl mx-auto px-8'>
+      <div class='grid grid-cols-1 md:grid-cols-12 gap-8'>
+        <!-- Main blog content -->
+        <main class='md:col-span-7 lg:col-span-8'>
+          <h1 class='text-4xl hist font-bold mb-4'>
+            Celebrating World Wetlands Day:
+          </h1>
+          <p class='text-2xl font-semibold mb-6'>
+            Tree Planting at Tom Mboya University
+          </p>
+
+          <p class='mb-4 text-gray-700 leading-relaxed'>
+            Inuana Community Action Network (ICAN) joined hands with students,
+            faculty, and diverse stakeholders at Tom Mboya University in Homa
+            Bay County, Kenya, to mark World Wetlands Day. This vibrant event,
+            held on February 2, 2025, was a powerful testament to our shared
+            commitment to preserving wetlands and fostering sustainable
+            communities.
+          </p>
+
+          <p class='mb-4 text-gray-700 leading-relaxed'>
+            The day was filled with energy and purpose as ICAN members connected
+            with environmental activists, local leaders, and university
+            representatives. Together, we rolled up our sleeves and planted
+            trees around the university grounds, contributing to the restoration
+            of vital ecosystems. Wetlands, often called the "kidneys of the
+            earth," play a critical role in water purification, flood control,
+            and biodiversity. By planting trees, we aimed to enhance these
+            natural systems, combat climate change, and create greener spaces
+            for future generations.
+          </p>
+
+          <div class='my-6'>
+            <img
+              src='/img/wetlands-min.jpg'
+              alt='Partnership success'
+              class='rounded w-full object-cover'
+            />
+          </div>
+
+          <p class='mb-4 text-gray-700 leading-relaxed'>
+            The event was more than just planting trees—it was a celebration of
+            collaboration. Conversations buzzed with ideas for sustainable
+            practices, from wetland conservation to youth-led environmental
+            initiatives. Stakeholders shared insights on the challenges facing
+            wetlands in Homa Bay, sparking inspiration for ICAN’s ongoing
+            mission to empower communities through health, youth engagement, and
+            environmental action.
+          </p>
+          <p class='mb-4 text-gray-700 leading-relaxed'>
+            As the sun set over Tom Mboya University, the newly planted trees
+            stood as symbols of hope and unity. ICAN is proud to have been part
+            of this meaningful day, and we’re more determined than ever to
+            continue our work in environmental advocacy and community
+            empowerment. Join us in our journey to protect our planet and uplift
+            Homa Bay—because together, we can make a lasting impact!
+          </p>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class='md:col-span-5 lg:col-span-4 space-y-6 mt-8 md:mt-0'>
+          <div class='bg-gray-100 rounded overflow-hidden shadow'>
+            <img
+              src='/gallery/30.jpg'
+              alt='Partnership success'
+              class='w-full object-cover'
+            />
+          </div>
+          <div class='bg-gray-100 rounded overflow-hidden shadow'>
+            <img
+              src='/gallery/33.jpg'
+              alt='Partnership success'
+              class='w-full object-cover'
+            />
+          </div>
+          <div class='bg-gray-100 rounded overflow-hidden shadow'>
+            <img
+              src='/gallery/34.jpg'
+              alt='Partnership success'
+              class='w-full object-cover'
+            />
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

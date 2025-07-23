@@ -1,0 +1,180 @@
+<nav
+  class='bg-white text-[#074351] sticky top-0 z-50 shadow-sm'
+  role='navigation'
+  aria-label='Main Navigation'>
+  <div
+    class='max-w-screen-xl mx-auto flex flex-wrap items-center justify-between px-4 py-4'>
+    <!-- Logo + Brand -->
+    <a href='/' class='flex items-center space-x-3 rtl:space-x-reverse'>
+      <img src='/public/img/logo-min.png' class='h-10 md:h-8' alt='ICAN Logo' />
+      <span class='text-lg font-semibold hidden sm:inline'>ICAN</span>
+    </a>
+
+    <!-- Mobile Toggle -->
+    <button
+      id='navToggle'
+      type='button'
+      class='inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-600 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-[#074351]'
+      aria-controls='navbar-default'
+      aria-expanded='false'
+      aria-label='Toggle navigation menu'>
+      <svg
+        id='navIcon'
+        class='w-6 h-6'
+        fill='none'
+        stroke='currentColor'
+        viewBox='0 0 24 24'>
+        <path
+          stroke-linecap='round'
+          stroke-linejoin='round'
+          stroke-width='2'
+          d='M4 6h16M4 12h16M4 18h16'></path>
+      </svg>
+    </button>
+
+    <!-- Menu Links -->
+    <div
+      id='navbar-default'
+      class='hidden w-full md:flex md:items-center md:justify-end md:flex-1 max-h-[90vh] transition-all duration-300 ease-in-out'>
+      <ul
+        class='flex flex-col md:flex-row justify-end px-4 md:px-0 gap-4 md:gap-6 mt-4 md:mt-0 text-base font-medium'>
+        <!-- ABOUT US DROPDOWN -->
+        <li class='relative group'>
+          <a
+            href='/about-us'
+            class='flex items-center gap-1 px-2 py-2 transition hover:text-[#b9bc23]'>
+            About Us
+            <svg
+              class='w-3 h-3'
+              fill='none'
+              stroke='currentColor'
+              viewBox='0 0 24 24'>
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                stroke-width='2'
+                d='M19 9l-7 7-7-7'></path>
+            </svg>
+          </a>
+          <ul
+            class='absolute md:group-hover:visible md:group-hover:opacity-100 opacity-0 invisible md:opacity-0 md:invisible md:group-hover:block left-0 top-full mt-2 w-56 bg-white text-[#074351] text-sm rounded-md shadow-lg transition duration-300 z-50 md:block md:opacity-0 md:invisible group-focus-within:visible group-focus-within:opacity-100'>
+            <li>
+              <a
+                href='/about-us/organization'
+                class='block px-4 py-2 hover:bg-gray-50'>Organization</a
+              >
+            </li>
+            <li>
+              <a
+                href='/about-us/strategic-framework'
+                class='block px-4 py-2 hover:bg-gray-50'>Strategic Framework</a
+              >
+            </li>
+            <li>
+              <a
+                href='/about-us/partners-and-donors'
+                class='block px-4 py-2 hover:bg-gray-50'>Partners and Donors</a
+              >
+            </li>
+            <li>
+              <a
+                href='/about-us/work-with-us'
+                class='block px-4 py-2 hover:bg-gray-50'>Work With Us</a
+              >
+            </li>
+            <li>
+              <a
+                href='/about-us/contact'
+                class='block px-4 py-2 hover:bg-gray-50'>Contact</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <!-- WHAT WE DO DROPDOWN -->
+        <li class='relative group'>
+          <a
+            href='/what-we-do'
+            class='flex items-center gap-1 px-2 py-2 transition hover:text-[#b9bc23]'>
+            What We Do
+            <svg
+              class='w-3 h-3'
+              fill='none'
+              stroke='currentColor'
+              viewBox='0 0 24 24'>
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                stroke-width='2'
+                d='M19 9l-7 7-7-7'></path>
+            </svg>
+          </a>
+          <ul
+            class='absolute md:group-hover:visible md:group-hover:opacity-100 opacity-0 invisible md:opacity-0 md:invisible md:group-hover:block left-0 top-full mt-2 w-56 bg-white text-[#074351] text-sm rounded-md shadow-lg transition duration-300 z-50 md:block md:opacity-0 md:invisible group-focus-within:visible group-focus-within:opacity-100'>
+            <li>
+              <a
+                href='/what-we-do/programs'
+                class='block px-4 py-2 hover:bg-gray-50'>Programs</a
+              >
+            </li>
+            <li>
+              <a
+                href='/what-we-do/projects'
+                class='block px-4 py-2 hover:bg-gray-50'>Projects</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <!-- RESOURCES DROPDOWN -->
+        <li class='relative group'>
+          <a
+            href='/resources'
+            class='flex items-center gap-1 px-2 py-2 transition hover:text-[#b9bc23]'>
+            Resources
+            <svg
+              class='w-3 h-3'
+              fill='none'
+              stroke='currentColor'
+              viewBox='0 0 24 24'>
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                stroke-width='2'
+                d='M19 9l-7 7-7-7'></path>
+            </svg>
+          </a>
+          <ul
+            class='absolute md:group-hover:visible md:group-hover:opacity-100 opacity-0 invisible md:opacity-0 md:invisible md:group-hover:block left-0 top-full mt-2 w-56 bg-white text-[#074351] text-sm rounded-md shadow-lg transition duration-300 z-50 md:block md:opacity-0 md:invisible group-focus-within:visible group-focus-within:opacity-100'>
+            <li>
+              <a href='/resources/news' class='block px-4 py-2 hover:bg-gray-50'
+                >News</a
+              >
+            </li>
+            <li>
+              <a
+                href='/resources/documents'
+                class='block px-4 py-2 hover:bg-gray-50'>Documents</a
+              >
+            </li>
+            <li>
+              <a
+                href='/resources/events'
+                class='block px-4 py-2 hover:bg-gray-50'>Events</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- CTA Button -->
+      <div class='mt-4 md:mt-0 px-4 md:px-0'>
+        <a
+          href='/donate'
+          class='btn-secondary font-semibold py-2 px-4 rounded-md transition'>
+          DONATE
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>

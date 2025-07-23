@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../../layout/BaseLayout.astro';
+import PillarCard from '../../components/PillarCard.astro';
+
+const pillars = [
+  {
+    title: 'Our Organization',
+    image: '/img/office pic-min.jpg',
+    description: 'Learn about ICAN’s roots, mission, and governance structure.',
+    link: '/about-us/organization',
+  },
+  {
+    title: 'Strategic Framework',
+    image: '/img/approach-min.jpg',
+    description:
+      'See our vision and long-term approach to sustainable development.',
+    link: '/about-us/strategic-framework',
+  },
+  {
+    title: 'Partners and Donors',
+    image: '/gallery/1.jpg',
+    description: 'Meet the organizations that support our mission',
+    link: '/about-us/partners-and-donors',
+  },
+  {
+    title: 'Work With Us',
+    image: '/img/cleaning2-min.jpg',
+    description: 'Opportunities to collaborate, volunteer, or join our team.',
+    link: '/about-us/work-with-us',
+  },
+  {
+    title: 'Contact',
+    image: '/img/darklogo-min.jpg',
+    description:
+      'Get in touch with us for inquiries, feedback, or partnerships.',
+    link: '/about-us/contact',
+  },
+];
+---
+
+<BaseLayout title='About Us'>
+  <!-- Hero Section -->
+  <section
+    class="relative bg-center bg-cover bg-no-repeat bg-[url('/gallery/19.jpg')] bg-blend-multiply bg-gray-700 bg-fixed">
+    <div class='px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56'>
+      <h1 class='mb-2 text-white text-lg tracking-wide uppercase font-light'>
+        Since 2022
+      </h1>
+      <p
+        class='mb-8 text-white text-2xl lg:text-4xl font-bold sm:px-10 lg:px-32 leading-relaxed'>
+        At ICAN, we empower rural communities to thrive through innovative
+        programs and partnerships. By promoting health, economic opportunity,
+        and environmental sustainability, we foster an inclusive, equitable
+        future where everyone has the resources to achieve self-sufficiency and
+        build stronger communities.
+      </p>
+    </div>
+  </section>
+
+  <!-- ICAN Overview Section -->
+  <section class='bg-white py-20'>
+    <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-24'>
+      <h2 class='text-3xl font-bold text-[#074351] uppercase mb-6'>
+        Inuana Community Action Network (ICAN)
+      </h2>
+      <p class='text-lg text-gray-700 mb-6'>
+        <strong>ICAN</strong> is a community-based organization founded by active,
+        dedicated, and committed youths in 2022. It is fully registered under the
+        Civil Society of Kenya within the State Department for Social Protection.
+      </p>
+      <p class='text-lg text-gray-700 mb-6'>
+        ICAN has grown to over 30 members by 2024, including students,
+        freelancers, healthcare workers, and social workers across Siaya,
+        Kisumu, and Homabay Counties. Though diverse in background, all share a
+        common vision of healthy, empowered Kenyan communities.
+      </p>
+      <p class='text-lg text-gray-700'>
+        Our aim is to improve community wellbeing and address health, economic,
+        and social challenges through innovative programs and strategic
+        partnerships.
+      </p>
+      <div class='mt-10'>
+        <img
+          src='/gallery/12.jpg'
+          alt='ICAN Community'
+          class='rounded-lg shadow-lg w-full h-auto object-cover'
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Roots / History Section -->
+  <section class='bg-green-50 py-20'>
+    <div
+      class='max-w-7xl mx-auto flex flex-col md:flex-row gap-10 px-4 sm:px-6 lg:px-24'>
+      <div class='md:w-1/2'>
+        <h3 class='text-2xl font-semibold text-[#074351] uppercase mb-4'>
+          Our Roots
+        </h3>
+        <p class='mb-5 text-gray-800 leading-relaxed'>
+          In the vibrant heart of Homa Bay Town, Kenya, a group of passionate
+          youths ignited a movement for change. As the Inuana Community
+          Organization, they championed health, youth empowerment, and community
+          unity with a vision to transform lives.
+        </p>
+        <p class='mb-5 text-gray-800 leading-relaxed'>
+          A pivotal moment came when they met three like-minded individuals who
+          shared their dream but lacked a platform. This alliance of passion and
+          expertise laid the foundation for a new chapter.
+        </p>
+        <p class='text-gray-800 leading-relaxed'>
+          Thus, the Inuana Community Organization evolved into the
+          <strong>Inuana Community Action Network (ICAN)</strong>, a registered
+          entity with a broader mission. Today, with a vibrant and diverse
+          membership, ICAN continues to champion youth empowerment, health
+          equity, and inclusive community growth.
+        </p>
+      </div>
+      <div class='md:w-1/2'>
+        <img
+          src='/img/office pic-min.jpg'
+          alt='ICAN Roots'
+          class='rounded-xl shadow-xl w-full h-full object-cover'
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Link Cards -->
+  <section class='py-10 px-4 bg-green-50'>
+    <div class='max-w-6xl mx-auto text-center mb-10'></div>
+    <div class='grid md:grid-cols-3 gap-6 max-w-6xl mx-auto'>
+      {
+        pillars.map((pillar) => (
+          <PillarCard
+            image={pillar.image}
+            title={pillar.title}
+            description={pillar.description}
+            link={pillar.link}
+          />
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

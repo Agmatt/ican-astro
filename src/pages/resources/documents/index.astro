@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../../../layout/BaseLayout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import DocumentTable from '../../../components/DocumentTable.astro';
+
+const breadcrumbItems = [
+  { href: '/', label: 'Home' },
+  { href: '/resources', label: 'Resources' },
+  { href: '/resources/document', label: 'Documents' },
+];
+
+const documents = [
+  {
+    name: 'Membership Application',
+    description: "Used by individuals or organizations seeking to officially join ICAN. This form captures essential details for enrollment and participation in ICAN's programs and network.",
+    viewUrl: '/forms/ICAN REGISTRATION FORM.pdf',
+    downloadUrl: '/forms/ICAN REGISTRATION FORM.pdf',
+  },
+  {
+    name: 'Ubuntu Soko Loan',
+    description:
+      'An official agreement document detailing the terms and conditions for financial support or microloans provided through ICAN’s community development initiatives.',
+    viewUrl: '/forms/Ubuntu Soko Loan Document.pdf',
+    downloadUrl: '/forms/Ubuntu Soko Loan Document.pdf',
+  },
+  {
+    name: 'Ubuntu Soko Loan Application Form',
+    description:
+      'o be completed by individuals or groups applying for financial assistance or community-based loans. Includes applicant information, business/project details, and requested support.',
+    viewUrl: '/forms/Ubuntu Soko Loan Application Form.pdf',
+    downloadUrl: '/forms/Ubuntu Soko Loan Application Form.pdf',
+  },
+  {
+    name: 'Strategic Plan',
+    description:
+      'A comprehensive roadmap outlining ICAN’s goals, priorities, and planned activities over the next strategic period',
+    viewUrl: '/forms/ICAN STRATEGIC PLAN 2024_2027.pdf',
+    downloadUrl: '/forms/ICAN STRATEGIC PLAN 2024_2027.pdf',
+  },
+];
+---
+
+<BaseLayout title='Documents'>
+  <Breadcrumb items={breadcrumbItems} />;
+
+  <section class='bg-gray-50 py-20 px-4 sm:px-8 lg:px-24'>
+    <div class='max-w-3xl mx-auto text-center'>
+      <h1 class='text-3xl font-bold mb-6'>ICAN Official Documents</h1>
+      <p class='text-lg text-gray-600 mb-8 leading-relaxed'>
+        This section contains important publications and downloadable materials
+        that represent ICAN’s dedication to transparency, accountability, and
+        community engagement.
+        <br class='hidden sm:block mt-1' />
+        From strategic plans to reports and policy frameworks, we aim to keep our
+        stakeholders informed and empowered.
+      </p>
+    </div>
+  </section>
+
+  <!-- Download Tables -->
+  <section class='bg-white py-20 px-4 sm:px-8 lg:px-24'>
+    <div class='max-w-5xl mx-auto'>
+      <h1 class='text-3xl font-bold mb-6 text-center'>
+        ICAN Downloadable Forms
+      </h1>
+      <p class='text-lg text-gray-600 mb-10 text-center'>
+        Below is a list of official ICAN forms available for download. Click to
+        view or save each document.
+      </p>
+
+      <DocumentTable documents={documents} />
+    </div>
+  </section>
+</BaseLayout>

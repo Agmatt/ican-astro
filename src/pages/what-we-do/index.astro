@@ -1,0 +1,153 @@
+---
+import BaseLayout from '../../layout/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import PillarCard from '../../components/PillarCard.astro';
+
+const breadcrumbItems = [
+  { href: '/', label: 'Home' },
+  { href: '/what-we-do', label: 'What We Do' },
+];
+
+const pillars = [
+  {
+    title: 'Health & Wellbeing',
+    image: '/img/charity-min.jpg',
+    description:
+      'Promoting equitable access to healthcare, education, and dignity for all.',
+    link: '/what-we-do/programs/health',
+  },
+  {
+    title: 'Environmental Sustainability',
+    image: '/gallery/33.jpg',
+    description:
+      'Empowering communities to restore and protect their natural ecosystems.',
+    link: '/what-we-do/programs/environment',
+  },
+  {
+    title: 'Economic Development',
+    image: '/img/soko.jpg',
+    description:
+      'Building resilient livelihoods through entrepreneurship and innovation.',
+    link: '/what-we-do/programs/ubuntu-soko',
+  },
+];
+---
+
+<BaseLayout title='What We Do'>
+  <Breadcrumb items={breadcrumbItems} />
+  <section class='px-2 sm:px-4 md:px-2 lg:px-6 my-8'>
+    <article
+      class='px-4 max-w-6xl mx-auto flex flex-col md:flex-row gap-4 justify-center mb-20 animate-fade-up duration-700 ease-in-out motion-safe:animate-fade-in scroll-mt-12'
+      data-aos='fade-up'>
+      <div class='flex-1'>
+        <h2 class='text-2xl font-semibold hist uppercase mb-4'>our work</h2>
+        <p class='text-gray-700 mb-4 text-[1.2rem]'>
+          ICAN’s mission is to strengthen community wellbeing by addressing
+          health, economic, and social challenges through inclusive, innovative
+          programs and strategic partnerships.
+        </p>
+        <p class='text-gray-700 mb-4 text-[1.2rem]'>
+          We envision a future where rural populations flourish through
+          equitable access to resources, self-reliance, and sustainable
+          development.
+        </p>
+      </div>
+      <div class='flex-1'>
+        <figure>
+          <img
+            src='/gallery/25.jpg'
+            alt='Volunteers planting trees in local schoolyard'
+            class='w-full h-auto shadow-lg'
+          />
+        </figure>
+      </div>
+    </article>
+
+    <!-- COVERAGE -->
+    <article
+      class='px-4 py-12 max-w-6xl mx-auto flex flex-col md:flex-row gap-4 justify-center mb-20 animate-fade-up duration-700 ease-in-out motion-safe:animate-fade-in scroll-mt-12'
+      data-aos='fade-up'>
+      <div class='flex-1'>
+        <figure>
+          <img
+            src='/img/hb map.png'
+            alt='Volunteers planting trees in local schoolyard'
+            class='w-full h-auto shadow-lg'
+          />
+        </figure>
+      </div>
+      <div class='flex-1'>
+        <h2 class='text-2xl font-semibold hist uppercase mb-4'>
+          population coverage
+        </h2>
+        <p class='text-gray-700 mb-4 text-[1.2rem]'>
+          At Inuana Community Action Network (ICAN), we are dedicated to
+          reaching every corner of the rural communities in Kenya especially
+          Homabay County with our headquarters at Homabay Town.
+        </p>
+        <p class='text-gray-700 mb-4 text-[1.2rem]'>
+          Our initiatives have positively impacted lives by promoting health,
+          economic stability, and social well-being. We aim to expand our reach
+          and touch even more lives, fostering a healthier, more prosperous, and
+          empowered rural Kenya.
+        </p>
+      </div>
+    </article>
+
+    <!-- TRACKING IMPACT -->
+    <article
+      class='px-4 max-w-6xl mx-auto flex flex-col md:flex-row gap-4 justify-center mb-20 animate-fade-up duration-700 ease-in-out motion-safe:animate-fade-in scroll-mt-12'
+      data-aos='fade-up'>
+      <div class='flex-1'>
+        <h2 class='text-2xl font-semibold hist uppercase mb-4'>tracking our progress</h2>
+        <p class='text-gray-700 mb-4 text-[1.2rem]'>
+          We believe in transparency and accountability. Our impact tracking
+          system meticulously monitors and evaluates the outcomes of our
+          programs. Through detailed reports and success stories, we showcase
+          how our efforts have transformed communities
+        </p>
+        <p class='text-gray-700 mb-4 text-[1.2rem]'>
+          We measure success by improved health statistics, economic growth, and
+          enhanced social cohesion within the communities we serve.
+        </p>
+      </div>
+      <div class='flex-1'>
+        <figure>
+          <img
+            src='/img/progress-min.jpg'
+            alt='Volunteers planting trees in local schoolyard'
+            class='w-full h-auto shadow-lg'
+          />
+        </figure>
+      </div>
+    </article>
+  </section>
+
+  <!-- CORE SECTORS -->
+  <section class='py-16 px-4 bg-teal-50'>
+    <div class='max-w-4xl mx-auto text-center'>
+      <h2 class='text-4xl font-bold stories-header mb-6'>Our Core Sectors</h2>
+      <p class='text-lg pb-10 text-gray-600 leading-[1.8]'>
+        At ICAN, our work is anchored on three interconnected pillars that drive
+        our mission and impact. These pillars guide all our programs and
+        initiatives to ensure that we serve communities holistically—addressing
+        immediate needs, fostering long-term sustainability, and empowering
+        people to thrive.
+      </p>
+    </div>
+    <div class='grid md:grid-cols-3 gap-6 max-w-6xl mx-auto'>
+      {
+        pillars.map((pillar) => (
+          <PillarCard
+            image={pillar.image}
+            title={pillar.title}
+            description={pillar.description}
+            link={pillar.link}
+          />
+        ))
+      }
+    </div>
+  </section>
+
+ 
+</BaseLayout>

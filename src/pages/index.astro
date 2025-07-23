@@ -1,0 +1,177 @@
+---
+// src/pages/index.astro
+import Layout from '../layout/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import LogoCarousel from '../components/LogoCarousel.astro';
+import CookieConsent from '../components/CookieConsent.astro';
+---
+
+<Layout title='Inuana Community Action Network'>
+  
+  <main>
+    <!-- HERO -->
+   <Hero />
+    <!-- INTRO -->
+    <section class='px-4 sm:px-4 md:px-2 lg:px-6 my-8'>
+      <div class='container mx-auto bg-green-50 my-10'>
+        <div class='flex flex-col md:flex-row gap-4'>
+          <div class='flex-1' data-aos='zoom-in'>
+            <img
+              src='/img/9-min.jpg'
+              alt='Pose'
+              class='w-full h-auto md:h-[500px] object-cover'
+              loading='lazy'
+              decoding='async'
+            />
+          </div>
+          <div class='flex-1 p-4' data-aos='fade-left'>
+            <h2 class='text-4xl font-bold mb-2 hist uppercase'>
+              A community movement
+            </h2>
+            <p class='my-6 text-lg md:text-xl'>
+              We are a passionate community-driven organization dedicated to
+              transforming lives and safeguarding our environment.
+            </p>
+            <p class='my-6 text-lg md:text-xl'>
+              Our mission is to empower youth, promote health and wellness, and
+              foster sustainable practices that benefit everyone.
+            </p>
+            <p class='my-6 text-lg md:text-xl'>
+              Let’s build a community where every voice matters, every life
+              thrives, and our planet flourishes.
+            </p>
+            <a href='/what-we-do/programs/' class='btn-secondary my-10'
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BANNER CTA -->
+    <section class='bg-gray-100 py-12'>
+      <div
+        class='px-4 mx-auto max-w-screen-xl text-center lg:py-16 relative'
+        data-aos='fade-up'>
+        <h1
+          class='mb-4 text-4xl font-extrabold tracking-tight text-[#074251] md:text-5xl lg:text-6xl'>
+          We invest in the community's potential
+        </h1>
+        <p
+          class='mb-8 text-lg font-normal text-gray-900 lg:text-xl sm:px-16 lg:px-48'>
+          "Where Community and Commerce Thrive Together."
+        </p>
+        <a
+          href='/what-we-do/core-sectors/ubuntu-soko'
+          class='inline-flex justify-between items-center py-1 px-1 pe-4 mb-7 text-sm text-white rounded-full bg-[#074251] hover:bg-[#caccae] hover:text-gray-900'>
+          <span
+            class='text-xs bg-[#074251] hover:bg-[#b9bc23] rounded-full text-white px-4 py-1.5 me-3'
+            >New</span
+          >
+          <span class='text-sm font-medium'
+            >Ubuntu Soko launched! See what's new</span
+          >
+          <svg
+            class='w-2.5 h-2.5 ms-2 rtl:rotate-180'
+            viewBox='0 0 6 10'
+            fill='none'
+            xmlns='http://www.w3.org/2000/svg'>
+            <path
+              d='m1 9 4-4-4-4'
+              stroke='currentColor'
+              stroke-width='2'
+              stroke-linecap='round'
+              stroke-linejoin='round'></path>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- WHERE WE WORK -->
+    <section class='px-2 sm:px-4 md:px-2 lg:px-6 my-8'>
+      <div class='container mx-auto bg-green-50 my-10'>
+        <div class='flex flex-col md:flex-row gap-4'>
+          <div class='flex-1 p-4' data-aos='fade-right'>
+            <h2 class='text-4xl font-bold mb-2 hist uppercase'>
+              Where we work
+            </h2>
+            <p class='my-6 text-lg md:text-xl'>
+              Our work spans rural regions in Kenya, especially Homabay Town and
+              its environs — areas of public health importance with unique
+              challenges and opportunities.
+            </p>
+            <p class='my-6 text-lg md:text-xl'>
+              By understanding the local context, we tailor our programs to
+              community-specific needs. ICAN is on the ground, making a
+              difference.
+            </p>
+            <a href='/what-we-do' class='btn-secondary my-10'>Learn More</a>
+          </div>
+          <div class='flex-1' data-aos='zoom-in'>
+            <img
+              src='/img/pose-min.jpg'
+              alt='Pose'
+              class='w-full h-auto md:h-[500px] object-cover'
+              loading='lazy'
+              decoding='async'
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEADERSHIP MESSAGE -->
+    <section class='py-16 bg-white'>
+      <div class='max-w-5xl mx-auto px-4'>
+        <div
+          class='flex flex-col md:flex-row items-center justify-center gap-12'>
+          <!-- Founder -->
+          <figure
+            class='flex flex-col items-center text-center space-y-6 max-w-sm'
+            data-aos='fade-up'>
+            <img
+              src='/img/frank-min.jpg'
+              alt='Founder portrait'
+              class='w-40 h-40 rounded-full shadow-xl object-cover'
+              loading='lazy'
+            />
+            <blockquote class='text-gray-700 text-base leading-relaxed'>
+              Together, let's drive change and empowerment in rural Kenya. Join
+              us in our mission for a healthier, more prosperous community.<br
+              />Your involvement makes a difference.
+            </blockquote>
+            <figcaption class='text-sm text-gray-500'>/ Founder</figcaption>
+          </figure>
+
+          <!-- M&E Officer -->
+          <figure
+            class='flex flex-col items-center text-center space-y-6 max-w-sm'
+            data-aos='fade-up'
+            data-aos-delay='100'>
+            <img
+              src='/img/ben-min.jpg'
+              alt='Co-founder portrait'
+              class='w-40 h-40 rounded-full shadow-xl object-cover'
+              loading='lazy'
+            />
+            <blockquote class='text-gray-700 text-base leading-relaxed'>
+              At ICAN, we measure impact that transforms lives — healthier
+              people, greener communities, stronger economies. Our data tells
+              real stories of change across our three pillars.
+            </blockquote>
+            <figcaption class='text-sm text-gray-500'>
+              / M.E.A.R.L.A Officer
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners Carousel -->
+     <LogoCarousel />
+
+     <!-- Cookie -->
+    <div class='container mx-auto px-4'>
+      <CookieConsent />
+  </main>
+</Layout>

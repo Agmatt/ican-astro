@@ -1,0 +1,116 @@
+---
+import BaseLayout from '../../../layout/BaseLayout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+
+const breadcrumbItems = [
+  { href: '/', label: 'Home' },
+  { href: '/what-we-do', label: 'What We Do' },
+  { href: '/what-we-do/projects', label: 'Projects' },
+  { href: '', label: 'Walking For Change' },
+];
+---
+
+<BaseLayout title='Walking for Change'>
+  <Breadcrumb items={breadcrumbItems} />
+
+  <section class='py-13'>
+    <div class='max-w-7xl mx-auto px-8'>
+      <div class='grid grid-cols-1 md:grid-cols-12 gap-8'>
+        <!-- Main blog content -->
+        <main class='md:col-span-7 lg:col-span-8'>
+          <h1 class='text-4xl hist font-bold mb-4'>Walking for Change:</h1>
+          <p class='text-2xl font-semibold mb-6'>A Journey Against Femicide.</p>
+
+          <p class='mb-4 text-gray-700 leading-relaxed'>
+            In the heart of Homa Bay town, a quiet revolution began to
+            stir—fueled by a shared determination to end the brutal and
+            senseless violence against women and girls in our community. As dawn
+            broke on a crisp Saturday morning, the streets came alive with the
+            steady rhythm of footsteps, each one echoing a powerful message of
+            hope, unity, and defiance.
+          </p>
+
+          <p class='mb-4 text-gray-700 leading-relaxed'>
+            Among the crowd, one figure stood out—you. You chose to walk
+            alongside local organizations and fellow advocates, united in
+            purpose and unwavering in your resolve. This wasn’t just a walk; it
+            was a declaration. A bold affirmation that enough is enough. It was
+            a stand against injustice and a step toward a safer, more equitable
+            world.
+          </p>
+
+          <div class='my-6'>
+            <img
+              src='/gallery/2.jpg'
+              alt='Partnership success'
+              class='rounded w-full object-cover'
+            />
+          </div>
+
+          <p class='mb-4 text-gray-700 leading-relaxed'>
+            As you moved through the streets, banners raised high and voices
+            joined in unison, a wave of emotion surged through you—anger for the
+            lives stolen, sorrow for those who suffered in silence, but above
+            all, hope. Hope that through action, awareness, and solidarity, real
+            change is not only possible but inevitable.
+          </p>
+          <p class='mb-4 text-gray-700 leading-relaxed'>
+            By midday, the march arrived at the town square, where a stage
+            welcomed speeches, songs, and stories. Here, in the heart of the
+            community, you stood among leaders, allies, and survivors to share a
+            vision: a world where every woman and girl lives free from fear. A
+            world shaped not by violence, but by dignity, equity, and respect.
+            But your commitment didn’t end when the march was over.
+          </p>
+          <p class='mb-4 text-gray-700 leading-relaxed'>
+            In the days and weeks that followed, you continued to raise your
+            voice—lobbying for policy reform, educating others, and providing
+            critical support to those affected. Your passion sparked a movement.
+            Others joined the cause, inspired by your example and galvanized by
+            your determination.
+          </p>
+          <p class='mb-4 text-gray-700 leading-relaxed'>
+            And so, the movement grew. From whispered conversations to national
+            discussions, from small gatherings to public rallies, momentum
+            built—transforming personal resolve into a collective force for
+            justice. Today, as we reflect on this journey, we see you for who
+            you are: a catalyst, a changemaker, a beacon of hope. Your courage
+            and compassion remind us all that even in the darkest of times,
+            progress is possible when we walk together.
+          </p>
+
+          <p class='mb-4 font-semibold text-gray-800'>
+            The road ahead may still be long. But with each step we
+            take—together—we move closer to a world where femicide is no longer
+            a headline, but a tragedy of the past.
+          </p>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class='md:col-span-5 lg:col-span-4 space-y-6 mt-8 md:mt-0'>
+          <div class='bg-gray-100 rounded overflow-hidden shadow'>
+            <img
+              src='/gallery/4.jpg'
+              alt='Partnership success'
+              class='w-full object-cover'
+            />
+          </div>
+          <div class='bg-gray-100 rounded overflow-hidden shadow'>
+            <img
+              src='/gallery/6.jpg'
+              alt='Partnership success'
+              class='w-full object-cover'
+            />
+          </div>
+          <div class='bg-gray-100 rounded overflow-hidden shadow'>
+            <img
+              src='/gallery/5.jpg'
+              alt='Partnership success'
+              class='w-full object-cover'
+            />
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

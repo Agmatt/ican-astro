@@ -1,0 +1,137 @@
+---
+// src/layouts/Layout.astro
+import '../styles/global.css';
+import Navbar from '../components/navbar.astro';
+import Footer from '../components/footer.astro';
+import 'aos/dist/aos.css';
+const { title = 'Inuana Community Action Network' } = Astro.props;
+---
+
+<script>
+  import AOS from 'aos';
+  AOS.init({
+    duration: 800,
+    once: true,
+  });
+</script>
+
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>{title}</title>
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap'
+      rel='stylesheet'
+    />
+    <link
+      rel='stylesheet'
+      href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css'
+    />
+
+    <slot name='head' />
+    <!-- This is important! -->
+  </head>
+  <body>
+    <Navbar />
+    <main class='min-h-screen'>
+      <slot />
+    </main>
+    <Footer />
+    <script src='/src/scripts/navbar.js' type='module'></script>
+    <script src='https://unpkg.com/flowbite@latest/dist/flowbite.min.js'
+    ></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const counters = document.querySelectorAll('.counter');
+        const speed = 50;
+
+        const animateCounter = (counter) => {
+          const updateCount = () => {
+            const target = +counter.getAttribute('data-count');
+            const count = +counter.innerText;
+            const increment = Math.ceil(target / speed);
+
+            if (count < target) {
+              counter.innerText = count + increment;
+              requestAnimationFrame(updateCount);
+            } else {
+              counter.innerText = target;
+            }
+          };
+          updateCount();
+        };
+
+        const observer = new IntersectionObserver(
+          (entries, obs) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                obs.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.6 }
+        );
+
+        counters.forEach((counter) => observer.observe(counter));
+      });
+    </script>
+
+    <!-- Cookie Settings -->
+    
+    <!-- Cookie Policy -->
+    <div
+      id='cookie-banner'
+      class='hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 text-gray-700 px-6 py-4 shadow-lg'>
+      <div
+        class='max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4'>
+        <p class='text-sm text-center md:text-left'>
+          We use cookies to improve your experience and analyze site traffic. By
+          clicking "Accept", you agree to our use of cookies. Read our <a
+            href='/privacy-policy'
+            class='underline text-[#074351] hover:text-[#248d87]'
+            >Privacy Policy</a
+          >.
+        </p>
+        <div class='flex gap-2 justify-center md:justify-end'>
+          <button
+            id='acceptCookies'
+            class='bg-[#074351] text-white text-sm font-semibold px-4 py-2 rounded hover:bg-[#055d6c] transition'>
+            Accept
+          </button>
+          <button
+            id='declineCookies'
+            class='bg-gray-200 text-sm font-semibold px-4 py-2 rounded hover:bg-gray-300 transition'>
+            Decline
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', function () {
+        const banner = document.getElementById('cookie-banner');
+        const acceptBtn = document.getElementById('acceptCookies');
+        const declineBtn = document.getElementById('declineCookies');
+
+        if (!localStorage.getItem('ican_cookie_consent')) {
+          banner.classList.remove('hidden');
+        }
+
+        acceptBtn.addEventListener('click', function () {
+          localStorage.setItem('ican_cookie_consent', 'accepted');
+          banner.classList.add('hidden');
+        });
+
+        declineBtn.addEventListener('click', function () {
+          localStorage.setItem('ican_cookie_consent', 'declined');
+          banner.classList.add('hidden');
+        });
+      });
+    </script> 
+  </body>
+</html>

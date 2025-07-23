@@ -1,0 +1,208 @@
+---
+import BaseLayout from '../../layout/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+
+const breadcrumbItems = [
+  { href: '/', label: 'Home' },
+  { href: '/what-we-do', label: 'What We Do' },
+  { href: '/what-we-do/programs', label: 'Programs' },
+];
+---
+
+<BaseLayout title='Programs'>
+  <Breadcrumb items={breadcrumbItems} />
+  <!-- INTRO -->
+  <section class='bg-gray-200 py-16'>
+    <div class='mb-12 text-center max-w-3xl mx-auto' data-aos='fade-up'>
+      <h1 class='text-4xl font-extrabold mb-4 text-[#074351] tracking-tight'>
+        Programs That Change Lives
+      </h1>
+      <p class='text-lg text-gray-700 leading-relaxed'>
+        At ICAN, we don’t just run programs — we ignite change. Every tree
+        planted, every family supported, every skill shared is a step toward a
+        healthier, more resilient community.
+        <br class='hidden sm:block' />
+        From clean environments to access to healthcare and sustainable livelihoods,
+        our work is rooted in dignity, equity, and hope.
+      </p>
+    </div>
+  </section>
+
+  <section class='pt-10'>
+    <div class='max-w-6xl mx-auto px-4'>
+      <!-- Program Blocks -->
+      <article
+        class='grid md:grid-cols-2 gap-10 items-center mb-20 animate-fade-up duration-700 ease-in-out motion-safe:animate-fade-in scroll-mt-12'
+        data-aos='fade-up'>
+        <div>
+          <h2 class='text-2xl font-semibold text-[#185a69] mb-4'>
+            Greening Our Future
+          </h2>
+          <p class='text-gray-700 mb-4'>
+            Our planet needs us. Through tree-planting drives and community
+            cleanups, we’re restoring local ecosystems. In 2023, we planted <strong
+              >50 native trees</strong
+            >, creating habitats for wildlife and cleaner air.
+          </p>
+          <p class='text-gray-700'>
+            We also educate schools and families about recycling and sustainable
+            practices. These efforts ensure a healthier environment for future
+            generations.
+          </p>
+        </div>
+        <figure>
+          <img
+            src='/img/tree-min.jpg'
+            alt='Volunteers planting trees in local schoolyard'
+            class='w-full h-auto shadow-lg'
+          />
+        </figure>
+      </article>
+
+      <article
+        class='grid md:grid-cols-2 gap-10 items-center mb-20 animate-fade-up duration-700 ease-in-out delay-100 motion-safe:animate-fade-in scroll-mt-12'
+        data-aos='fade-up'>
+        <figure class='order-2 md:order-1'>
+          <img
+            src='/img/charity-min.jpg'
+            alt='Community members donating supplies'
+            class='w-full h-auto shadow-lg'
+          />
+        </figure>
+        <div class='order-1 md:order-2'>
+          <h2 class='text-2xl font-semibold text-[#185a69] mb-4'>
+            Community Engagements
+          </h2>
+          <p class='text-gray-700 mb-4'>
+            We believe in fostering dignity and hope. Our programs connect
+            neighbors, encouraging community members to give back. By working
+            together, we’re not just addressing immediate needs but building a
+            stronger, more resilient community.
+          </p>
+          <p class='text-gray-700 mb-4'>
+            Join us at our next donation drive and see the impact of collective
+            kindness firsthand.
+          </p>
+          <a
+            href='/about-us/contact'
+            class='inline-block btn-primary px-5 py-2 rounded-md text-sm transition'
+            >Contact Us</a
+          >
+        </div>
+      </article>
+
+      <article
+        class='grid md:grid-cols-2 gap-10 items-center mb-20 animate-fade-up duration-700 ease-in-out delay-200 motion-safe:animate-fade-in scroll-mt-12'
+        data-aos='fade-up'>
+        <div>
+          <h2 class='text-2xl font-semibold text-[#185a69] mb-4'>
+            Health Projects
+          </h2>
+          <p class='text-gray-700 mb-4'>
+            Access to healthcare is a right, not a privilege. Our health
+            projects bring free medical camps, vaccination drives, and wellness
+            workshops to underserved areas.
+          </p>
+          <p class='text-gray-700 mb-4'>
+            We partner with local clinics and volunteers to deliver quality care
+            and education. From blood pressure screenings to nutrition classes,
+            we empower our community to live healthier lives.
+          </p>
+          <p class='text-gray-700 mb-4'>
+            Volunteer at our next health camp and help us make wellness
+            accessible to everyone.
+          </p>
+          <a
+            href='/about-us/work-with-us'
+            class='inline-block btn-primary px-5 py-2 rounded-md text-sm transition'
+            >Explore Our Openings →</a
+          >
+        </div>
+        <figure>
+          <img
+            src='/img/pads-min.jpg'
+            alt='Free health camp with volunteers attending patients'
+            class='w-full h-auto shadow-lg'
+          />
+        </figure>
+      </article>
+
+      <article
+        class='grid md:grid-cols-2 gap-10 items-center animate-fade-up duration-700 ease-in-out delay-300 motion-safe:animate-fade-in scroll-mt-12'
+        data-aos='fade-up'>
+        <figure class='order-2 md:order-1'>
+          <img
+            src='/img/sw1.jpg'
+            alt='Women showcasing handcrafted products from ICAN training'
+            class='w-full h-auto shadow-lg'
+          />
+        </figure>
+        <div class='order-1 md:order-2'>
+          <h2 class='text-2xl font-semibold text-[#185a69] mb-4'>
+            Empowering Livelihood
+          </h2>
+          <p class='text-gray-700 mb-4'>
+            Financial independence transforms lives. Our income-generating
+            projects provide skills training and microfinance to help
+            individuals start small businesses. We envision supporting over <strong
+              >50 entrepreneurs</strong
+            >.
+          </p>
+          <p class='text-gray-700 mb-4'>
+            We offer workshops on budgeting and marketing, ensuring long-term
+            success. These initiatives not only boost incomes but also
+            strengthen community bonds.
+          </p>
+          <p class='text-gray-700 mb-4'>
+            Support our training session and help someone build a brighter
+            future.
+          </p>
+          <a
+            href='/what-we-do/ubuntu-soko'
+            class='inline-block btn-primary px-5 py-2 rounded-md text-sm transition'
+            >Explore Our Livelihood Program</a
+          >
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Impact Stats with Counters -->
+  <section class='mt-20 text-center bg-green-100 py-16'>
+    <h2 class='text-3xl font-bold text-[#185a69] mb-6'>Impact Highlights</h2>
+    <div class='grid grid-cols-2 sm:grid-cols-4 gap-8' id='impact-counters'>
+      <div>
+        <p
+          class='text-4xl font-extrabold text-[#185a69] counter'
+          data-count='50'>
+          0
+        </p>
+        <p class='text-gray-600'>Trees Planted</p>
+      </div>
+      <div>
+        <p
+          class='text-4xl font-extrabold text-[#185a69] counter'
+          data-count='100'>
+          0
+        </p>
+        <p class='text-gray-600'>Families Supported</p>
+      </div>
+      <div>
+        <p
+          class='text-4xl font-extrabold text-[#185a69] counter'
+          data-count='200'>
+          0
+        </p>
+        <p class='text-gray-600'>Health Checks</p>
+      </div>
+      <div>
+        <p
+          class='text-4xl font-extrabold text-[#185a69] counter'
+          data-count='50'>
+          0
+        </p>
+        <p class='text-gray-600'>Businesses Trained</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

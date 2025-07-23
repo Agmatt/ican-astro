@@ -1,0 +1,140 @@
+---
+import BaseLayout from '../../layout/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+
+const breadcrumbItems = [
+  { href: '/', label: 'Home' },
+  { href: '/about-us', label: 'About us' },
+  { href: '/about-us/work-with-us', label: 'Work with us' },
+];
+---
+
+<BaseLayout title='Work With Us'>
+  <Breadcrumb items={breadcrumbItems} />
+  <main>
+    <section class='bg-[#074351] text-white py-20 text-center px-6'>
+      <div>
+        <h1 class='text-4xl md:text-5xl text-white font-bold mb-4'>
+          Work With Us
+        </h1>
+        <p class='text-lg max-w-3xl mx-auto'>
+          Join a growing movement that's changing lives across Homa Bay and
+          beyond. Whether you're a changemaker, specialist, or student—your
+          skills can spark lasting impact.
+        </p>
+      </div>
+    </section>
+
+    <!-- Engage section -->
+    <section class='py-16 px-4 lg:px-24 bg-gray-100'>
+      <h2 class='text-3xl font-bold text-[#074351] text-center mb-10'>
+        How You Can Join
+      </h2>
+      <div class='grid md:grid-cols-2 gap-8 max-w-5xl mx-auto'>
+        <!-- Job Opportunities -->
+        <div
+          class='bg-white p-6 rounded-xl shadow hover:shadow-lg transition'
+          data-aos='fade-up'>
+          <svg
+            class='w-10 h-10 text-[#074351] mb-4'
+            fill='none'
+            stroke='currentColor'
+            stroke-width='1.5'
+            viewBox='0 0 24 24'
+            ><path
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              d='M4 6h16M4 10h16M4 14h16M4 18h16'></path></svg
+          >
+          <h3 class='text-xl font-semibold mb-2'>Open Roles</h3>
+          <p>
+            Apply for leadership, field, or admin roles when available. We're
+            building a strong, inclusive team.
+          </p>
+        </div>
+
+        <!-- Volunteering -->
+        <div
+          class='bg-white p-6 rounded-xl shadow hover:shadow-lg transition'
+          data-aos='fade-up'>
+          <svg
+            class='w-10 h-10 text-[#074351] mb-4'
+            fill='none'
+            stroke='currentColor'
+            stroke-width='1.5'
+            viewBox='0 0 24 24'
+            ><path
+              d='M5 13l4 4L19 7'
+              stroke-linecap='round'
+              stroke-linejoin='round'></path></svg
+          >
+          <h3 class='text-xl font-semibold mb-2'>Volunteer With Us</h3>
+          <p>
+            Join as a short-term or long-term volunteer—on the ground or
+            remotely. Every hour counts.
+          </p>
+        </div>
+
+        <!-- Consultancy -->
+        <div
+          class='bg-white p-6 rounded-xl shadow hover:shadow-lg transition'
+          data-aos='fade-up'>
+          <svg
+            class='w-10 h-10 text-[#074351] mb-4'
+            fill='none'
+            stroke='currentColor'
+            stroke-width='1.5'
+            viewBox='0 0 24 24'
+            ><path d='M12 20h9' stroke-linecap='round' stroke-linejoin='round'
+            ></path><path
+              d='M16.5 3.5a5.5 5.5 0 010 11H12v5h-1.5v-5h-2V9h2V4.5H12V9h4.5a3.5 3.5 0 100-7H12v4.5'
+            ></path></svg
+          >
+          <h3 class='text-xl font-semibold mb-2'>Consult with ICAN</h3>
+          <p>
+            Offer your technical or sectoral expertise to help scale specific
+            programs or advise on strategy.
+          </p>
+        </div>
+
+        <!-- Internships -->
+        <div
+          class='bg-white p-6 rounded-xl shadow hover:shadow-lg transition'
+          data-aos='fade-up'>
+          <svg
+            class='w-10 h-10 text-[#074351] mb-4'
+            fill='none'
+            stroke='currentColor'
+            stroke-width='1.5'
+            viewBox='0 0 24 24'
+            ><path
+              d='M5 3v4h14V3H5zM3 7v11h18V7H3z'
+              stroke-linecap='round'
+              stroke-linejoin='round'></path></svg
+          >
+          <h3 class='text-xl font-semibold mb-2'>Student Involvement</h3>
+          <p>
+            We offer mentorship to students in public health, environment, or
+            development.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section
+      class='py-16 text-[#074351] bg-[#b9bc23]  text-center px-6'
+      data-aos='fade-up'>
+      <h3 class='text-3xl font-bold mb-4'>Ready to Create Impact?</h3>
+      <p class='text-lg mb-6 max-w-2xl mx-auto'>
+        Start your journey with ICAN—whether through work, volunteering, or
+        mentorship. Let’s co-create change.
+      </p>
+      <a
+        href='/about-us/opportunities'
+        class='inline-block bg-white text-[#074351] font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition'>
+        Our Opennings
+      </a>
+    </section>
+  </main>
+</BaseLayout>

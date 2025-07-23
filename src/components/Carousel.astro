@@ -1,0 +1,40 @@
+---
+// Carousel.astro
+import { Swiper, SwiperSlide } from 'swiper/astro';
+
+// Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+---
+
+<section class='w-full max-w-5xl mx-auto px-4 my-10'>
+  <Swiper
+    spaceBetween={20}
+    slidesPerView={1}
+    pagination={{ clickable: true }}
+    navigation={true}
+    class='h-[300px] md:h-[400px] rounded-lg overflow-hidden'>
+    <SwiperSlide>
+      <img
+        src='/src/assets/img/charity-min.jpg'
+        alt='Slide 1'
+        class='w-full h-full object-cover'
+      />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img
+        src='/src/assets/img/cleaning-min.jpg'
+        alt='Slide 2'
+        class='w-full h-full object-cover'
+      />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img
+        src='/src/assets/img/CD1-min.jpg'
+        alt='Slide 3'
+        class='w-full h-full object-cover'
+      />
+    </SwiperSlide>
+  </Swiper>
+</section>

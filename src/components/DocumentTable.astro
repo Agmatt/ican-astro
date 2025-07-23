@@ -1,0 +1,59 @@
+---
+// Props: documents = array of { name, description, viewUrl, downloadUrl }
+const { documents = [] } = Astro.props;
+---
+
+<div class='overflow-x-auto rounded-xl shadow-md'>
+  <table class='min-w-full bg-white border border-gray-200 text-sm text-left'>
+    <thead class='bg-gray-100 text-gray-700 uppercase text-xs'>
+      <tr>
+        <th class='px-6 py-4'>#</th>
+        <th class='px-6 py-4'>Form Name</th>
+        <th class='px-6 py-4'>Description</th>
+        <th class='px-6 py-4 text-center'>Actions</th>
+      </tr>
+    </thead>
+    <tbody class='divide-y divide-gray-100'>
+      {
+        documents.map((doc, index) => (
+          <tr class='hover:bg-[#f1fbfd] transition duration-200'>
+            <td class='px-6 py-4'>{index + 1}</td>
+            <td class='px-6 py-4 font-medium text-gray-800'>{doc.name}</td>
+            <td class='px-6 py-4 text-gray-600'>{doc.description}</td>
+            <td class='px-6 py-4 text-center space-x-4'>
+              <a
+                href={doc.viewUrl}
+                target='_blank'
+                class='inline-flex items-center gap-1 text-[#074351] hover:underline font-medium'>
+                <svg
+                  class='w-5 h-5'
+                  fill='none'
+                  stroke='currentColor'
+                  stroke-width='1.8'
+                  viewBox='0 0 24 24'>
+                  <path d='M1.5 12s4.5-7.5 10.5-7.5S22.5 12 22.5 12 18 19.5 12 19.5 1.5 12 1.5 12z' />
+                  <circle cx='12' cy='12' r='3' />
+                </svg>
+                View
+              </a>
+              <a
+                href={doc.downloadUrl}
+                target='_blank'
+                class='inline-flex items-center gap-1 text-[#074351] hover:underline font-medium'>
+                <svg
+                  class='w-5 h-5'
+                  fill='none'
+                  stroke='currentColor'
+                  stroke-width='1.8'
+                  viewBox='0 0 24 24'>
+                  <path d='M12 3v12m0 0l-4-4m4 4l4-4m-9 9h10' />
+                </svg>
+                Download
+              </a>
+            </td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</div>

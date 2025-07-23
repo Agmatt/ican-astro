@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../../../layout/BaseLayout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+
+const breadcrumbItems = [
+  { href: '/', label: 'Home' },
+  { href: '/what-we-do', label: 'What We Do' },
+  { href: '/what-we-do/projects', label: 'Projects' },
+  { href: '', label: 'Changing Lives' },
+];
+---
+
+<BaseLayout title='Changing Lives'>
+  <Breadcrumb items={breadcrumbItems} />
+
+  <section class='py-13'>
+    <div class='max-w-7xl mx-auto px-8'>
+      <div class='grid grid-cols-1 md:grid-cols-12 gap-8'>
+        <!-- Main blog content -->
+        <main class='md:col-span-7 lg:col-span-8'>
+          <h1 class='text-4xl font-bold mb-4'>Changing Lives:</h1>
+          <p class='text-2xl font-semibold mb-6'>
+            One Pad at a Time: Inside Our School Sanitary Drive
+          </p>
+
+          <p class='mb-4 text-gray-700 leading-relaxed'>
+            Picture this: a classroom full of bright young girls, their eyes
+            lighting up not just with curiosity—but with confidence. That was
+            the scene at our recent school sanitary pad drive, where something
+            powerful happened. We didn’t just hand out supplies—we sparked
+            conversations, challenged taboos, and helped transform the way these
+            girls see themselves and their futures.
+          </p>
+
+          <p class='mb-4 text-gray-700 leading-relaxed'>
+            The day began with an interactive workshop that turned shy glances
+            and hushed whispers about menstruation into open, fearless dialogue.
+            With the help of our incredible team and dedicated volunteers, we
+            created a safe, judgment-free space where questions were encouraged
+            and myths were debunked. The atmosphere was electric as girls began
+            to realize: periods aren’t something to be ashamed of—they’re a
+            natural, strong, and shared part of womanhood.
+          </p>
+
+          <div class='my-6'>
+            <img
+              src='/gallery/17.jpg'
+              alt='Partnership success'
+              class='rounded w-full object-cover'
+            />
+          </div>
+
+          <p class='mb-4 text-gray-700 leading-relaxed'>
+            One girl who barely whispered her name at the start of the day came
+            up to us later, glowing with pride. “I used to think periods were
+            something to hide,” she said. “Now I feel proud.” That’s the kind of
+            change we live for—real, lasting impact made one conversation, one
+            smile, one pad at a time.
+          </p>
+          <p class='mb-4 text-gray-700 leading-relaxed'>
+            Join us. Whether it’s through donating, volunteering, or simply
+            sharing this story, you can be part of the change. Let’s rewrite the
+            narrative around menstrual health—together.
+          </p>
+
+          <p class='mb-4 font-semibold text-gray-800'>
+            Because every girl deserves to feel proud. Every girl deserves to
+            stay in school. And every girl deserves the chance to shine.
+          </p>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class='md:col-span-5 lg:col-span-4 space-y-6 mt-8 md:mt-0'>
+          <div class='bg-gray-100 rounded overflow-hidden shadow'>
+            <img
+              src='/gallery/32.jpg'
+              alt='Partnership success'
+              class='w-full object-cover'
+            />
+          </div>
+          <div class='bg-gray-100 rounded overflow-hidden shadow'>
+            <img
+              src='/gallery/31.jpg'
+              alt='Partnership success'
+              class='w-full object-cover'
+            />
+          </div>
+          <div class='bg-gray-100 rounded overflow-hidden shadow'>
+            <img
+              src='/gallery/37.jpg'
+              alt='Partnership success'
+              class='w-full object-cover'
+            />
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

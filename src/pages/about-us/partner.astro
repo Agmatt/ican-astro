@@ -1,0 +1,196 @@
+---
+import BaseLayout from '../../layout/BaseLayout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+
+const breadcrumbItems = [
+  { href: '/', label: 'Home' },
+  { href: '/about-us', label: 'About us' },
+  { href: '/about-us/partners-and-donors', label: 'Partner' },
+];
+---
+<BaseLayout title='Partner'>
+    <Breadcrumb items={breadcrumbItems} />
+
+  <section class='bg-gray-50 py-16 px-4 sm:px-6 lg:px-20'>
+    <div class='max-w-7xl mx-auto text-center mb-12'>
+      <h2 class='text-4xl font-bold text-[#074351] mb-4'>
+        Ways to Partner with ICAN
+      </h2>
+      <p class='text-gray-700 text-lg'>
+        Together, we can make sustainable change in Homa Bay and beyond. Here’s
+        how you can partner with us.
+      </p>
+    </div>
+
+    <div class='grid gap-8 md:grid-cols-2 lg:grid-cols-3'>
+      <!-- Card -->
+      <div
+        class='bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all'>
+        <div class='flex items-center mb-4'>
+          <!-- Funding SVG -->
+          <svg
+            class='w-8 h-8 text-[#074351] mr-3'
+            fill='none'
+            stroke='currentColor'
+            stroke-width='2'
+            viewBox='0 0 24 24'>
+            <path
+              d='M12 8c-2.21 0-4 .895-4 2s1.79 2 4 2 4 .895 4 2-1.79 2-4 2m0-8v10m0-12a9 9 0 100 18 9 9 0 000-18z'
+            ></path>
+          </svg>
+          <h3 class='text-xl font-semibold text-[#074351]'>Funding & Grants</h3>
+        </div>
+        <p class='text-gray-600'>
+          Support our programs through direct donations, grants, or project
+          sponsorships.
+        </p>
+      </div>
+
+      <!-- Strategic Collaborations -->
+      <div
+        class='bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all'>
+        <div class='flex items-center mb-4'>
+          <!-- Collaboration SVG -->
+          <svg
+            class='w-8 h-8 text-[#074351] mr-3'
+            fill='none'
+            stroke='currentColor'
+            stroke-width='2'
+            viewBox='0 0 24 24'>
+            <path
+              d='M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v7'
+            ></path>
+          </svg>
+          <h3 class='text-xl font-semibold text-[#074351]'>
+            Strategic Collaborations
+          </h3>
+        </div>
+        <p class='text-gray-600'>
+          Partner with us to co-create impactful solutions in health,
+          environment, or business.
+        </p>
+      </div>
+
+      <!-- Technical Support -->
+      <div
+        class='bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all'>
+        <div class='flex items-center mb-4'>
+          <!-- Tools SVG -->
+          <svg
+            class='w-8 h-8 text-[#074351] mr-3'
+            fill='none'
+            stroke='currentColor'
+            stroke-width='2'
+            viewBox='0 0 24 24'>
+            <path
+              d='M15 7h.01M6 12l1 1 4-4m2-1a5 5 0 105 5l4 4m-9-5a5 5 0 11-5-5 5 5 0 015 5z'
+            ></path>
+          </svg>
+          <h3 class='text-xl font-semibold text-[#074351]'>
+            Technical Support
+          </h3>
+        </div>
+        <p class='text-gray-600'>
+          Share your expertise or volunteer time to support our
+          community-centered work.
+        </p>
+      </div>
+
+      <!-- CSR Partnerships -->
+      <div
+        class='bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all'>
+        <div class='flex items-center mb-4'>
+          <!-- Briefcase SVG -->
+          <svg
+            class='w-8 h-8 text-[#074351] mr-3'
+            fill='none'
+            stroke='currentColor'
+            stroke-width='2'
+            viewBox='0 0 24 24'>
+            <path
+              d='M4 7V6a2 2 0 012-2h2a2 2 0 012 2v1m0 0h4m-4 0v1m4-1v1M4 7h16a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V9a2 2 0 012-2z'
+            ></path>
+          </svg>
+          <h3 class='text-xl font-semibold text-[#074351]'>CSR Partnerships</h3>
+        </div>
+        <p class='text-gray-600'>
+          Join us through your company’s CSR initiatives to co-deliver lasting
+          community impact.
+        </p>
+      </div>
+
+      <!-- In-Kind Support -->
+      <div
+        class='bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all'>
+        <div class='flex items-center mb-4'>
+          <!-- Gift SVG -->
+          <svg
+            class='w-8 h-8 text-[#074351] mr-3'
+            fill='none'
+            stroke='currentColor'
+            stroke-width='2'
+            viewBox='0 0 24 24'>
+            <path
+              d='M20 12v8a2 2 0 01-2 2H6a2 2 0 01-2-2v-8m16 0H4m16 0V6a2 2 0 00-2-2h-3.5a1.5 1.5 0 100 3H20zM4 12V6a2 2 0 012-2h3.5a1.5 1.5 0 110 3H4z'
+            ></path>
+          </svg>
+          <h3 class='text-xl font-semibold text-[#074351]'>
+            In-Kind Donations
+          </h3>
+        </div>
+        <p class='text-gray-600'>
+          Donate medical supplies, seedlings, services, or digital tools to help
+          us grow.
+        </p>
+      </div>
+
+      <!-- Media Partners -->
+      <div
+        class='bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all'>
+        <div class='flex items-center mb-4'>
+          <!-- Megaphone SVG -->
+          <svg
+            class='w-8 h-8 text-[#074351] mr-3'
+            fill='none'
+            stroke='currentColor'
+            stroke-width='2'
+            viewBox='0 0 24 24'>
+            <path
+              d='M3 10v4m0 0a9 9 0 009 9v-9a9 9 0 00-9-9v9zm18 0a9 9 0 01-9 9v-9a9 9 0 019-9v9z'
+            ></path>
+          </svg>
+          <h3 class='text-xl font-semibold text-[#074351]'>
+            Media & Awareness
+          </h3>
+        </div>
+        <p class='text-gray-600'>
+          Amplify our voice by sharing stories, campaigns, and community
+          milestones.
+        </p>
+      </div>
+
+      <!-- Tech Partners -->
+      <div
+        class='bg-white p-6 rounded-2xl shadow hover:shadow-lg transition-all'>
+        <div class='flex items-center mb-4'>
+          <!-- Code SVG -->
+          <svg
+            class='w-8 h-8 text-[#074351] mr-3'
+            fill='none'
+            stroke='currentColor'
+            stroke-width='2'
+            viewBox='0 0 24 24'>
+            <path d='M16 18l6-6-6-6M8 6l-6 6 6 6'></path>
+          </svg>
+          <h3 class='text-xl font-semibold text-[#074351]'>
+            Technology & Innovation
+          </h3>
+        </div>
+        <p class='text-gray-600'>
+          Help us develop tools, platforms, or mobile solutions for rural
+          development.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

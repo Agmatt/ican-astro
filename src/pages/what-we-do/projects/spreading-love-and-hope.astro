@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../../../layout/BaseLayout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+
+const breadcrumbItems = [
+  { href: '/', label: 'Home' },
+  { href: '/what-we-do', label: 'What We Do' },
+  { href: '/what-we-do/projects', label: 'Projects' },
+  { href: '', label: 'Spreading Love and Hope' },
+];
+---
+
+<BaseLayout title='Spreading Love and Hope'>
+  <Breadcrumb items={breadcrumbItems} />
+
+  <section class='py-13'>
+    <div class='max-w-7xl mx-auto px-8'>
+      <div class='grid grid-cols-1 md:grid-cols-12 gap-8'>
+        <!-- Main blog content -->
+        <main class='md:col-span-7 lg:col-span-8'>
+          <h1 class='text-4xl hist font-bold mb-4'>Spreading Love and Hope:</h1>
+          <p class='text-2xl font-semibold mb-6'>A Success Story</p>
+
+          <p class='mb-4 text-gray-700 leading-relaxed'>
+            In a remarkable demonstration of compassion and community spirit,
+            the Inuana Community Action Network (ICAN) recently organized a
+            donation drive themed “Spreading Love and Hope” at the KOST
+            Children’s Home in Homa Bay Town. The event served as a source of
+            light and encouragement for the children, staff, and the wider
+            community.
+          </p>
+
+          <p class='mb-4 text-gray-700 leading-relaxed'>
+            The primary goal of the initiative was to provide essential support
+            and uplift the well-being of the children residing at KOST. Thanks
+            to the collective effort of generous donors and dedicated
+            volunteers, ICAN distributed a range of vital items, including food
+            supplies, sanitary products, clothing, and school materials. These
+            contributions not only addressed immediate needs but also reinforced
+            a sense of dignity, care, and belonging among the children.
+          </p>
+
+          <div class='my-6'>
+            <img
+              src='/gallery/22.jpg'
+              alt='Partnership success'
+              class='rounded w-full object-cover'
+            />
+          </div>
+
+          <p class='mb-4 text-gray-700 leading-relaxed'>
+            In addition to the donation drive, the event featured a
+            tree-planting activity—an effort that underscored the importance of
+            environmental responsibility. This hands-on initiative not only
+            enhanced the natural beauty of the children’s home but also
+            instilled values of environmental stewardship among the young
+            residents.
+          </p>
+          <p class='mb-4 text-gray-700 leading-relaxed'>
+            Beyond the tangible items, the drive offered something even more
+            powerful: hope. It brought joy to the faces of the children, created
+            meaningful connections, and served as a reminder of the impact that
+            kindness, solidarity, and community-driven action can have on the
+            lives of others.
+          </p>
+          <p class='mb-4 text-gray-700 leading-relaxed'>
+            Thanks to the unwavering commitment of ICAN and the generosity of
+            its supporters, the children at KOST now have more than just
+            essential resources—they have renewed confidence in their future and
+            the assurance that they are valued and supported by a caring
+            community.
+          </p>
+          <p class='mb-4 text-gray-700 leading-relaxed'>
+            This successful initiative stands as a compelling example of what
+            can be achieved through unity, compassion, and purpose. As ICAN
+            continues its mission, it remains dedicated to creating lasting
+            change, one act of love and hope at a time.
+          </p>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class='md:col-span-5 lg:col-span-4 space-y-6 mt-8 md:mt-0'>
+          <div class='bg-gray-100 rounded overflow-hidden shadow'>
+            <img
+              src='/gallery/10.jpg'
+              alt='Partnership success'
+              class='w-full object-cover'
+            />
+          </div>
+          <div class='bg-gray-100 rounded overflow-hidden shadow'>
+            <img
+              src='/gallery/20.jpg'
+              alt='Partnership success'
+              class='w-full object-cover'
+            />
+          </div>
+          <div class='bg-gray-100 rounded overflow-hidden shadow'>
+            <img
+              src='/gallery/21.jpg'
+              alt='Partnership success'
+              class='w-full object-cover'
+            />
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
