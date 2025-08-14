@@ -5,6 +5,7 @@
 @layer base {
   body {
     font-family: 'Cabin', sans-serif;
+    overflow-x: hidden
   }
   h1, h2, h3, h4, h5, h6 {
     color: #185a69;
@@ -19,32 +20,10 @@
     @apply inline-block px-5 py-2 rounded-lg bg-[#b9bc23] hover:bg-[#248d87] hover:text-white transition duration-700 ease-in-out shadow;
   }
   .btn-tertiary {
-    @apply inline-block px-5 py-2 rounded-lg bg-[#b9bc23] text-white  hover:bg-[#a3a622] font-medium hover:text-white transition duration-700 ease-in-out shadow;
+    @apply inline-block px-5 py-2 rounded-lg bg-[#b9bc23] text-gray-950  hover:bg-[#a3a622] font-medium hover:text-black transition duration-700 ease-in-out shadow;
   }
 }
 
-/* @layer components {
-  .navbar a {
-    @apply relative inline-block;
-  }
-
-  .navbar a::before {
-    content: '';
-    position: absolute;
-    background-color: #bfb926;
-    height: 4px;
-    width: 100%;
-    left: 0;
-    bottom: -4px;
-    margin: 0 auto;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-  }
-
-  .navbar a:hover::before {
-    opacity: 1;
-  }
-} */
 
 @layer components {
   .hist {
@@ -89,9 +68,10 @@
     position: absolute;
     background-color: #185a69;
     height: 4px;
-    width: 50%;
-    left: 25%;
-    bottom: 0;
+    width: 8%;
+    left: 20%;
+    right: 20%;
+    bottom: -35px;
     margin: auto;
   }
 }
@@ -129,3 +109,4 @@
     animation: scroll 30s linear infinite;
   }
 }
+

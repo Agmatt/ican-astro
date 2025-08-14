@@ -1,0 +1,202 @@
+---
+import BaseLayout from '../../layout/BaseLayout.astro';
+
+import 'aos/dist/aos.css';
+---
+
+<BaseLayout title='Environmental Sustainability'>
+  <!-- Hero Section -->
+  <section
+    class='relative bg-cover bg-center py-28 text-white'
+    style="background-image: url('/gallery/45.jpg');">
+    <div class='absolute inset-0 bg-black/50'></div>
+    <div
+      class='relative z-10 text-center max-w-4xl mx-auto px-6'
+      data-aos='fade-down'>
+      <img
+        src='/sdg/13.png'
+        alt='SDG 13'
+        class='mx-auto w-28 h-28 mb-6 drop-shadow-lg'
+      />
+      <h1 class='text-5xl text-white font-bold mb-4'>
+        Environmental Sustainability
+      </h1>
+      <p class='text-lg'>
+        Promoting conservation, climate resilience, and sustainable living for a
+        greener Homa Bay.
+      </p>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class='py-16 px-6 sm:px-12 lg:px-20 bg-gray-100'>
+    <div class='grid lg:grid-cols-2 gap-10 items-center'>
+      <div data-aos='fade-right'>
+        <h2 class='text-3xl font-bold text-[#074251]-700 mb-4'>Our Goal</h2>
+        <p class='text-gray-700 leading-relaxed'>
+          To promote environmental conservation and sustainability in rural
+          communities, ensuring that future generations inherit a healthy
+          planet.
+        </p>
+        <ul class='mt-6 space-y-3 list-disc list-inside text-gray-700'>
+          <li>Tree planting campaigns and environmental clean-ups.</li>
+          <li>Collaboration with environmental NGOs and government bodies.</li>
+          <li>Community education on sustainable practices.</li>
+        </ul>
+      </div>
+      <img
+        src='/gallery/44.jpg'
+        alt='Tree planting'
+        class='w-full object-contain h-auto'
+        data-aos='zoom-in'
+      />
+    </div>
+  </section>
+
+  <!-- Key Initiatives -->
+  <section class='bg-[#f7fdf8] py-16 px-6 sm:px-12 lg:px-20'>
+    <h2
+      class='text-3xl font-bold text-[#074251]-700 mb-10 text-center'
+      data-aos='fade-up'>
+      Key Initiatives
+    </h2>
+    <div class='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+      <div
+        class='p-6 bg-white rounded-xl shadow hover:shadow-lg transition'
+        data-aos='fade-up'>
+        <h3 class='font-semibold text-lg text-[#074251]-700 mb-2'>
+          Tree Planting Campaigns
+        </h3>
+        <p class='text-gray-600'>
+          Restoring degraded lands, riverbanks, and public spaces with
+          indigenous species while engaging the community.
+        </p>
+      </div>
+      <div
+        class='p-6 bg-white rounded-xl shadow hover:shadow-lg transition'
+        data-aos='fade-up'>
+        <h3 class='font-semibold text-lg text-[#074251]-700 mb-2'>
+          Environmental Clean-ups
+        </h3>
+        <p class='text-gray-600'>
+          Reducing pollution, improving sanitation, and enhancing public space
+          beauty through organized drives.
+        </p>
+      </div>
+      <div
+        class='p-6 bg-white rounded-xl shadow hover:shadow-lg transition'
+        data-aos='fade-up'>
+        <h3 class='font-semibold text-lg text-[#074251]-700 mb-2'>
+          Partnerships for Impact
+        </h3>
+        <p class='text-gray-600'>
+          Working with NGOs, CBOs, and government agencies for policy alignment
+          and resource sharing.
+        </p>
+      </div>
+      <div
+        class='p-6 bg-white rounded-xl shadow hover:shadow-lg transition'
+        data-aos='fade-up'>
+        <h3 class='font-semibold text-lg text-[#074251]-700 mb-2'>
+          Sustainable Practices
+        </h3>
+        <p class='text-gray-600'>
+          Educating on sustainable farming, water conservation, and waste
+          management for long-term change.
+        </p>
+      </div>
+      <div
+        class='p-6 bg-white rounded-xl shadow hover:shadow-lg transition'
+        data-aos='fade-up'>
+        <h3 class='font-semibold text-lg text-[#074251]-700 mb-2'>
+          Youth Engagement
+        </h3>
+        <p class='text-gray-600'>
+          Eco-clubs, school programs, and interactive learning to inspire the
+          next generation of environmental stewards.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SDG Alignment -->
+  <section class='py-16 px-6 sm:px-12 lg:px-20 bg-white'>
+    <h2
+      class='text-3xl font-bold text-[#074251]-700 mb-10 text-center'
+      data-aos='fade-up'>
+      Connected Sustainable Development Goals
+    </h2>
+    <div class='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8'>
+      {
+        [
+          {
+            img: '/sdg/13.png',
+            title: 'Climate Action',
+            desc: 'Combating climate change impacts.',
+          },
+          {
+            img: '/sdg/15.png',
+            title: 'Life on Land',
+            desc: 'Protecting and restoring ecosystems.',
+          },
+          {
+            img: '/sdg/12.png',
+            title: 'Responsible Consumption',
+            desc: 'Promoting sustainable resource use.',
+          },
+          {
+            img: '/sdg/06.png',
+            title: 'Clean Water & Sanitation',
+            desc: 'Safeguarding water sources.',
+          },
+          {
+            img: '/sdg/14.png',
+            title: 'Life Below Water',
+            desc: 'Protecting aquatic life through shoreline clean-ups.',
+          },
+          {
+            img: '/sdg/17.png',
+            title: 'Partnerships',
+            desc: 'Collaborating for greater impact.',
+          },
+        ].map((sdg) => (
+          <div
+            class='text-center shadow hover:scale-105 hover:shadow-lg transition'
+            data-aos='zoom-in'>
+            <img src={sdg.img} alt={sdg.title} class='w-full h-auto' />
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Outcomes -->
+  <section class='bg-green-100 py-16 px-6 sm:px-12 lg:px-20 text-center'>
+    <h2 class='text-3xl font-bold text-[#074251]-800 mb-6' data-aos='fade-up'>
+      Expected Outcomes
+    </h2>
+    <p class='max-w-3xl mx-auto text-gray-700 mb-10' data-aos='fade-up'>
+      Through tree planting, clean-up drives, education, and partnerships, ICAN
+      aims to create a cleaner, greener, and more resilient environment for all.
+    </p>
+    <div class='grid sm:grid-cols-3 gap-8' data-aos='zoom-in'>
+      <div class='p-6 bg-white rounded-xl shadow-lg'>
+        <h3 class='text-2xl font-bold text-[#074251]-700'>+10,000</h3>
+        <p class='text-gray-600'>Trees Planted</p>
+      </div>
+      <div class='p-6 bg-white rounded-xl shadow-lg'>
+        <h3 class='text-2xl font-bold text-[#074251]-700'>50+</h3>
+        <p class='text-gray-600'>Clean-up Drives</p>
+      </div>
+      <div class='p-6 bg-white rounded-xl shadow-lg'>
+        <h3 class='text-2xl font-bold text-[#074251]-700'>20+</h3>
+        <p class='text-gray-600'>Community Workshops</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    import AOS from 'aos';
+    AOS.init({ duration: 900, once: true, easing: 'ease-in-out' });
+  </script>
+</BaseLayout>

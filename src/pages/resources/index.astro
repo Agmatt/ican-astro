@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layout/BaseLayout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
-
+import { ArrowRight } from 'lucide-react';
 const breadcrumbItems = [
   { href: '/', label: 'Home' },
   { href: '/resources', label: 'Resources' },
@@ -9,100 +9,86 @@ const breadcrumbItems = [
 ---
 
 <BaseLayout title='Resources'>
-  <Breadcrumb items={breadcrumbItems} />;
-
-  <!-- Info -->
-  <section class='bg-white pt-3 pb-10 px-4 sm:px-8 lg:px-24'>
-    <div class='max-w-4xl mx-auto text-center'>
-      <h1 class='text-4xl font-bold mb-6'>Resources</h1>
-      <p class='text-lg text-gray-600 mb-8 leading-relaxed'>
-        Welcome to ICAN’s resource center — a central place where you can access
-        key information, updates, and tools that support our mission. Whether
-        you’re looking for the latest news, official documents, or how to join
-        our community, you’re in the right place.
+  <Breadcrumb items={breadcrumbItems} />
+  <section class='py-16 px-4 lg:px-24 text-white bg-[#248d87]'>
+    <div class='max-w-6xl mx-auto text-center mb-12' data-aos='fade-up'>
+      <h1 class='text-4xl font-bold text-white mb-4'>Resources</h1>
+      <p class='text-lg'>
+        Explore our curated resources to stay informed, engaged, and empowered.
+        Access our latest <strong>events</strong>, <strong>news updates</strong
+        >, and
+        <strong>downloads</strong> designed to keep you connected with ICAN's mission.
       </p>
+    </div>
+  </section>
 
-      <div class='grid gap-6 sm:grid-cols-2 md:grid-cols-3 mt-12 text-left'>
-        <!-- Documents -->
-        <a
-          href='/resources/documents'
-          class='group block bg-gradient-to-br from-gray-100 to-gray-200 p-6 rounded-xl shadow-sm hover:shadow-xl hover:from-white hover:to-white hover:border hover:border-[#074351] transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 ease-in-out'>
-          <div class='flex items-center mb-4'>
-            <div
-              class='bg-[#074351] rounded-full w-10 h-10 flex items-center justify-center mr-3 group-hover:scale-110 transition-transform'>
-              <svg
-                class='w-5 h-5 text-white'
-                fill='none'
-                stroke='currentColor'
-                stroke-width='2'
-                viewBox='0 0 24 24'>
-                <path
-                  d='M7 7h10M7 11h10M7 15h6M5 3h14a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z'
-                ></path>
-              </svg>
-            </div>
-            <h2 class='text-xl font-semibold text-[#074351]'>Documents</h2>
-          </div>
-          <p class='text-gray-600 text-sm'>
-            Access downloadable reports, policies, strategic plans, and other
-            official ICAN publications.
-          </p>
-        </a>
+  <!-- RESOURCE CARDS -->
+  <section class='py-20 px-4 lg:px-24'>
+    <div class='grid md:grid-cols-3 gap-8'>
+      <!-- Events -->
+      <a
+        href='/resources/events'
+        class='group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 flex flex-col items-center text-center'
+        data-aos='fade-up'
+        data-aos-delay='100'>
+        <img
+          src='/gallery/1.jpg'
+          alt='Events'
+          class='aspect-[4/3] w-full h-auto mb-4'
+        />
+        <h2 class='text-2xl font-semibold text-[#074351] mb-2'>Events</h2>
+        <p class='text-gray-600 p-4 mb-4'>
+          Stay updated on upcoming activities, workshops, and community
+          engagements.
+        </p>
+        <span
+          class='flex items-center pb-5 gap-2 text-[#074351] font-medium group-hover:gap-3 transition-all'>
+          Explore <ArrowRight size={18} />
+        </span>
+      </a>
 
-        <!-- News -->
-        <a
-          href='/resources/news'
-          class='group block bg-gradient-to-br from-gray-100 to-gray-200 p-6 rounded-xl shadow-sm hover:shadow-xl hover:from-white hover:to-white hover:border hover:border-[#074351] transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 ease-in-out'>
-          <div class='flex items-center mb-4'>
-            <div
-              class='bg-[#074351] rounded-full w-10 h-10 flex items-center justify-center mr-3 group-hover:scale-110 transition-transform'>
-              <svg
-                class='w-5 h-5 text-white'
-                fill='none'
-                stroke='currentColor'
-                stroke-width='2'
-                viewBox='0 0 24 24'>
-                <path
-                  d='M19 21H5a2 2 0 01-2-2V7a2 2 0 012-2h4l2-2h2l2 2h4a2 2 0 012 2v12a2 2 0 01-2 2z'
-                ></path>
-                <path d='M12 11h4M8 11h.01M8 15h8'></path>
-              </svg>
-            </div>
-            <h2 class='text-xl font-semibold text-[#074351]'>News</h2>
-          </div>
-          <p class='text-gray-600 text-sm'>
-            Read updates from the field, community success stories, and the
-            latest from our team.
-          </p>
-        </a>
+      <!-- News -->
+      <a
+        href='/resources/news'
+        class='group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 flex flex-col items-center text-center'
+        data-aos='fade-up'
+        data-aos-delay='200'>
+        <img
+          src='/img/news.jpg'
+          alt='News'
+          class='aspect-[4/3] w-full h-auto mb-4'
+        />
+        <h2 class='text-2xl font-semibold text-[#074351] mb-2'>News</h2>
+        <p class='text-gray-600 p-4 mb-4'>
+          Read the latest updates, project milestones, and inspiring community
+          stories.
+        </p>
+        <span
+          class='flex items-center pb-5 gap-2 text-[#074351] font-medium group-hover:gap-3 transition-all'>
+          Read More <ArrowRight size={18} />
+        </span>
+      </a>
 
-        <!-- Membership -->
-        <a
-          href='/resources/membership'
-          class='group block bg-gradient-to-br from-gray-100 to-gray-200 p-6 rounded-xl shadow-sm hover:shadow-xl hover:from-white hover:to-white hover:border hover:border-[#074351] transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 ease-in-out'>
-          <div class='flex items-center mb-4'>
-            <div
-              class='bg-[#074351] rounded-full w-10 h-10 flex items-center justify-center mr-3 group-hover:scale-110 transition-transform'>
-              <svg
-                class='w-5 h-5 text-white'
-                fill='none'
-                stroke='currentColor'
-                stroke-width='2'
-                viewBox='0 0 24 24'>
-                <path d='M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'></path>
-                <circle cx='12' cy='7' r='4'></circle>
-                <path d='M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75'
-                ></path>
-              </svg>
-            </div>
-            <h2 class='text-xl font-semibold text-[#074351]'>Membership</h2>
-          </div>
-          <p class='text-gray-600 text-sm'>
-            Find out how you can become part of the ICAN movement and help us
-            transform communities together.
-          </p>
-        </a>
-      </div>
+      <!-- Downloads -->
+      <a
+        href='/resources/downloads'
+        class='group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 flex flex-col items-center text-center'
+        data-aos='fade-up'
+        data-aos-delay='300'>
+        <img
+          src='/img/downloads.jpg'
+          alt='Downloads'
+          class='aspect-[4/3] w-full h-auto mb-4'
+        />
+        <h2 class='text-2xl font-semibold text-[#074351] mb-2'>Downloads</h2>
+        <p class='text-gray-600 p-4 mb-4'>
+          Access important resources, reports, and materials anytime.
+        </p>
+        <span
+          class='flex items-center pb-5 gap-2 text-[#074351] font-medium group-hover:gap-3 transition-all'>
+          View Files <ArrowRight size={18} />
+        </span>
+      </a>
     </div>
   </section>
 </BaseLayout>

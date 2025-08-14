@@ -99,7 +99,9 @@ const pillars = [
       class='px-4 max-w-6xl mx-auto flex flex-col md:flex-row gap-4 justify-center mb-20 animate-fade-up duration-700 ease-in-out motion-safe:animate-fade-in scroll-mt-12'
       data-aos='fade-up'>
       <div class='flex-1'>
-        <h2 class='text-2xl font-semibold hist uppercase mb-4'>tracking our progress</h2>
+        <h2 class='text-2xl font-semibold hist uppercase mb-4'>
+          tracking our progress
+        </h2>
         <p class='text-gray-700 mb-4 text-[1.2rem]'>
           We believe in transparency and accountability. Our impact tracking
           system meticulously monitors and evaluates the outcomes of our
@@ -124,7 +126,7 @@ const pillars = [
   </section>
 
   <!-- CORE SECTORS -->
-  <section class='py-16 px-4 bg-teal-50'>
+  <section class='py-12 px-4 md:px-6 lg:px-6 bg-gray-200'>
     <div class='max-w-4xl mx-auto text-center'>
       <h2 class='text-4xl font-bold stories-header mb-6'>Our Core Sectors</h2>
       <p class='text-lg pb-10 text-gray-600 leading-[1.8]'>
@@ -135,19 +137,85 @@ const pillars = [
         people to thrive.
       </p>
     </div>
-    <div class='grid md:grid-cols-3 gap-6 max-w-6xl mx-auto'>
-      {
-        pillars.map((pillar) => (
-          <PillarCard
-            image={pillar.image}
-            title={pillar.title}
-            description={pillar.description}
-            link={pillar.link}
+
+    <div class='grid gap-8 md:grid-cols-3'>
+      <!-- Card 1: Annual Reports -->
+      <div
+        class='group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 flex flex-col'>
+        <div class='overflow-hidden'>
+          <img
+            src='/img/h1.jpg'
+            alt='health and wellbeing'
+            class='w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105'
           />
-        ))
-      }
+        </div>
+        <div class='p-5 flex flex-col justify-between flex-grow'>
+          <h3 class='text-xl font-semibold text-[#074351] mb-2'>
+            Health & Wellbeing
+          </h3>
+          <p class='text-gray-600 text-sm mb-4'>
+            Promoting equitable access to healthcare, education, and dignity for
+            all.
+          </p>
+          <a
+            href='/what-we-do/health-and-wellbeing'
+            class='mt-auto inline-block btn-primary transition px-4 py-2 rounded-full text-sm font-medium'>
+            Read More
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2: ICAN History -->
+      <div
+        class='group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 flex flex-col'>
+        <div class='overflow-hidden'>
+          <img
+            src='/img/cleaning2-min.jpg'
+            alt='environmental sustainability'
+            class='w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105'
+          />
+        </div>
+        <div class='p-5 flex flex-col justify-between flex-grow'>
+          <h3 class='text-xl font-semibold text-[#074351] mb-2'>
+            Environmental Sustainability
+          </h3>
+          <p class='text-gray-600 text-sm mb-4'>
+            Empowering communities to restore and protect their natural
+            ecosystems.
+          </p>
+          <a
+            href='/what-we-do/environmental-sustainability'
+            class='mt-auto inline-block btn-primary transition px-4 py-2 rounded-full text-sm font-medium'>
+            Read More
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3: Mission, Vision & Values -->
+      <div
+        class='group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 flex flex-col'>
+        <div class='overflow-hidden'>
+          <img
+            src='/img/sw1.jpg'
+            alt='economic development'
+            class='w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105'
+          />
+        </div>
+        <div class='p-5 flex flex-col justify-between flex-grow'>
+          <h3 class='text-xl font-semibold text-[#074351] mb-2'>
+            Economic Development
+          </h3>
+          <p class='text-gray-600 text-sm mb-4'>
+            Building resilient livelihoods through entrepreneurship and
+            innovation.
+          </p>
+          <a
+            href='/what-we-do/economic-development'
+            class='mt-auto inline-block btn-primary transition px-4 py-2 rounded-full text-sm font-medium'>
+            Read More
+          </a>
+        </div>
+      </div>
     </div>
   </section>
-
- 
 </BaseLayout>

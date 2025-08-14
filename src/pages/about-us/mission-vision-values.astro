@@ -1,25 +1,32 @@
 ---
 import BaseLayout from '../../layout/BaseLayout.astro';
----
+import Breadcrumb from '../../components/Breadcrumb.astro';
 
-<BaseLayout title='Mission Visio Values'>
+const breadcrumbItems = [
+  { href: '/', label: 'Home' },
+  { href: '', label: 'Mission Vision Values' },
+];
+---
+<BaseLayout title='Mission Vision Values'>
+    <Breadcrumb items={breadcrumbItems} />
+
   <main>
     <!-- Mission & Vision Section -->
-    <section class='px-4 lg:px-8 py-20 bg-[#f0fdf4]'>
+    <section class='px-4 lg:px-8 py-10 bg-[#f0fdf4]'>
       <div class='max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center'>
         <!-- Image -->
         <div>
           <img
             src='/gallery/3.jpg'
             alt='Community gathering'
-            class='rounded-xl shadow-md w-full h-auto object-cover max-h-[500px]'
+            class='shadow-md w-full h-auto object-cover max-h-[500px]'
           />
         </div>
 
         <!-- Content -->
         <div class='space-y-10'>
           <div data-aos='fade-up'>
-            <h2 class='text-4xl font-bold text-[#074351] uppercase'>
+            <h2 class='text-4xl font-bold hist text-[#074351] uppercase'>
               Our Vision
             </h2>
             <p class='text-lg md:text-xl text-gray-700 mt-4'>
@@ -29,7 +36,7 @@ import BaseLayout from '../../layout/BaseLayout.astro';
           </div>
 
           <div data-aos='fade-up' data-aos-delay='150'>
-            <h2 class='text-4xl font-bold text-[#074351] uppercase'>
+            <h2 class='text-4xl font-bold hist text-[#074351] uppercase'>
               Our Mission
             </h2>
             <p class='text-lg md:text-xl text-gray-700 mt-4'>
@@ -46,7 +53,7 @@ import BaseLayout from '../../layout/BaseLayout.astro';
     <section class='py-16 bg-gray-100'>
       <div class='max-w-7xl mx-auto px-4'>
         <div class='text-center mb-12'>
-          <h2 class='text-4xl font-bold text-[#074351] mb-4'>Our Values</h2>
+          <h2 class='text-4xl font-bold text-[#074351] mb-4 stories-header pb-5'>Our Values</h2>
           <p class='text-lg text-gray-600 max-w-2xl mx-auto'>
             The foundation of ICAN is built upon guiding principles that reflect
             our deep-rooted commitment to community empowerment, sustainability,

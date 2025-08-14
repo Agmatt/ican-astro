@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../layout/BaseLayout.astro';
+---
+
+<BaseLayout title='One-Time Gift | ICAN'>
+  <section class='bg-teal-0 py-16 px-4 lg:px-24'>
+    <div class='max-w-4xl mx-auto text-center'>
+      <h1 class='text-4xl font-bold text-[#074351] mb-4'>
+        Make a One-Time Gift
+      </h1>
+      <p class='text-gray-700 text-lg max-w-2xl mx-auto'>
+        Your one-time donation helps ICAN create immediate and lasting change in
+        our communities. Every gift, no matter the size, makes a difference.
+      </p>
+    </div>
+
+    <!-- Donation Container -->
+    <div class='mt-12 bg-white rounded-xl shadow-lg p-8 max-w-3xl mx-auto'>
+      <!-- Suggested Amounts -->
+      <div class='flex flex-wrap gap-4 justify-center'>
+        {
+          ['10', '25', '50', '100'].map((amount) => (
+            <button
+              class='px-6 py-3 bg-[#074351] text-white rounded-lg hover:bg-[#096078] focus:outline-none'
+              onClick={`document.getElementById('amount').value='${amount}'`}>
+              ${amount}
+            </button>
+          ))
+        }
+      </div>
+
+      <!-- Custom Amount -->
+      <div class='mt-6'>
+        <label for='amount' class='block text-gray-700 font-medium mb-2'
+          >Enter Custom Amount</label
+        >
+        <input
+          type='number'
+          id='amount'
+          name='amount'
+          placeholder='e.g. 250'
+          class='w-full border border-gray-300 rounded-lg p-3 focus:ring-[#074351] focus:border-[#074351]'
+        />
+      </div>
+
+      <!-- Payment Methods -->
+      <div class='mt-8 grid md:grid-cols-2 gap-6'>
+        <div class='bg-gray-50 p-4 rounded-lg border border-gray-200'>
+          <h3 class='font-bold text-[#074351] mb-2'>Bank Transfer</h3>
+          <p class='text-sm text-gray-700'>Account Name: ICAN Foundation</p>
+          <p class='text-sm text-gray-700'>Account Number: 123456789</p>
+          <p class='text-sm text-gray-700'>Bank: Example Bank</p>
+        </div>
+
+        <div class='bg-gray-50 p-4 rounded-lg border border-gray-200'>
+          <h3 class='font-bold text-[#074351] mb-2'>M-Pesa Paybill</h3>
+          <p class='text-sm text-gray-700'>Paybill: 123456</p>
+          <p class='text-sm text-gray-700'>Account: ICAN</p>
+        </div>
+      </div>
+
+      <!-- Donate Button -->
+      <div class='mt-8 text-center'>
+        <button
+          type='submit'
+          class='px-8 py-4 btn-primary text-lg font-semibold rounded-lg  transition'>
+          Donate Now
+        </button>
+      </div>
+    </div>
+
+    <!-- Impact Statement -->
+    <div class='mt-16 text-center max-w-2xl mx-auto'>
+      <h2 class='text-2xl font-bold text-[#074351] mb-4'>Your Impact</h2>
+      <p class='text-gray-700'>
+        Every donation goes directly to supporting programs in health,
+        environment, and economic empowerment. Together, we are creating
+        stronger, sustainable communities.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

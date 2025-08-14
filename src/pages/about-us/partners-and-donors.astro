@@ -1,21 +1,30 @@
 ---
 import BaseLayout from '../../layout/BaseLayout.astro';
 import LogoCarousel from '../../components/LogoCarousel.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+
+const breadcrumbItems = [
+  { href: '/', label: 'Home' },
+  { href: '/about-us', label: 'About us' },
+  { href: '/about-us/partners-and-donors', label: 'Partners & Donors' },
+];
 ---
 
 <BaseLayout title='Partners and Donors'>
+  <Breadcrumb items={breadcrumbItems} />
+
   <!-- Header -->
-  <section class='py-16 px-4 lg:px-24 bg-white'>
+  <section class='bg-[#248d87] py-10 px-4 lg:px-24 text-white'>
     <div class='max-w-4xl mx-auto text-center'>
-      <h1 class='text-4xl font-bold mb-4 text-[#074351]'>
+      <h1 class='text-4xl font-bold mb-4 text-white'>
         Our Partners & Donors
       </h1>
-      <p class='text-lg text-gray-700 mb-6'>
+      <p class='text-lg mb-6'>
         At ICAN, meaningful change is made possible through strong partnerships.
         While we are still in our early growth stage, we are proud to be
         supported by organizations and individuals who believe in our mission.
       </p>
-      <p class='text-lg text-gray-700'>
+      <p class='text-lg'>
         Over 60% of our foundational goals have been achieved with the help of
         these champions of community development.
       </p>
@@ -35,83 +44,6 @@ import LogoCarousel from '../../components/LogoCarousel.astro';
     <LogoCarousel />
   </section>
 
-  <!-- Partner Categories -->
-  <section class='py-20 px-4 lg:px-24 bg-white'>
-    <div class='max-w-6xl mx-auto grid md:grid-cols-2 gap-12'>
-      <div>
-        <h3 class='text-2xl font-semibold text-[#074351] mb-4'>
-          Institutional Partners
-        </h3>
-        <ul class='text-gray-700 space-y-2 list-disc list-inside'>
-          <li>UNICEF – Technical guidance & pilot support</li>
-          <li>UNDP – Program incubation support</li>
-          <li>Ministry of Health – Regional health collaboration</li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 class='text-2xl font-semibold text-[#074351] mb-4'>
-          Private Sector & Local Partners
-        </h3>
-        <ul class='text-gray-700 space-y-2 list-disc list-inside'>
-          <li>Safaricom Foundation – Seed grant</li>
-          <li>Local NGO – Community outreach mobilization</li>
-          <li>Community Groups – Implementation partners</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class='bg-white py-20 px-4 lg:px-24'>
-    <div class='max-w-6xl mx-auto text-center'>
-      <h2 class='text-3xl font-bold text-[#074351] mb-12'>
-        What Our Partners Say
-      </h2>
-
-      <div class='space-y-12'>
-        <!-- Testimonial 1 -->
-        <div
-          class='flex flex-col md:flex-row items-center text-left bg-gray-100 rounded-xl p-6 gap-6 shadow-sm'>
-          <img
-            src='/logos/scouts.png'
-            alt='UNICEF Representative'
-            class='w-24 h-24 rounded-full object-contain bg-white shadow-md shrink-0'
-          />
-          <div>
-            <p class='text-gray-700 italic mb-2'>
-              "ICAN’s grassroots approach aligns perfectly with our mission.
-              Their community presence is strong, and we’ve seen real results
-              already."
-            </p>
-            <div class='text-[#074351] font-semibold'>
-              UNICEF Representative
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 2 -->
-        <div
-          class='flex flex-col md:flex-row items-center text-left bg-gray-100 rounded-xl p-6 gap-6 shadow-sm'>
-          <img
-            src='/logos/nacada.png'
-            alt='Safaricom Officer'
-            class='w-24 h-24 rounded-full object-contain bg-white shadow-md shrink-0'
-          />
-          <div>
-            <p class='text-gray-700 italic mb-2'>
-              "Supporting ICAN was a smart choice. Their transparency and
-              accountability make them a trusted partner."
-            </p>
-            <div class='text-[#074351] font-semibold'>
-              Safaricom Foundation Officer
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Call to Action -->
   <section class='bg-gray-100 py-16 px-4 lg:px-24 text-center'>
     <h3 class='text-3xl font-bold text-[#074351] mb-4'>Partner With Us</h3>
@@ -127,40 +59,5 @@ import LogoCarousel from '../../components/LogoCarousel.astro';
     </a>
   </section>
 
-  <!-- Location -->
-  <section class='bg-white py-16 px-4 lg:px-24'>
-    <div class='max-w-6xl mx-auto grid md:grid-cols-2 gap-12'>
-      <!-- Contact Info -->
-      <div>
-        <h3 class='text-2xl font-bold text-[#074351] mb-4'>Contact Us</h3>
-        <p class='text-gray-700 mb-2'>
-          ICAN – Initiative for Community Action Network
-        </p>
-        <p class='text-gray-700 mb-2'>Homa Bay, Kenya</p>
-        <p class='text-gray-700 mb-2'>
-          Email: <a href='mailto:info@ican.org' class='text-[#074351] underline'
-            >info@ican.org</a
-          >
-        </p>
-        <p class='text-gray-700'>
-          Phone: <a href='tel:+254712345678' class='text-[#074351] underline'
-            >+254 712 345 678</a
-          >
-        </p>
-      </div>
-
-      <!-- Map -->
-      <div class='w-full h-64 md:h-full'>
-        <iframe
-          src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8444196576573!2d34.738645875034285!3d-0.5278922352801824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182aa60133cc445d%3A0x2f5cde88fd6e34ee!2sHoma%20Bay!5e0!3m2!1sen!2ske!4v1721300627517!5m2!1sen!2ske'
-          width='100%'
-          height='100%'
-          style='border:0;'
-          allowfullscreen=''
-          loading='lazy'
-          referrerpolicy='no-referrer-when-downgrade'
-          class='rounded-xl shadow-md'></iframe>
-      </div>
-    </div>
-  </section>
+  
 </BaseLayout>

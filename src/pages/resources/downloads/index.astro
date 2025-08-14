@@ -12,7 +12,8 @@ const breadcrumbItems = [
 const documents = [
   {
     name: 'Membership Application',
-    description: "Used by individuals or organizations seeking to officially join ICAN. This form captures essential details for enrollment and participation in ICAN's programs and network.",
+    description:
+      "Used by individuals or organizations seeking to officially join ICAN. This form captures essential details for enrollment and participation in ICAN's programs and network.",
     viewUrl: '/forms/ICAN REGISTRATION FORM.pdf',
     downloadUrl: '/forms/ICAN REGISTRATION FORM.pdf',
   },
@@ -43,22 +44,15 @@ const documents = [
 <BaseLayout title='Documents'>
   <Breadcrumb items={breadcrumbItems} />;
 
-  <section class='bg-gray-50 py-20 px-4 sm:px-8 lg:px-24'>
+  <section class='bg-[#248d87] text-white py-10 px-4 sm:px-8 lg:px-24'>
     <div class='max-w-3xl mx-auto text-center'>
-      <h1 class='text-3xl font-bold mb-6'>ICAN Official Documents</h1>
-      <p class='text-lg text-gray-600 mb-8 leading-relaxed'>
-        This section contains important publications and downloadable materials
-        that represent ICAN’s dedication to transparency, accountability, and
-        community engagement.
-        <br class='hidden sm:block mt-1' />
-        From strategic plans to reports and policy frameworks, we aim to keep our
-        stakeholders informed and empowered.
-      </p>
+      <h1 class='text-3xl text-white font-bold mb-6'>ICAN Official Documents</h1>
+      
     </div>
   </section>
 
   <!-- Download Tables -->
-  <section class='bg-white py-20 px-4 sm:px-8 lg:px-24'>
+  <section class='bg-white py-14 px-4 sm:px-8 lg:px-24'>
     <div class='max-w-5xl mx-auto'>
       <h1 class='text-3xl font-bold mb-6 text-center'>
         ICAN Downloadable Forms

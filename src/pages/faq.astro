@@ -3,7 +3,7 @@ import BaseLayout from '../layout/BaseLayout.astro';
 ---
 
 <BaseLayout tittle='FAQs'>
-  <section class='py-16 px-4 lg:px-24 bg-gray-50'>
+  <section class='py-12 px-4 lg:px-6'>
     <div class='max-w-6xl mx-auto'>
       <div class='grid md:grid-cols-2 gap-12 items-start'>
         <!-- Left Intro -->
@@ -18,188 +18,200 @@ import BaseLayout from '../layout/BaseLayout.astro';
           </p>
           <a
             href='/about-us/contact'
-            class='inline-block btn-primary font-medium px-6 py-3 rounded-lg shadow transition'>
+            class='btn-primary font-medium px-6 py-3 rounded-lg shadow-md transition-colors duration-300'>
             Contact Us
           </a>
         </div>
 
-        <!-- Right Accordion (Flowbite) -->
-        <div
-          id='accordion-collapse'
-          data-accordion='collapse'
-          class='space-y-4'>
+        <!-- Right Accordion -->
+        <div id='faq-accordion' class='space-y-4'>
+          <!-- FAQ Item 1 -->
           <div
-            class='border border-gray-200 rounded-xl shadow-sm aria-expanded:bg-[#185a69]'>
-            <h2 id='accordion-collapse-heading-1'>
+            class='border border-gray-200 rounded-xl shadow-sm overflow-hidden'>
+            <h2 id='faq-heading-1'>
               <button
                 type='button'
-                class='flex items-center justify-between w-full px-6 py-4 text-left text-lg font-medium aria-expanded:bg-[#185a69]'
-                data-accordion-target='#accordion-collapse-body-1'
-                aria-expanded='true'
-                aria-controls='accordion-collapse-body-1'>
+                class='accordion-toggle flex items-center justify-between w-full px-6 py-4 text-left text-lg font-medium text-[#074351] hover:bg-gray-100 transition-colors duration-200'
+                aria-expanded='false'
+                aria-controls='faq-body-1'>
                 What is ICAN?
                 <svg
-                  data-accordion-icon
-                  class='w-5 h-5 shrink-0'
+                  class='accordion-icon w-5 h-5 shrink-0 transition-transform duration-300'
                   fill='currentColor'
-                  viewBox='0 0 20 20'
-                  ><path
+                  viewBox='0 0 20 20'>
+                  <path
                     fill-rule='evenodd'
                     d='M5.23 7.21a.75.75 0 011.06.02L10 10.939l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.25 8.27a.75.75 0 01-.02-1.06z'
-                    clip-rule='evenodd'></path></svg
-                >
+                    clip-rule='evenodd'></path>
+                </svg>
               </button>
             </h2>
             <div
-              id='accordion-collapse-body-1'
-              class='hidden'
-              aria-labelledby='accordion-collapse-heading-1'>
-              <div class='px-6 pb-4 text-gray-700'>
-                ICAN, or the Inuana Community Action Network, is a youth-led
-                nonprofit organization in Homa Bay, Kenya. We’re committed to
-                community empowerment through health, sustainability, and
-                youth-focused programs.
-              </div>
+              id='faq-body-1'
+              class='accordion-content hidden px-6 pb-6 text-gray-700 transition-all duration-300 ease-in-out'>
+              ICAN, or the Inuana Community Action Network, is a youth-led
+              nonprofit organization in Homa Bay, Kenya. We’re committed to
+              community empowerment through health, sustainability, and
+              youth-focused programs.
             </div>
           </div>
 
-          <div class='border border-gray-200 rounded-xl shadow-sm'>
-            <h2 id='accordion-collapse-heading-2'>
+          <!-- FAQ Item 2 -->
+          <div
+            class='border border-gray-200 rounded-xl shadow-sm overflow-hidden'>
+            <h2 id='faq-heading-2'>
               <button
                 type='button'
-                class='flex items-center justify-between w-full px-6 py-4 text-left text-[#074351] text-lg font-medium aria-expanded:bg-[#185a69]'
-                data-accordion-target='#accordion-collapse-body-2'
+                class='accordion-toggle flex items-center justify-between w-full px-6 py-4 text-left text-lg font-medium text-[#074351] hover:bg-gray-100 transition-colors duration-200'
                 aria-expanded='false'
-                aria-controls='accordion-collapse-body-2'>
+                aria-controls='faq-body-2'>
                 How did ICAN start?
                 <svg
-                  data-accordion-icon
-                  class='w-5 h-5 shrink-0'
+                  class='accordion-icon w-5 h-5 shrink-0 transition-transform duration-300'
                   fill='currentColor'
-                  viewBox='0 0 20 20'
-                  ><path
+                  viewBox='0 0 20 20'>
+                  <path
                     fill-rule='evenodd'
                     d='M5.23 7.21a.75.75 0 011.06.02L10 10.939l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.25 8.27a.75.75 0 01-.02-1.06z'
-                    clip-rule='evenodd'></path></svg
-                >
+                    clip-rule='evenodd'></path>
+                </svg>
               </button>
             </h2>
             <div
-              id='accordion-collapse-body-2'
-              class='hidden'
-              aria-labelledby='accordion-collapse-heading-2'>
-              <div class='px-6 pb-4 text-gray-700'>
-                ICAN began as a small local youth initiative in Homa Bay and
-                evolved into a registered organization through the efforts of
-                passionate young people dedicated to community transformation.
-              </div>
+              id='faq-body-2'
+              class='accordion-content hidden px-6 pb-6 text-gray-700 transition-all duration-300 ease-in-out'>
+              ICAN began as a small local youth initiative in Homa Bay and
+              evolved into a registered organization through the efforts of
+              passionate young people dedicated to community transformation.
+              <a href='/about-us' class='text-teal-500'
+                >Read more about us.</a
+              >
             </div>
           </div>
 
-          <div class='border border-gray-200 rounded-xl shadow-sm'>
-            <h2 id='accordion-collapse-heading-3'>
+          <!-- FAQ Item 3 -->
+          <div
+            class='border border-gray-200 rounded-xl shadow-sm overflow-hidden'>
+            <h2 id='faq-heading-3'>
               <button
                 type='button'
-                class='flex items-center justify-between w-full px-6 py-4 text-left text-[#074351] text-lg font-medium aria-expanded:bg-[#185a69]'
-                data-accordion-target='#accordion-collapse-body-3'
+                class='accordion-toggle flex items-center justify-between w-full px-6 py-4 text-left text-lg font-medium text-[#074351] hover:bg-gray-100 transition-colors duration-200'
                 aria-expanded='false'
-                aria-controls='accordion-collapse-body-3'>
+                aria-controls='faq-body-3'>
                 How can I support ICAN’s work?
                 <svg
-                  data-accordion-icon
-                  class='w-5 h-5 shrink-0'
+                  class='accordion-icon w-5 h-5 shrink-0 transition-transform duration-300'
                   fill='currentColor'
-                  viewBox='0 0 20 20'
-                  ><path
+                  viewBox='0 0 20 20'>
+                  <path
                     fill-rule='evenodd'
                     d='M5.23 7.21a.75.75 0 011.06.02L10 10.939l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.25 8.27a.75.75 0 01-.02-1.06z'
-                    clip-rule='evenodd'></path></svg
-                >
+                    clip-rule='evenodd'></path>
+                </svg>
               </button>
             </h2>
             <div
-              id='accordion-collapse-body-3'
-              class='hidden'
-              aria-labelledby='accordion-collapse-heading-3'>
-              <div class='px-6 pb-4 text-gray-700'>
-                You can support ICAN by making a donation, becoming a monthly
-                donor, volunteering, or partnering with us on initiatives
-                aligned with our mission.
-              </div>
+              id='faq-body-3'
+              class='accordion-content hidden px-6 pb-6 text-gray-700 transition-all duration-300 ease-in-out'>
+              You can support ICAN by making a donation, becoming a monthly
+              donor, volunteering, or partnering with us on initiatives aligned
+              with our mission.
+              <a href='/donate' class='text-teal-500'
+                >Make a Donation</a
+              >
             </div>
           </div>
 
-          <div class='border border-gray-200 rounded-xl shadow-sm'>
-            <h2 id='accordion-collapse-heading-4'>
+          <!-- FAQ Item 4 -->
+          <div
+            class='border border-gray-200 rounded-xl shadow-sm overflow-hidden'>
+            <h2 id='faq-heading-4'>
               <button
                 type='button'
-                class='flex items-center justify-between w-full px-6 py-4 text-left text-[#074351] text-lg font-medium aria-expanded:bg-[#185a69]'
-                data-accordion-target='#accordion-collapse-body-4'
+                class='accordion-toggle flex items-center justify-between w-full px-6 py-4 text-left text-lg font-medium text-[#074351] hover:bg-gray-100 transition-colors duration-200'
                 aria-expanded='false'
-                aria-controls='accordion-collapse-body-4'>
+                aria-controls='faq-body-4'>
                 Where does ICAN operate?
                 <svg
-                  data-accordion-icon
-                  class='w-5 h-5 shrink-0'
+                  class='accordion-icon w-5 h-5 shrink-0 transition-transform duration-300'
                   fill='currentColor'
-                  viewBox='0 0 20 20'
-                  ><path
+                  viewBox='0 0 20 20'>
+                  <path
                     fill-rule='evenodd'
                     d='M5.23 7.21a.75.75 0 011.06.02L10 10.939l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.25 8.27a.75.75 0 01-.02-1.06z'
-                    clip-rule='evenodd'></path></svg
-                >
+                    clip-rule='evenodd'></path>
+                </svg>
               </button>
             </h2>
             <div
-              id='accordion-collapse-body-4'
-              class='hidden'
-              aria-labelledby='accordion-collapse-heading-4'>
-              <div class='px-6 pb-4 text-gray-700'>
-                ICAN operates primarily in Homa Bay County, Kenya, but we
-                collaborate with national and international partners to expand
-                our impact.
-              </div>
+              id='faq-body-4'
+              class='accordion-content hidden px-6 pb-6 text-gray-700 transition-all duration-300 ease-in-out'>
+              ICAN operates primarily in Homa Bay County, Kenya, but we
+              collaborate with national and international partners to expand our
+              impact.
             </div>
           </div>
 
-          <div class='border border-gray-200 rounded-xl shadow-sm'>
-            <h2 id='accordion-collapse-heading-5'>
+          <!-- FAQ Item 5 -->
+          <div
+            class='border border-gray-200 rounded-xl shadow-sm overflow-hidden'>
+            <h2 id='faq-heading-5'>
               <button
                 type='button'
-                class='flex items-center justify-between w-full px-6 py-4 text-left text-[#074351] text-lg font-medium aria-expanded:bg-[#185a69]'
-                data-accordion-target='#accordion-collapse-body-5'
+                class='accordion-toggle flex items-center justify-between w-full px-6 py-4 text-left text-lg font-medium text-[#074351] hover:bg-gray-100 transition-colors duration-200'
                 aria-expanded='false'
-                aria-controls='accordion-collapse-body-5'>
+                aria-controls='faq-body-5'>
                 Can I volunteer or partner with ICAN?
                 <svg
-                  data-accordion-icon
-                  class='w-5 h-5 shrink-0'
+                  class='accordion-icon w-5 h-5 shrink-0 transition-transform duration-300'
                   fill='currentColor'
-                  viewBox='0 0 20 20'
-                  ><path
+                  viewBox='0 0 20 20'>
+                  <path
                     fill-rule='evenodd'
                     d='M5.23 7.21a.75.75 0 011.06.02L10 10.939l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.25 8.27a.75.75 0 01-.02-1.06z'
-                    clip-rule='evenodd'></path></svg
-                >
+                    clip-rule='evenodd'></path>
+                </svg>
               </button>
             </h2>
             <div
-              id='accordion-collapse-body-5'
-              class='hidden'
-              aria-labelledby='accordion-collapse-heading-5'>
-              <div class='px-6 pb-4 text-gray-700'>
-                Absolutely! We welcome volunteers and partners. Please reach out
-                via our Contact page to explore current opportunities.
-              </div>
+              id='faq-body-5'
+              class='accordion-content hidden px-6 pb-6 text-gray-700 transition-all duration-300 ease-in-out'>
+              Absolutely! We welcome volunteers and partners. Please reach out
+              via our <a
+                href='/about-us/work-with-us'
+                class='text-teal-500'>Work With Us</a
+              > page to explore current opportunities or you can contact us here
+              <a href='/about-us/contact' class='text-teal-500'
+                >Contact.</a
+              >
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- AlpineJS CDN -->
-  <script
-    src='https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js'
-    defer></script>
 </BaseLayout>
+
+<script is:inline>
+  // Get all accordion toggle buttons and content panels
+  const accordionToggles = document.querySelectorAll('.accordion-toggle');
+
+  accordionToggles.forEach((toggle) => {
+    toggle.addEventListener('click', () => {
+      // Get the target content panel and the icon
+      const contentId = toggle.getAttribute('aria-controls');
+      const content = document.getElementById(contentId);
+      const icon = toggle.querySelector('.accordion-icon');
+
+      // Check if the content is currently visible
+      const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+
+      // Toggle the 'hidden' class on the content panel and rotate the icon
+      content.classList.toggle('hidden');
+      icon.classList.toggle('rotate-180');
+
+      // Update the aria-expanded attribute
+      toggle.setAttribute('aria-expanded', !isExpanded);
+    });
+  });
+</script>

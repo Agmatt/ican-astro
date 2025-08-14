@@ -1,0 +1,343 @@
+---
+import BaseLayout from '../../../layout/BaseLayout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+
+const breadcrumbItems = [
+  { href: '/', label: 'Home' },
+  { href: '/what-we-do/projects', label: 'Projects' },
+  { href: '', label: 'Reforestation Campaign' },
+];
+const page = {
+  title: 'Reforestation Campaign – ICAN',
+  description:
+    'ICAN’s community-led reforestation with Tom Mboya University, KOST Children’s Home, and the Gembe Hills—planting 100+ indigenous trees and restoring hope in Homa Bay.',
+  heroImg: '/img/tree-min.jpg', // replace with your hero image
+  brand: '#074351',
+};
+---
+
+<BaseLayout title='Reforesttion Campaign - ICAN'>
+  <Breadcrumb items={breadcrumbItems} />
+  <!-- HERO -->
+  <section class='relative text-white'>
+    <div class='absolute inset-0'>
+      <img
+        src={page.heroImg}
+        alt='Volunteers planting indigenous trees in Homa Bay'
+        class='w-full h-[64vh] object-cover'
+        loading='eager'
+      />
+    </div>
+    <!-- <div class='absolute inset-0 bg-black/50'></div> -->
+
+    <div
+      class='relative z-10 max-w-5xl mx-auto px-6 py-15 md:py-28 text-center'
+      data-aos='fade-down'>
+      <h1 class='text-4xl md:text-5xl text-white font-extrabold leading-tight'>
+        Reforestation Campaign
+      </h1>
+      <p class='mt-4 text-lg md:text-xl text-gray-100'>
+        Restoring green hope with students, children, and communities across
+        Homa Bay County.
+      </p>
+      <div class='my-8 flex items-center justify-center gap-4'>
+        <a
+          href='/donate'
+          class='btn-primary font-semibold px-6 py-3 rounded-xl transition'>
+          Donate to Plant More Trees
+        </a>
+        <a
+          href='/work-with-us'
+          class='btn-secondary font-semibold px-6 py-3 rounded-x transition'>
+          Partner with ICAN
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class='bg-white py-16 md:py-20 px-6'>
+    <div class='max-w-5xl mx-auto grid md:grid-cols-5 gap-10 items-start'>
+      <div class='md:col-span-3' data-aos='fade-right'>
+        <h2
+          class='text-3xl md:text-4xl font-bold'
+          style={`color:${page.brand}`}>
+          A Human Story of Climate Action
+        </h2>
+        <p class='mt-4 text-gray-700 leading-relaxed'>
+          In Homa Bay County, the cost of deforestation is deeply personal:
+          harsher dry spells, eroded soils, and shrinking biodiversity. ICAN
+          believes that every indigenous seedling in the ground is a promise
+          kept—to children who deserve shade and rain, to farmers who need
+          healthy soils, and to wildlife looking for a way back home.
+        </p>
+        <p class='mt-4 text-gray-700 leading-relaxed'>
+          Together with <strong>Tom Mboya University</strong> and <strong
+            >KOST Children’s Home</strong
+          >, we planted more than <strong>100 indigenous trees</strong>—and
+          later took the work uphill to the
+          <strong>Gembe Hills</strong>, where bare slopes are beginning to
+          breathe again. The smiles were real, the hands were muddy, and hope
+          felt tangible.
+        </p>
+      </div>
+      <div class='md:col-span-2 space-y-4' data-aos='fade-left'>
+        <div class='p-6 rounded-2xl shadow bg-gray-50'>
+          <h3 class='font-semibold text-lg' style={`color:${page.brand}`}>
+            Why Reforestation Matters
+          </h3>
+          <ul class='mt-3 space-y-2 text-gray-700 list-disc list-inside'>
+            <li>Restores water cycles and reduces flood risk</li>
+            <li>Prevents soil erosion and improves farm yields</li>
+            <li>Rebuilds habitats and biodiversity corridors</li>
+            <li>Creates local eco-jobs in nurseries and care</li>
+          </ul>
+        </div>
+        <div class='p-6 rounded-2xl shadow bg-white border'>
+          <h3 class='font-semibold text-lg' style={`color:${page.brand}`}>
+            What Your Gift Does
+          </h3>
+          <ul class='mt-3 space-y-2 text-gray-700 list-disc list-inside'>
+            <li>Funds indigenous seedlings & tools</li>
+            <li>Trains youth “eco-guardians” for aftercare</li>
+            <li>Monitors survival rates and replacements</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATIONS TIMELINE -->
+  <section class='bg-gray-50 py-16 md:py-20 px-6'>
+    <div class='max-w-5xl mx-auto'>
+      <h2
+        class='text-3xl md:text-4xl font-bold text-center mb-12'
+        style={`color:${page.brand}`}>
+        Where We Planted
+      </h2>
+      <ol class='relative border-s-2 border-gray-200 max-w-3xl mx-auto'>
+        <li class='mb-12 ms-6' data-aos='fade-up'>
+          <h3 class='text-xl font-semibold'>Tom Mboya University</h3>
+          <p class='mt-1 text-gray-700'>
+            Students and ICAN volunteers planted indigenous species around
+            learning spaces and walkways—turning campus paths into future shade
+            corridors.
+          </p>
+        </li>
+        <li class='mb-12 ms-6' data-aos='fade-up' data-aos-delay='100'>
+          <h3 class='text-xl font-semibold'>KOST Children’s Home</h3>
+          <p class='mt-1 text-gray-700'>
+            Children helped plant their own trees—learning care, ownership, and
+            climate stewardship one watering can at a time.
+          </p>
+        </li>
+        <li class='ms-6' data-aos='fade-up' data-aos-delay='200'>
+          <h3 class='text-xl font-semibold'>Gembe Hills</h3>
+          <p class='mt-1 text-gray-700'>
+            On degraded slopes, we’re rebuilding green belts that hold soil,
+            call back birds, and stabilize local microclimates.
+          </p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section class='bg-gray-100 py-14 px-6'>
+    <div class='max-w-5xl mx-auto text-center'>
+      <h2 class='text-3xl md:text-4xl font-bold' style={`color:${page.brand}`}>
+        Impact (So Far)
+      </h2>
+      <p class='mt-2 text-gray-700'>
+        Small beginnings, real momentum. Help us scale this work county-wide.
+      </p>
+
+      <div
+        class='mt-8 grid grid-cols-2 md:grid-cols-3 gap-6'
+        id='impact-counters'>
+        <div class='p-6 bg-white rounded-2xl shadow' data-aos='fade-up'>
+          <p
+            class='text-4xl font-extrabold'
+            style={`color:${page.brand}`}
+            data-count='100'>
+            200+
+          </p>
+          <p class='mt-1 text-gray-600'>Trees Planted (and counting)</p>
+        </div>
+        <div
+          class='p-6 bg-white rounded-2xl shadow'
+          data-aos='fade-up'
+          data-aos-delay='100'>
+          <p
+            class='text-4xl font-extrabold'
+            style={`color:${page.brand}`}
+            data-count='3'>
+            3
+          </p>
+          <p class='mt-1 text-gray-600'>Sites Restored</p>
+        </div>
+        <div
+          class='p-6 bg-white rounded-2xl shadow'
+          data-aos='fade-up'
+          data-aos-delay='200'>
+          <p
+            class='text-4xl font-extrabold'
+            style={`color:${page.brand}`}
+            data-count='1'>
+            1
+          </p>
+          <p class='mt-1 text-gray-600'>County, One Shared Future</p>
+        </div>
+      </div>
+
+      <div class='mt-10'>
+        <a
+          href='/donate'
+          class='inline-flex items-center gap-2 px-6 py-3 rounded-xl btn-secondary font-semibold transition'>
+          Fund a Seedling Today
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section class='bg-white text-white py-14 px-6'>
+    <div class='max-w-5xl mx-auto'>
+      <h3 class='text-center text-xl font-semibold text-gray-700'>
+        In partnership with
+      </h3>
+      <div
+        class='mt-6 flex flex-wrap items-center justify-center gap-8 opacity-90'
+        data-aos='fade-up'>
+        <!-- Replace with real logos -->
+        <div class='px-5 py-3 rounded-xl border bg-[#248d88ec] text-sm'>
+          Tom Mboya University
+        </div>
+        <div class='px-5 py-3 rounded-xl border bg-[#248d88ec] text-sm'>
+          KOST Children’s Home
+        </div>
+        <div class='px-5 py-3 rounded-xl border bg-[#248d88ec] text-sm'>
+          Gembe Hills Community
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY (SMALL) -->
+  <section class='bg-gray-50 py-16 px-6'>
+    <div class='max-w-6xl mx-auto'>
+      <h2
+        class='text-3xl md:text-4xl font-bold text-center mb-10'
+        style={`color:${page.brand}`}>
+        Gallery
+      </h2>
+      <div class='grid grid-cols-1 sm:grid-cols-3 gap-6'>
+        <figure
+          class='group overflow-hidden rounded-2xl shadow'
+          data-aos='zoom-in'>
+          <img
+            src='/gallery/9.jpg'
+            alt='Tree planting at Tom Mboya University'
+            class='w-full h-64 object-cover group-hover:scale-105 transition'
+            loading='lazy'
+          />
+          <figcaption class='p-3 text-sm text-gray-700 bg-white'>
+            Tom Mboya University — students & volunteers planting
+          </figcaption>
+        </figure>
+        <figure
+          class='group overflow-hidden rounded-2xl shadow'
+          data-aos='zoom-in'
+          data-aos-delay='100'>
+          <img
+            src='/img/tree-min.jpg'
+            alt='ICAN at KOST Children’s Home'
+            class='w-full h-64 object-cover group-hover:scale-105 transition'
+            loading='lazy'
+          />
+          <figcaption class='p-3 text-sm text-gray-700 bg-white'>
+            KOST Children’s Home — children becoming eco-guardians
+          </figcaption>
+        </figure>
+        <figure
+          class='group overflow-hidden rounded-2xl shadow'
+          data-aos='zoom-in'
+          data-aos-delay='200'>
+          <img
+            src='/img/gembe.jpg'
+            alt='Reforestation at Gembe Hills'
+            class='w-full h-64 object-cover group-hover:scale-105 transition'
+            loading='lazy'
+          />
+          <figcaption class='p-3 text-sm text-gray-700 bg-white'>
+            Gembe Hills — healing degraded slopes together
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- DONOR CTA -->
+  <section class='relative bg-[#248d88ec] text-white py-16 md:py-20'>
+    <div
+      class='absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(7,67,81,.06),transparent_40%),radial-gradient(circle_at_80%_30%,rgba(7,67,81,.08),transparent_35%)]'>
+    </div>
+    <div class='max-w-4xl mx-auto px-6 text-center' data-aos='fade-up'>
+      <h2 class='text-3xl md:text-4xl text-white font-bold'>
+        Help Us Grow a Forest of Hope
+      </h2>
+      <p class='mt-5'>
+        Your support turns seedlings into shade, and bare hills into living
+        classrooms. Sponsor aftercare, expand nurseries, and help us plant
+        wisely—where it matters most.
+      </p>
+      <div class='mt-8 flex items-center justify-center gap-4'>
+        <a
+          href='/donate'
+          class='btn-tertiary font-semibold px-6 py-3 rounded-xl transition'>
+          Donate
+        </a>
+        <a
+          href='/about-us/opportunities'
+          class='bg-white text-black font-semibold px-6 py-3 rounded-xl hover:bg-gray-100 transition'
+          style={`--brand:${page.brand}`}>
+          Volunteer / Partner
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<!-- AOS + COUNTERS -->
+<script is:inline>
+  import AOS from 'aos';
+  document.addEventListener('DOMContentLoaded', () => {
+    AOS.init({ duration: 900, once: true, easing: 'ease-out-cubic' });
+
+    const counters = document.querySelectorAll('#impact-counters [data-count]');
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          const target = parseInt(el.getAttribute('data-count'), 10);
+          let count = 0;
+          const step = Math.max(1, Math.floor(target / 80));
+          const tick = () => {
+            count += step;
+            if (count >= target) {
+              el.textContent = target.toLocaleString();
+            } else {
+              el.textContent = count.toLocaleString();
+              requestAnimationFrame(tick);
+            }
+          };
+          requestAnimationFrame(tick);
+          obs.unobserve(el);
+        });
+      },
+      { threshold: 0.3 }
+    );
+    counters.forEach((c) => obs.observe(c));
+  });
+</script>

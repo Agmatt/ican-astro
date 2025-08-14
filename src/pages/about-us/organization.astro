@@ -13,34 +13,39 @@ const breadcrumbItems = [
   <main>
     <!-- Breadcrumps -->
     <Breadcrumb items={breadcrumbItems} />
-    <!-- Organization Structure -->
-    <section
-      class='bg-white py-20 px-4 lg:px-24'
-      id='organization-structure'
-      data-aos='fade-up'>
+    <!-- BACKGROUND -->
+    <section class='py-10 bg-[#248d87] text-white'>
       <div class='max-w-6xl mx-auto text-center mb-12'>
-        <h2 class='text-4xl font-bold text-[#074351]'>Our Organization</h2>
-        <p class='mt-4 text-lg text-gray-700'>
-          ICAN was officially founded in <span
-            class='font-semibold text-[#185a69]'>2022</span
-          > with a mission to empower communities through health, sustainability,
-          and economic advancement.
+        <h2 class='text-4xl text-white font-bold'>Our Organization</h2>
+        <p class='mt-4 text-lg'>
+          ICAN was officially founded in <span class='font-semibold'>2022</span>
+          with a mission to empower communities through health, sustainability, and
+          economic advancement.
         </p>
       </div>
-
-      <div class='grid md:grid-cols-2 gap-12 items-center mb-16'>
+    </section>
+    <!-- Organization Structure -->
+    <section
+      class='py-20 px-4 lg:px-24 bg-gray-200'
+      id='organization-structure'
+      data-aos='fade-up'>
+      <div
+        class='flex flex-col md:flex-row md:justify-center md:items-start gap-12 items-center mb-16 px-4'
+        data-aos='fade-up'
+        data-aos-duration='800'>
         <!-- Founder -->
-        <div class='flex flex-col items-center text-center px-4'>
+        <div
+          class='flex flex-col items-center text-center max-w-sm p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300'>
           <img
             src='/img/founder-min.jpg'
             alt='Founder'
-            class='w-40 h-40 rounded-full object-cover shadow-md mb-4'
+            class='w-40 h-40 rounded-full object-cover shadow-md mb-4 transform hover:scale-105 transition-transform duration-300'
           />
           <h3 class='text-xl font-semibold text-[#074351] mb-2'>
             Frank Ochieng
           </h3>
           <p class='text-sm text-gray-500 mb-4'>Founder, ICAN</p>
-          <blockquote class='text-gray-700 text-base italic max-w-md'>
+          <blockquote class='text-gray-700 text-base italic'>
             "Our journey began with a vision to build resilient communities from
             the ground up. Every step forward is guided by compassion,
             sustainability, and purpose."
@@ -48,15 +53,16 @@ const breadcrumbItems = [
         </div>
 
         <!-- Co-Founder -->
-        <div class='flex flex-col items-center text-center px-4'>
+        <div
+          class='flex flex-col items-center text-center max-w-sm p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300'>
           <img
             src='/img/edna.jpg'
             alt='Co-Founder'
-            class='w-40 h-40 rounded-full object-cover shadow-md mb-4'
+            class='w-40 h-40 rounded-full object-cover shadow-md mb-4 transform hover:scale-105 transition-transform duration-300'
           />
           <h3 class='text-xl font-semibold text-[#074351] mb-2'>Edna Awuor</h3>
           <p class='text-sm text-gray-500 mb-4'>Co-Founder, ICAN</p>
-          <blockquote class='text-gray-700 text-base italic max-w-md'>
+          <blockquote class='text-gray-700 text-base italic'>
             "ICAN is a platform of hope and transformation. Together with our
             communities, we co-create solutions that make a lasting difference."
           </blockquote>
@@ -64,7 +70,7 @@ const breadcrumbItems = [
       </div>
 
       <!-- CTA Section -->
-      <div class='text-center'>
+      <div class='text-center py-8'>
         <h3 class='text-2xl font-semibold text-[#074351] mb-4'>
           Want to be part of our mission?
         </h3>
@@ -77,7 +83,7 @@ const breadcrumbItems = [
     </section>
 
     <!-- Team -->
-    <section class='py-16 bg-teal-50'>
+    <section class='py-16 bg-white'>
       <div class='max-w-7xl mx-auto px-4'>
         <div class='text-center mb-12'>
           <h2 class='text-3xl md:text-4xl font-bold stories-header'>
@@ -205,7 +211,7 @@ const breadcrumbItems = [
             </p>
             <a
               href='#reports'
-              class='mt-auto inline-block btn-primary  transition px-4 py-2 rounded-full text-sm font-medium'>
+              class='mt-auto inline-block btn-primary transition px-4 py-2 rounded-full text-sm font-medium'>
               Read More
             </a>
           </div>

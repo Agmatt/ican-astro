@@ -1,8 +1,8 @@
 ---
-// src/layouts/Layout.astro
 import '../styles/global.css';
 import Navbar from '../components/navbar.astro';
 import Footer from '../components/footer.astro';
+// import ReactNavbar from '../components/ReactNavbar.jsx';
 import 'aos/dist/aos.css';
 const { title = 'Inuana Community Action Network' } = Astro.props;
 ---
@@ -81,8 +81,6 @@ const { title = 'Inuana Community Action Network' } = Astro.props;
       });
     </script>
 
-    <!-- Cookie Settings -->
-    
     <!-- Cookie Policy -->
     <div
       id='cookie-banner'
@@ -132,6 +130,6 @@ const { title = 'Inuana Community Action Network' } = Astro.props;
           banner.classList.add('hidden');
         });
       });
-    </script> 
+    </script>
   </body>
 </html>

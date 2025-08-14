@@ -1,0 +1,187 @@
+---
+import BaseLayout from '../../../layout/BaseLayout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+
+const pageTitle = 'School Drug Awareness Campaign Report';
+const reportDate = '17th June 2025';
+const venue = 'St. Augustine Mirogi Boys High School';
+
+const breadcrumbItems = [
+  { href: '/', label: 'Home' },
+  { href: '/what-we-do/projects', label: 'Drug Awareness Campaign' },
+];
+---
+
+<BaseLayout title='Drug Awareness Campaign - ICAN'>
+  <Breadcrumb items={breadcrumbItems} />
+
+  <section class='bg-gray-50 py-12'>
+    <div class='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
+      <!-- Title & Meta -->
+      <div class='mb-10 text-center' data-aos='fade-up'>
+        <h1 class='text-4xl md:text-5xl font-bold text-[#074351] mb-4'>
+          {pageTitle}
+        </h1>
+        <p class='text-gray-600 text-lg'>
+          Venue: <strong>{venue}</strong> | Date: {reportDate}
+        </p>
+        <p class='text-gray-600 text-lg'>
+          Organised by: <strong>Homabay Community Workgroup (HCW)</strong> in collaboration
+          with <strong>NACADA</strong><br />
+          Host CBO: <strong>Inuana Community Action Network (ICAN)</strong>
+        </p>
+      </div>
+
+      <!-- Hero Image -->
+      <div class='overflow-hidden shadow-lg mb-12' data-aos='zoom-in'>
+        <img
+          src='/gallery/57.jpg'
+          alt='Students attending the Drug Awareness Campaign'
+          class='w-full h-auto object-cover'
+          loading='lazy'
+        />
+      </div>
+
+      <!-- Introduction -->
+      <article
+        class='prose prose-lg max-w-none prose-headings:text-[#074351]'
+        data-aos='fade-up'>
+        <h2>1. Introduction</h2>
+        <p>
+          The Homabay Community Workgroup (HCW) is a network of active
+          community-based and non-governmental organisations committed to
+          driving positive change in Homabay County. On <strong
+            >{reportDate}</strong
+          >, HCW—together with <strong>ICAN</strong> and with the support of
+          <strong> NACADA</strong>—responded to a call from St. Augustine Mirogi
+          Boys High School to address a growing crisis: drug and substance abuse
+          among students.
+        </p>
+        <p>
+          This report is both a record of that day’s activities and a call to
+          action. It captures the voices, concerns, and hopes of a school
+          community determined to reclaim the future of its youth.
+        </p>
+
+        <h2 class='my-6'>2. Problem Statement</h2>
+        <p>
+          Substance abuse in secondary schools is no longer an isolated
+          problem—it is a community crisis. At Mirogi Boys High School, cases of
+          cannabis, smokeless tobacco, alcohol, and psychoactive inhalants had
+          risen sharply. Beyond health risks, these behaviors were eroding
+          academic performance, fueling stigma, and fracturing family
+          relationships.
+        </p>
+
+        <h2 class='my-6'>3. Literature Review</h2>
+        <ul>
+          <li>
+            <strong>NACADA (2022)</strong>: Cannabis, prescription drug misuse,
+            and smokeless tobacco are increasingly common in rural schools.
+          </li>
+          <li>
+            <strong>KDHS (2022)</strong>: Substance abuse correlates with rising
+            adolescent reproductive health challenges, untreated STIs, and
+            mental health disorders.
+          </li>
+          <li>
+            <strong>MOH Adolescent Health Policy (2015)</strong>: Calls for
+            community-led interventions to reduce risky behaviors and promote
+            adolescent well-being.
+          </li>
+        </ul>
+
+        <h2 class='my-6'>4. Objectives of the Campaign</h2>
+        <p>
+          <strong>Primary Objective:</strong> Create awareness and equip the school
+          with strategies to address root causes of drug abuse.
+        </p>
+        <p><strong>Secondary Objectives:</strong></p>
+        <ul>
+          <li>Engage students in open, stigma-free discussions.</li>
+          <li>Identify the types and sources of abused substances.</li>
+          <li>Understand impacts on mental health and academics.</li>
+          <li>Explore related sexual reproductive health (SRH) concerns.</li>
+          <li>Initiate stakeholder-driven follow-up actions.</li>
+        </ul>
+
+        <h2 class='my-6'>5. Methodology</h2>
+        <p>The campaign used a participatory, student-centered approach:</p>
+        <ol>
+          <li>Preliminary engagement with school administration.</li>
+          <li>Stakeholder briefing for alignment and support.</li>
+          <li>Age-segmented student groups for tailored discussions.</li>
+          <li>
+            Participatory group discussions using real stories and testimonies.
+          </li>
+          <li>Analysis of student and teacher input.</li>
+          <li>Debrief with school leaders to co-create next steps.</li>
+        </ol>
+
+        <h2 class='my-6'>6. Key Findings</h2>
+        <h3>A. Drug and Substance Abuse</h3>
+        <ul>
+          <li>Most abused: Bhang, “mbazi” (inhalants), kuber, and alcohol.</li>
+          <li>
+            Highest incidence: Form 4 students—peer influence, academic stress,
+            lax supervision.
+          </li>
+          <li>
+            Most initiation happens <strong>within</strong> school premises.
+          </li>
+          <li>100+ drug-related incidents in the past academic year.</li>
+          <li>
+            Psychosocial consequences: stigma, withdrawal, anxiety, depression.
+          </li>
+        </ul>
+
+        <h3 class='my-6'>B. Sexual Reproductive Health Issues</h3>
+        <ul>
+          <li>Untreated/recurrent STIs, UTIs among students.</li>
+          <li>Lack of access to proper healthcare and treatment.</li>
+          <li>Stigma compounds mental health struggles.</li>
+          <li>
+            Drivers: poor hygiene, sexual activity within school, lack of school
+            clinic.
+          </li>
+        </ul>
+
+        <h2 class='my-6'>7. Root Cause Analysis</h2>
+        <p>
+          Using the “5 Whys” technique, the investigation revealed the lack of
+          effective monitoring, poor frisking practices, overburdened staff, and
+          absence of a comprehensive school drug policy.
+        </p>
+
+        <h2>8. Conclusion & Recommendations</h2>
+        <p>
+          The campaign achieved its immediate awareness goal but also exposed
+          urgent systemic needs: stronger policy, better monitoring, healthcare
+          access, and sustained stakeholder collaboration. The recommended next
+          step is a <strong>Free Comprehensive Medical Camp</strong> for reproductive
+          and mental health screening and treatment.
+        </p>
+      </article>
+
+      <!-- Call to Action -->
+      <div
+        class='mt-12 bg-[#248d87] text-white p-8 rounded-2xl shadow-lg'
+        data-aos='fade-up'>
+        <h3 class='text-2xl font-bold text-white mb-4'>
+          Be Part of the Change
+        </h3>
+        <p class='mb-6'>
+          Our young people deserve a future free from drugs and preventable
+          health risks. Support our mission to expand school-based awareness
+          campaigns, health services, and youth empowerment programs across
+          Homabay County.
+        </p>
+        <a
+          href='/donate'
+          class='inline-block btn-tertiary rounded-lg font-semibold transition'>
+          Donate Now
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

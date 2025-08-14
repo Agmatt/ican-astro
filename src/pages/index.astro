@@ -2,176 +2,532 @@
 // src/pages/index.astro
 import Layout from '../layout/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
-import LogoCarousel from '../components/LogoCarousel.astro';
 import CookieConsent from '../components/CookieConsent.astro';
+
+const pillars = [
+  {
+    title: 'Health & Wellbeing',
+    description:
+      'Promoting healthy lifestyles, access to healthcare, and community wellness programs for lasting change.',
+    icon: '/img/health-logo.png',
+    link: '/strategic-framework#health-wellbeing',
+  },
+  {
+    title: 'Environmental Sustainability',
+    description:
+      'Protecting natural resources, encouraging sustainable practices, and building climate-resilient communities.',
+    icon: '/img/en-logo.png',
+    link: '/strategic-framework#environmental-sustainability',
+  },
+  {
+    title: 'Economic Development',
+    description:
+      'Empowering communities through skills, entrepreneurship, and sustainable economic opportunities.',
+    icon: '/img/eco-logo.png',
+    link: '/strategic-framework#economic-development',
+  },
+];
+
+const impactStats = [
+  { label: 'People Reached', value: 300 },
+  { label: 'Projects Completed', value: 10 },
+  { label: 'Communities Served', value: 40 },
+  { label: 'Volunteers Engaged', value: 25 },
+];
+
+const sdgs = [
+  { icon: '/sdg/03.png' },
+  { icon: '/sdg/08.png' },
+  { icon: '/sdg/13.png' },
+  { icon: '/sdg/15.png' },
+];
 ---
 
 <Layout title='Inuana Community Action Network'>
-  
-  <main>
-    <!-- HERO -->
-   <Hero />
-    <!-- INTRO -->
-    <section class='px-4 sm:px-4 md:px-2 lg:px-6 my-8'>
-      <div class='container mx-auto bg-green-50 my-10'>
-        <div class='flex flex-col md:flex-row gap-4'>
-          <div class='flex-1' data-aos='zoom-in'>
-            <img
-              src='/img/9-min.jpg'
-              alt='Pose'
-              class='w-full h-auto md:h-[500px] object-cover'
-              loading='lazy'
-              decoding='async'
-            />
-          </div>
-          <div class='flex-1 p-4' data-aos='fade-left'>
-            <h2 class='text-4xl font-bold mb-2 hist uppercase'>
-              A community movement
-            </h2>
-            <p class='my-6 text-lg md:text-xl'>
-              We are a passionate community-driven organization dedicated to
-              transforming lives and safeguarding our environment.
-            </p>
-            <p class='my-6 text-lg md:text-xl'>
-              Our mission is to empower youth, promote health and wellness, and
-              foster sustainable practices that benefit everyone.
-            </p>
-            <p class='my-6 text-lg md:text-xl'>
-              Let’s build a community where every voice matters, every life
-              thrives, and our planet flourishes.
-            </p>
-            <a href='/what-we-do/programs/' class='btn-secondary my-10'
-              >Learn More</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
+  <!-- Hero -->
+  <section
+    class='relative bg-cover bg-center py-28 text-white'
+    style="background-image: url('/gallery/44.jpg');">
+    <div class='absolute inset-0 bg-black/50'></div>
+    <div
+      class='relative z-10 text-center max-w-4xl mx-auto px-6'
+      data-aos='fade-down'>
+      <h1 class='text-2xl md:text-5xl text-white font-bold mb-4'>
+        Empowering Communities for a Sustainable Future
+      </h1>
+      <p class='text-lg'>
+        ICAN works to improve health, protect the environment, and promote
+        economic opportunities for all.
+      </p>
+    </div>
+    <div class='flex justify-center mt-6 gap-4' data-aos='fade-down'>
+      <a href='/donate' class='btn-primary font-semibold py-3 px-6 rounded-lg'>
+        Donate Now
+      </a>
+      <a
+        href='/about-us'
+        class='btn-tertiary font-semibold py-3 px-6 rounded-lg'>
+        Learn More
+      </a>
+    </div>
+  </section>
 
-    <!-- BANNER CTA -->
-    <section class='bg-gray-100 py-12'>
-      <div
-        class='px-4 mx-auto max-w-screen-xl text-center lg:py-16 relative'
-        data-aos='fade-up'>
-        <h1
-          class='mb-4 text-4xl font-extrabold tracking-tight text-[#074251] md:text-5xl lg:text-6xl'>
-          We invest in the community's potential
-        </h1>
-        <p
-          class='mb-8 text-lg font-normal text-gray-900 lg:text-xl sm:px-16 lg:px-48'>
-          "Where Community and Commerce Thrive Together."
+  <!-- INTRO -->
+  <section class='py-10 px-4 sm:px-4 lg:px-10' data-aos='fade-up'>
+    <div class='max-w-6xl mx-auto grid md:grid-cols-2 gap-6 bg-green-50'>
+      <!-- Image -->
+      <div>
+        <img
+          src='/gallery/9.jpg'
+          alt='Pelican Open Rover Crew cleaning plastic waste'
+          class='w-full h-auto object-cover'
+        />
+      </div>
+
+      <!-- Text Content -->
+      <div class='pl-4'>
+        <h2 class='text-3xl font-bold pt-5 text-[#074351] hist mb-4 uppercase'>
+          A community movement
+        </h2>
+        <p class='text-gray-700 mb-6 leading-relaxed'>
+          We are a passionate community-driven organization dedicated to
+          transforming lives and safeguarding our environment.
+        </p>
+        <p class='text-gray-700 mb-6 leading-relaxed'>
+          Our mission is to empower youth, promote health and wellness, and
+          foster sustainable practices that benefit everyone.
         </p>
         <a
-          href='/what-we-do/core-sectors/ubuntu-soko'
-          class='inline-flex justify-between items-center py-1 px-1 pe-4 mb-7 text-sm text-white rounded-full bg-[#074251] hover:bg-[#caccae] hover:text-gray-900'>
-          <span
-            class='text-xs bg-[#074251] hover:bg-[#b9bc23] rounded-full text-white px-4 py-1.5 me-3'
-            >New</span
-          >
-          <span class='text-sm font-medium'
-            >Ubuntu Soko launched! See what's new</span
-          >
-          <svg
-            class='w-2.5 h-2.5 ms-2 rtl:rotate-180'
-            viewBox='0 0 6 10'
-            fill='none'
-            xmlns='http://www.w3.org/2000/svg'>
-            <path
-              d='m1 9 4-4-4-4'
-              stroke='currentColor'
-              stroke-width='2'
-              stroke-linecap='round'
-              stroke-linejoin='round'></path>
-          </svg>
+          href='/about-us/mission-vision-values'
+          class='inline-block btn-primary mb-5 px-6 py-3 rounded-lg shadow transition duration-300'>
+          Learn More →
         </a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- WHERE WE WORK -->
-    <section class='px-2 sm:px-4 md:px-2 lg:px-6 my-8'>
-      <div class='container mx-auto bg-green-50 my-10'>
-        <div class='flex flex-col md:flex-row gap-4'>
-          <div class='flex-1 p-4' data-aos='fade-right'>
-            <h2 class='text-4xl font-bold mb-2 hist uppercase'>
-              Where we work
-            </h2>
-            <p class='my-6 text-lg md:text-xl'>
-              Our work spans rural regions in Kenya, especially Homabay Town and
-              its environs — areas of public health importance with unique
-              challenges and opportunities.
-            </p>
-            <p class='my-6 text-lg md:text-xl'>
-              By understanding the local context, we tailor our programs to
-              community-specific needs. ICAN is on the ground, making a
-              difference.
-            </p>
-            <a href='/what-we-do' class='btn-secondary my-10'>Learn More</a>
-          </div>
-          <div class='flex-1' data-aos='zoom-in'>
-            <img
-              src='/img/pose-min.jpg'
-              alt='Pose'
-              class='w-full h-auto md:h-[500px] object-cover'
-              loading='lazy'
-              decoding='async'
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- LEADERSHIP MESSAGE -->
-    <section class='py-16 bg-white'>
-      <div class='max-w-5xl mx-auto px-4'>
-        <div
-          class='flex flex-col md:flex-row items-center justify-center gap-12'>
-          <!-- Founder -->
-          <figure
-            class='flex flex-col items-center text-center space-y-6 max-w-sm'
+  <!-- Pillars -->
+  <section class='py-16 px-2 md:px-4 max-w-6xl mx-auto'>
+    <h2
+      class='text-3xl font-bold text-center spacer-small pb-4 mb-12 text-[#074351]'>
+      Our Strategic Pillars
+    </h2>
+    <div class='grid md:grid-cols-3 gap-8'>
+      {
+        pillars.map((pillar) => (
+          <div
+            class='bg-gray-100 shadow-lg rounded-xl p-6 text-center hover:shadow-xl transition'
             data-aos='fade-up'>
             <img
-              src='/img/frank-min.jpg'
-              alt='Founder portrait'
-              class='w-40 h-40 rounded-full shadow-xl object-cover'
-              loading='lazy'
+              src={pillar.icon}
+              alt={pillar.title}
+              class='w-16 h-16 mx-auto mb-4'
             />
-            <blockquote class='text-gray-700 text-base leading-relaxed'>
-              Together, let's drive change and empowerment in rural Kenya. Join
-              us in our mission for a healthier, more prosperous community.<br
-              />Your involvement makes a difference.
-            </blockquote>
-            <figcaption class='text-sm text-gray-500'>/ Founder</figcaption>
-          </figure>
+            <h3 class='text-xl font-bold mb-2'>{pillar.title}</h3>
+            <p class='text-gray-600 mb-4'>{pillar.description}</p>
+            <a href={pillar.link} class='text-[#074351] font-semibold'>
+              Read More →
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </section>
 
-          <!-- M&E Officer -->
-          <figure
-            class='flex flex-col items-center text-center space-y-6 max-w-sm'
-            data-aos='fade-up'
-            data-aos-delay='100'>
-            <img
-              src='/img/ben-min.jpg'
-              alt='Co-founder portrait'
-              class='w-40 h-40 rounded-full shadow-xl object-cover'
-              loading='lazy'
-            />
-            <blockquote class='text-gray-700 text-base leading-relaxed'>
-              At ICAN, we measure impact that transforms lives — healthier
-              people, greener communities, stronger economies. Our data tells
-              real stories of change across our three pillars.
-            </blockquote>
-            <figcaption class='text-sm text-gray-500'>
-              / M.E.A.R.L.A Officer
-            </figcaption>
-          </figure>
+  <!-- BANNER CTA -->
+  <section class='bg-gray-100 py-12'>
+    <div
+      class='px-4 mx-auto max-w-screen-xl text-center lg:py-16 relative'
+      data-aos='fade-up'>
+      <h1
+        class='mb-4 text-4xl font-extrabold tracking-tight text-[#074251] md:text-5xl lg:text-6xl'>
+        We invest in the community's potential
+      </h1>
+      <p
+        class='mb-8 text-lg font-normal text-gray-900 lg:text-xl sm:px-16 lg:px-48'>
+        "Where Community and Commerce Thrive Together."
+      </p>
+      <a
+        href='/what-we-do/ubuntu-soko'
+        class='inline-flex justify-between items-center py-1 px-1 pe-4 mb-7 text-sm text-white rounded-full bg-[#074251] hover:bg-[#caccae] hover:text-gray-900'>
+        <span
+          class='text-xs bg-[#074251] hover:bg-[#b9bc23] rounded-full text-white px-4 py-1.5 me-3'
+          >New</span
+        >
+        <span class='text-sm font-medium'
+          >Ubuntu Soko launched! See what's new</span
+        >
+        <svg
+          class='w-2.5 h-2.5 ms-2 rtl:rotate-180'
+          viewBox='0 0 6 10'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'>
+          <path
+            d='m1 9 4-4-4-4'
+            stroke='currentColor'
+            stroke-width='2'
+            stroke-linecap='round'
+            stroke-linejoin='round'></path>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- WHERE WE WORK -->
+  <section class='px-2 sm:px-4 md:px-2 lg:px-6 my-8'>
+    <div class='container mx-auto bg-green-50 my-10'>
+      <div class='flex flex-col md:flex-row gap-4'>
+        <div class='flex-1 p-4' data-aos='fade-right'>
+          <h2 class='text-4xl font-bold mb-2 hist uppercase'>Where we work</h2>
+          <p class='my-6 text-lg md:text-xl'>
+            Our work spans rural regions in Kenya, especially Homabay Town and
+            its environs — areas of public health importance with unique
+            challenges and opportunities.
+          </p>
+          <p class='my-6 text-lg md:text-xl'>
+            By understanding the local context, we tailor our programs to
+            community-specific needs. ICAN is on the ground, making a
+            difference.
+          </p>
+          <a href='/what-we-do' class='btn-primary my-10'>Learn More</a>
+        </div>
+        <div class='flex-1' data-aos='zoom-in'>
+          <img
+            src='/img/pose-min.jpg'
+            alt='Pose'
+            class='w-full h-auto md:h-[500px] object-cover'
+            loading='lazy'
+            decoding='async'
+          />
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Partners Carousel -->
-     <LogoCarousel />
+  <!-- Impact Counters -->
+  <section class='bg-teal-100 py-16 px-6 text-center'>
+    <h2 class='text-3xl font-bold text-[#074351] spacer-small pb-4 mb-'>
+      Our Impact
+    </h2>
+    <div
+      class='grid grid-cols-2 sm:grid-cols-4 gap-8 py-10'
+      id='impact-counters'>
+      {
+        impactStats.map((stat) => (
+          <div data-aos='fade-up'>
+            <p
+              class='text-4xl font-extrabold text-[#074351]'
+              data-count={stat.value}>
+              0
+            </p>
+            <p class='text-gray-600'>{stat.label}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
 
-     <!-- Cookie -->
-    <div class='container mx-auto px-4'>
-      <CookieConsent />
-  </main>
+  <!-- Featured Projects -->
+  <section class='py-16 px-2 md:px-4 max-w-6xl mx-auto'>
+    <h2
+      class='text-3xl font-bold text-center spacer-small pb-4 text-[#074351] mb-12'>
+      Featured Projects
+    </h2>
+    <div class='grid md:grid-cols-3 gap-8'>
+      <article
+        class='bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-xl transition'
+        data-aos='fade-up'>
+        <img
+          src='/gallery/46.jpg'
+          alt='Project 1'
+          class='w-full h-48 object-cover'
+        />
+        <div class='p-6'>
+          <h3 class='font-bold text-xl mb-2'>Clean Water Access</h3>
+          <p class='text-gray-600 mb-4'>
+            Bringing safe drinking water to rural communities.
+          </p>
+          <a
+            href='/what-we-do/projects/clean-water-access'
+            class='text-[#074351] font-semibold hover:underline'>Learn More →</a
+          >
+        </div>
+      </article>
+      <article
+        class='bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-xl transition'
+        data-aos='fade-up'
+        data-aos-delay='100'>
+        <img
+          src='/gallery/33.jpg'
+          alt='Project 2'
+          class='w-full h-48 object-cover'
+        />
+        <div class='p-6'>
+          <h3 class='font-bold text-xl mb-2'>Reforestation Campaign</h3>
+          <p class='text-gray-600 mb-4'>
+            Planting trees to combat climate change and restore ecosystems.
+          </p>
+          <a
+            href='/what-we-do/projects/reforestation-campaign'
+            class='text-[#074351] font-semibold hover:underline'>Learn More →</a
+          >
+        </div>
+      </article>
+      <article
+        class='bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-xl transition'
+        data-aos='fade-up'
+        data-aos-delay='200'>
+        <img
+          src='/img/CD2-min.jpg'
+          alt='Project 3'
+          class='w-full h-48 object-cover'
+        />
+        <div class='p-6'>
+          <h3 class='font-bold text-xl mb-2'>Youth Empowerment</h3>
+          <p class='text-gray-600 mb-4'>
+            Empowering youth with job-ready skills and mentorship.
+          </p>
+          <a
+            href='/what-we-do/projects/empowering-teenagers'
+            class='text-[#074351] font-semibold hover:underline'>Learn More →</a
+          >
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SDG Commitments -->
+  <section class='bg-gray-50 py-16 px-6 text-center'>
+    <h2 class='text-3xl font-bold text-[#074351] mb-6 py-4 stories-header'>
+      Our Commitment to the SDGs
+    </h2>
+    <div class='flex flex-wrap justify-center py-8 gap-6'>
+      {
+        sdgs.map((goal) => (
+          <div class='flex flex-col items-center' data-aos='zoom-in'>
+            <img src={goal.icon} class='w-40 h-40 mb-2' />
+            <p class='text-gray-600 text-sm' />
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Featured Story Section -->
+  <section class='py-16 px-4 lg:px-10' data-aos='fade-up'>
+    <div
+      class='max-w-6xl mx-auto grid md:grid-cols-2 gap-6 bg-green-100 items-center'>
+      <!-- Image -->
+      <div>
+        <img
+          src='/logos/pelican.jpg'
+          alt='Pelican Open Rover Crew cleaning plastic waste'
+          class='w-full h-auto object-cover'
+        />
+      </div>
+
+      <!-- Text Content -->
+      <div class='pl-4'>
+        <h2 class='text-3xl font-bold pt-5 text-[#074351] hist mb-4'>
+          Featured Impact: Pelican Open Rover Crew
+        </h2>
+        <p class='text-gray-700 mb-6 leading-relaxed'>
+          Founded in 2023 by an ICAN member, the Pelican Open Rover Crew is
+          tackling plastic waste threatening Lake Victoria’s aquatic life.
+        </p>
+        <p class='text-gray-700 mb-6 leading-relaxed'>
+          From refusing single-use plastics to leading award-winning clean-up
+          drives, they’ve turned awareness into action — with community,
+          competition wins, and IFRC support.
+        </p>
+        <a
+          href='/pelican-open-rover-crew'
+          class='inline-block btn-primary mb-5 px-6 py-3 rounded-lg shadow transition duration-300'>
+          Read Full Story →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class='py-16 px-6 max-w-6xl mx-auto text-center'>
+    <h2
+      class='text-3xl font-bold text-[#074351] md:text-2xl mb-12 stories-header'>
+      Voices from Our Community
+    </h2>
+    <div class='grid md:grid-cols-3 py-7 gap-8'>
+      <blockquote class='bg-white shadow-lg rounded-xl p-6' data-aos='fade-up'>
+        <p class='italic mb-4'>
+          "ICAN transformed our village by providing clean water. We are
+          healthier and happier."
+        </p>
+        <footer class='text-sm text-gray-600'>— Mary, Community Leader</footer>
+      </blockquote>
+      <blockquote
+        class='bg-white shadow-lg rounded-xl p-6'
+        data-aos='fade-up'
+        data-aos-delay='100'>
+        <p class='italic mb-4'>
+          "The skills I gained through ICAN’s programs helped me start my own
+          business."
+        </p>
+        <footer class='text-sm text-gray-600'>
+          — James, Youth Entrepreneur
+        </footer>
+      </blockquote>
+      <blockquote
+        class='bg-white shadow-lg rounded-xl p-6'
+        data-aos='fade-up'
+        data-aos-delay='200'>
+        <p class='italic mb-4'>
+          "Their environmental work is preserving our forests for future
+          generations."
+        </p>
+        <footer class='text-sm text-gray-600'>
+          — Ruth, Environmental Activist
+        </footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Featured Highlight: Drug Aware Report -->
+  <section class='bg-gray-50 py-12 px-4 sm:px-6 lg:px-8' data-aos='fade-up'>
+    <div
+      class='max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center'>
+      <!-- Image -->
+      <div class='relative overflow-hidden shadow-lg' data-aos='zoom-in'>
+        <img
+          src='/gallery/57.jpg'
+          alt='Drug Aware Campaign Report'
+          class='w-full h-80 sm:h-96 object-cover'
+          loading='lazy'
+        />
+        <span
+          class='absolute top-4 left-4 bg-red-600 text-white text-sm font-semibold px-3 py-1 rounded-full shadow'>
+          Featured Report
+        </span>
+      </div>
+
+      <!-- Content -->
+      <div class='flex flex-col justify-center' data-aos='fade-left'>
+        <h2 class='text-3xl md:text-4xl font-bold text-[#074351] mb-4'>
+          Drug Aware Campaign Report
+        </h2>
+        <p class='text-lg text-gray-700 mb-4'>
+          The Drug Aware Campaign was <strong>championed by ICAN</strong> and
+          <strong>supported by NACADA</strong> at
+          <strong>St. Augustine Mirogi Boys High School</strong>. This
+          initiative focused on educating students about the dangers of
+          substance abuse, promoting healthy lifestyle choices, and inspiring
+          youth to become advocates for a drug-free society.
+        </p>
+        <p class='text-base text-gray-600 mb-6'>
+          Through interactive sessions, motivational talks, and community
+          engagement, the campaign created a lasting impact and encouraged
+          collective action against drug abuse.
+        </p>
+        <a
+          href='/what-we-do/projects/drug-awareness-campaign'
+          class='btn-secondary rounded font-medium px-4 py-2 text-sm items-center transition-colors duration-300'>
+          View Report →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP MESSAGE -->
+  <section class='py-16 bg-teal-50'>
+    <h2
+      class='text-3xl mx-auto text-center font-bold text-[#074351] spacer-small py-4 mb-12'>
+      Voices from Our Leaders
+    </h2>
+    <div class='max-w-5xl mx-auto py-6 px-4'>
+      <div class='flex flex-col md:flex-row items-center justify-center gap-12'>
+        <!-- Founder -->
+        <figure
+          class='flex flex-col items-center text-center space-y-6 max-w-sm'
+          data-aos='fade-up'>
+          <img
+            src='/img/frank-min.jpg'
+            alt='Founder portrait'
+            class='w-40 h-40 rounded-full shadow-xl object-cover'
+            loading='lazy'
+          />
+          <blockquote class='text-gray-700 text-base leading-relaxed'>
+            Together, let's drive change and empowerment in rural Kenya. Join us
+            in our mission for a healthier, more prosperous community.<br />Your
+            involvement makes a difference.
+          </blockquote>
+          <figcaption class='text-sm text-gray-500'>/ Founder</figcaption>
+        </figure>
+
+        <!-- M&E Officer -->
+        <figure
+          class='flex flex-col items-center text-center space-y-6 max-w-sm'
+          data-aos='fade-up'
+          data-aos-delay='100'>
+          <img
+            src='/img/ben-min.jpg'
+            alt='Co-founder portrait'
+            class='w-40 h-40 rounded-full shadow-xl object-cover'
+            loading='lazy'
+          />
+          <blockquote class='text-gray-700 text-base leading-relaxed'>
+            At ICAN, we measure impact that transforms lives — healthier people,
+            greener communities, stronger economies. Our data tells real stories
+            of change across our three pillars.
+          </blockquote>
+          <figcaption class='text-sm text-gray-500'>
+            / M.E.A.R.L.A Officer
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section
+    class='bg-[#248d88ec] text-white text-center py-12 px-6'
+    data-aos='fade-up'>
+    <h2 class='text-2xl text-white font-bold mb-4'>
+      Join Us in Making a Difference
+    </h2>
+    <p class='mb-6'>Be part of the change. Every action counts.</p>
+    <div class='flex justify-center gap-4'>
+      <a
+        href='/about-us/partners-and-donors'
+        class='btn-tertiary font-semibold py-3 px-6 rounded-lg'>
+        Partner
+      </a>
+      <a
+        href='/about-us/work-with-us'
+        class='bg-white text-[#074351] hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg'>
+        Volunteer
+      </a>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const counters = document.querySelectorAll(
+        '#impact-counters [data-count]'
+      );
+      counters.forEach((counter) => {
+        const updateCount = () => {
+          const target = +counter.getAttribute('data-count');
+          const count = +counter.innerText;
+          const speed = 50; // smaller is faster
+          const increment = Math.ceil(target / 100);
+
+          if (count < target) {
+            counter.innerText = count + increment;
+            setTimeout(updateCount, speed);
+          } else {
+            counter.innerText = target.toLocaleString();
+          }
+        };
+        updateCount();
+      });
+    });
+  </script>
 </Layout>

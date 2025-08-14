@@ -1,0 +1,314 @@
+---
+import BaseLayout from '../layout/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+
+const breadcrumbItems = [
+  { href: '/', label: 'Home' },
+  { href: '/pelican-open-rover-crew', label: 'Pelicaan Open Rover Crew' },
+];
+
+const page = {
+  title: 'Pelican Open Rover Crew — Turning the Tide on Plastics',
+  description:
+    'Founded in 2023 by an ICAN member, Pelican Open Rover Crew protects Lake Victoria by refusing, reusing, recycling, and reducing single-use plastics — with IFRC support and community-led impact.',
+  //   brand: 'white',
+  accent: '#0EA5E9', // soft cyan accent for water theme
+  heroImg: '/gallery/49.jpg', // replace with your best hero image
+};
+---
+
+<BaseLayout title='Pelican Open Rover Crew - ICAN'>
+  <Breadcrumb items={breadcrumbItems} />
+  <!-- HERO -->
+  <section class='relative text-white'>
+    <img
+      src={page.heroImg}
+      alt='Pelican Open Rover Crew cleaning plastics along Lake Victoria'
+      class='absolute inset-0 w-full h-[60vh] object-cover'
+      loading='eager'
+    />
+    <div class='absolute inset-0 bg-black/50'></div>
+
+    <div
+      class='relative text-white max-w-5xl mx-auto px-6 h-[60vh] flex flex-col items-center justify-center text-center'>
+      <h1 class='text-4xl md:text-5xl text-white font-extrabold leading-tight'>
+        Pelican Open Rover Crew
+      </h1>
+      <p class='mt-3 text-lg md:text-xl text-gray-100 max-w-3xl'>
+        A 2023 initiative sparked by an ICAN member’s witness of aquatic life
+        suffering — turning grief into action across Lake Victoria’s shores.
+      </p>
+      <div class='mt-8 flex flex-wrap items-center justify-center gap-4'>
+        <a
+          href='/donate'
+          class='btn-primary font-semibold px-6 py-3 rounded-xl transition'
+          >Support Their Work</a
+        >
+        <a
+          href='/about-us/contact'
+          class='btn-tertiary font-semibold px-6 py-3 rounded-xl transition'
+          style={`--brand:${page.brand}`}>Partner with ICAN</a
+        >
+      </div>
+    </div>
+
+    <!-- subtle wave divider -->
+    <svg
+      viewBox='0 0 1440 80'
+      class='block w-full text-white'
+      aria-hidden='true'>
+      <path
+        fill='currentColor'
+        d='M0,64L48,53.3C96,43,192,21,288,21.3C384,21,480,43,576,53.3C672,64,768,64,864,53.3C960,43,1056,21,1152,21.3C1248,21,1344,43,1392,53.3L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z'
+      ></path>
+    </svg>
+  </section>
+
+  <!-- ORIGIN STORY -->
+  <section class='bg-white py-16 px-6'>
+    <div class='max-w-5xl mx-auto grid md:grid-cols-5 gap-10 items-start'>
+      <div class='md:col-span-3'>
+        <h2
+          class='text-3xl md:text-4xl hist font-bold'
+          style={`color:${page.brand}`}>
+          From Witness to Movement
+        </h2>
+        <p class='mt-4 text-gray-700 leading-relaxed'>
+          Along rivers and streams feeding Lake Victoria, a young ICAN member
+          saw plastic choke life: tangled fins, silent shores, and nets filled
+          with more waste than fish. In 2023, I founded the <strong
+            >Pelican Open Rover Crew</strong
+          >
+          to flip the script with the 4Rs: <strong>Refuse</strong>, <strong
+            >Reuse</strong
+          >, <strong>Recycle</strong>, and <strong>Reduce</strong>.
+        </p>
+        <p class='mt-4 text-gray-700 leading-relaxed'>
+          What began as a personal vow became a community force — blending
+          awareness with action, and inspiring young people to protect the
+          waters that sustain their homes and hopes.
+        </p>
+      </div>
+
+      <!-- pull quote -->
+      <aside
+        class='md:col-span-2 p-6 rounded-2xl bg-[color:var(--accent)]/10 border border-[color:var(--accent)]'
+        style={`--accent:${page.accent}`}>
+        <p
+          class='text-lg italic text-[color:var(--brand)]'
+          style={`--brand:${page.brand}`}>
+          “Every bottle we refuse, every bag we replace, every kilo we recycle —
+          that’s a life saved downstream.”
+        </p>
+        <p class='mt-3 text-sm text-gray-600'><i>— Collince Ochieng,  PORC Lead</i> </p>
+
+        <span class='inline-flex flex-wrap items-center gap-4 mt-4'>
+          <img
+            src='/logos/pelican.jpg'
+            alt='Pelican Logo'
+            class='w-full max-w-[160px] h-auto object-contain'
+          />
+          <img
+            src='/img/collince-min.jpg'
+            alt='Collince'
+            class='w-full max-w-[160px] h-auto object-cover rounded-lg'
+          />
+        </span>
+      </aside>
+    </div>
+  </section>
+
+  <!-- PARTNERS / CREDIBILITY -->
+  <section class='bg-teal-50 py-12 px-6'>
+    <div class='max-w-5xl mx-auto'>
+      <h3 class='text-xl font-semibold text-gray-800 text-center'>
+        Powered by Partnerships
+      </h3>
+      <p class='text-center text-gray-600 mt-2'>
+        Community trust + institutional backing = durable impact.
+      </p>
+      <div
+        class='mt-6 flex flex-wrap items-center justify-center gap-4 md:gap-6'>
+        <span class='px-4 py-2 rounded-xl border bg-white text-sm'
+          >IFRC — International Federation of Red Cross & Red Crescent</span
+        >
+        <span class='px-4 py-2 rounded-xl border bg-white text-sm'>ICAN</span>
+        <span class='px-4 py-2 rounded-xl border bg-white text-sm'
+          >Local Communities & Volunteers</span
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW THEY WORK (TIMELINE) -->
+  <section class='bg-white py-16 px-6'>
+    <div class='max-w-5xl mx-auto'>
+      <h2
+        class='text-3xl md:text-4xl font-bold mb-8 text-center spacer-small pb-5'
+        style={`color:${page.brand}`}>
+        Awareness into Action
+      </h2>
+      <ol class='relative border-s-2 border-gray-200 max-w-3xl py-8 mx-auto'>
+        <li class='mb-10 ms-6'>
+          <span
+            class='absolute -start-3 h-6 w-6 rounded-full bg-white ring-2 ring-[color:var(--brand)]'
+            style={`--brand:${page.brand}`}></span>
+          <h3 class='text-lg font-semibold'>Community Debriefs</h3>
+          <p class='mt-1 text-gray-700'>
+            Workshops on single-use plastics, impacts on aquatic life, and the
+            4Rs.
+          </p>
+        </li>
+        <li class='mb-10 ms-6'>
+          <span
+            class='absolute -start-3 h-6 w-6 rounded-full bg-white ring-2 ring-[color:var(--brand)]'
+            style={`--brand:${page.brand}`}></span>
+          <h3 class='text-lg font-semibold'>Cleanups & Segregation</h3>
+          <p class='mt-1 text-gray-700'>
+            Shoreline sweeps with waste sorted by type for traceable handling.
+          </p>
+        </li>
+        <li class='mb-10 ms-6'>
+          <span
+            class='absolute -start-3 h-6 w-6 rounded-full bg-white ring-2 ring-[color:var(--brand)]'
+            style={`--brand:${page.brand}`}></span>
+          <h3 class='text-lg font-semibold'>Weighing & Data</h3>
+          <p class='mt-1 text-gray-700'>
+            Totals recorded to measure impact and improve planning.
+          </p>
+        </li>
+        <li class='ms-6'>
+          <span
+            class='absolute -start-3 h-6 w-6 rounded-full bg-white ring-2 ring-[color:var(--brand)]'
+            style={`--brand:${page.brand}`}></span>
+          <h3 class='text-lg font-semibold'>Recycling Pipeline</h3>
+          <p class='mt-1 text-gray-700'>
+            Collected plastics delivered to accredited recyclers; nothing left
+            to chance.
+          </p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  
+
+  <!-- GALLERY -->
+  <section class='bg-gray-50 py-16 px-2'>
+    <div class='max-w-6xl mx-auto'>
+      <h2
+        class='text-3xl md:text-4xl font-bold text-center mb-10 pb-5 spacer-small'
+        style={`color:${page.brand}`}>
+        Gallery
+      </h2>
+      <div class='grid py-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6'>
+        <figure class='group overflow-hidden rounded-2xl shadow'>
+          <img
+            src='/img/clean.jpg'
+            alt='Volunteers cleaning shoreline'
+            class='w-full h-64 object-cover group-hover:scale-105 transition'
+            loading='lazy'
+          />
+        </figure>
+        <figure class='group overflow-hidden rounded-2xl shadow'>
+          <img
+            src='/gallery/47.jpg'
+            alt='Sorting plastics by type'
+            class='w-full h-64 object-cover group-hover:scale-105 transition'
+            loading='lazy'
+          />
+        </figure>
+        <figure class='group overflow-hidden rounded-2xl shadow'>
+          <img
+            src='/gallery/49.jpg'
+            alt='Weighing collected waste'
+            class='w-full h-64 object-cover group-hover:scale-105 transition'
+            loading='lazy'
+          />
+        </figure>
+        <figure class='group overflow-hidden rounded-2xl shadow'>
+          <img
+            src='/gallery/50.jpg'
+            alt='Community debrief session'
+            class='w-full h-64 object-cover group-hover:scale-105 transition'
+            loading='lazy'
+          />
+        </figure>
+        <figure class='group overflow-hidden rounded-2xl shadow'>
+          <img
+            src='/gallery/51.jpg'
+            alt='Plastics sent to recycler'
+            class='w-full h-64 object-cover group-hover:scale-105 transition'
+            loading='lazy'
+          />
+        </figure>
+        <figure class='group overflow-hidden rounded-2xl shadow'>
+          <img
+            src='/img/cleaning.jpg'
+            alt='Smiling youth volunteers'
+            class='w-full h-64 object-cover group-hover:scale-105 transition'
+            loading='lazy'
+          />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class='relative py-16 md:py-20 bg-teal-50'>
+    <div
+      class='absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(14,165,233,.10),transparent_40%),radial-gradient(circle_at_80%_30%,rgba(7,67,81,.10),transparent_35%)]'>
+    </div>
+    <div class='max-w-4xl mx-auto px-6 text-center'>
+      <h2 class='text-3xl md:text-4xl font-bold' style={`color:${page.brand}`}>
+        Join Us in Protecting Our Waters
+      </h2>
+      <p class='mt-3 text-gray-700'>
+        Fund cleanups, scale education, and strengthen recycling pipelines
+        across the Lake Victoria basin.
+      </p>
+      <div class='mt-8 flex items-center justify-center gap-4'>
+        <a
+          href='/donate'
+          class='btn-primary font-semibold px-6 py-3 rounded-xl transition'
+          >Donate</a
+        >
+        <a
+          href='https://www.instagram.com/pelican_rover_crew_?utm_source=qr&igsh=dmkzZG45Y2VzZjRr'
+          target='_blank'
+          class='btn-tertiary font-semibold px-6 py-3 rounded-xl transition'
+          style={`--brand:${page.brand}`}>Follow Us</a
+        >
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<!-- Light, dependency-free scroll reveal -->
+<script is:inline>
+  const reveal = () => {
+    const els = document.querySelectorAll('[data-reveal]');
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add('opacity-100', 'translate-y-0');
+            io.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    els.forEach((el) => {
+      el.classList.add(
+        'opacity-0',
+        'translate-y-4',
+        'transition',
+        'duration-700'
+      );
+      io.observe(el);
+    });
+  };
+  if (document.readyState !== 'loading') reveal();
+  else document.addEventListener('DOMContentLoaded', reveal);
+</script>

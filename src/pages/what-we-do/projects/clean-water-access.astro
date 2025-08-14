@@ -1,0 +1,150 @@
+---
+import BaseLayout from '../../../layout/BaseLayout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+
+const breadcrumbItems = [
+  { href: '/', label: 'Home' },
+  { href: '/what-we-do/projects', label: 'Projects' },
+  { href: '', label: 'Clean Water Access' },
+];
+---
+
+<BaseLayout title='Clean Water Access - ICAN'>
+  <Breadcrumb items={breadcrumbItems} />
+  <!-- Hero Section -->
+  <section
+    class='relative bg-cover bg-center h-[60vh]'
+    style="background-image: url('/gallery/45.jpg');">
+    <div class='absolute inset-0 bg-black/25 flex items-center justify-center'>
+      <div class='text-center text-white px-6 max-w-3xl'>
+        <h1 class='text-4xl md:text-5xl text-white font-bold mb-4'>
+          Clean Water Access
+        </h1>
+        <p class='text-lg md:text-xl'>
+          Protecting and improving water resources for communities and
+          ecosystems.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section class='py-16 bg-white text-gray-800'>
+    <div class='max-w-5xl mx-auto px-6 space-y-6'>
+      <h2 class='text-3xl font-bold text-[#074351]'>
+        Our Beach Cleanup Initiative
+      </h2>
+      <p>
+        Lake Victoria is not just a body of water — it is the heartbeat of
+        countless lives. Fishermen cast their nets each morning, children play
+        along its shores, and entire communities depend on it for food, water,
+        and livelihood. Yet, this lifeline faces a growing threat: plastic
+        pollution.
+      </p>
+      <p>
+        In partnership with <strong>Osiepe Sango CBO</strong> and <strong
+          >Kenya Shipyards Limited</strong
+        >, ICAN took part in a transformative cleanup at <strong
+          >Usoma Beach, Kisumu Central Subcounty</strong
+        >. The day began with a community <em>debrief</em> — an eye-opening discussion
+        about the types of waste polluting the lake and how it impacts both humans
+        and aquatic life.
+      </p>
+      <p>
+        Participants then moved into action: sorting waste by type, collecting
+        it along the shoreline, weighing the totals, and ensuring it was
+        transported to plastic management companies for recycling. This wasn't
+        just about picking trash — it was about protecting life.
+      </p>
+    </div>
+  </section>
+
+  <!-- Impact Section -->
+  <section class='bg-gray-100 py-16'>
+    <div class='max-w-6xl mx-auto px-6 text-center'>
+      <h3 class='text-3xl font-bold text-[#074351] mb-10'>
+        Our Impact in Numbers
+      </h3>
+      <div class='grid grid-cols-1 sm:grid-cols-3 gap-8'>
+        <div>
+          <p class='text-5xl font-extrabold text-[#074351] mb-2'>500+</p>
+          <p class='text-gray-600'>Kilograms of waste removed</p>
+        </div>
+        <div>
+          <p class='text-5xl font-extrabold text-[#074351] mb-2'>3</p>
+          <p class='text-gray-600'>Partner organizations</p>
+        </div>
+        <div>
+          <p class='text-5xl font-extrabold text-[#074351] mb-2'>Future</p>
+          <p class='text-gray-600'>
+            Nam Lowlwe Bio-Regional Youth Confluence Cleanup 2025e
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Emotional Human Story -->
+  <section class='bg-white py-16'>
+    <div class='max-w-5xl mx-auto px-6 space-y-6'>
+      <p>
+        As the sun dipped low over the lake, the shoreline looked different —
+        cleaner, calmer, almost grateful. Children who had spent the day helping
+        smiled as they carried small bags of collected plastics. For them, this
+        wasn’t just an event — it was a lesson in love for the only lake they’ve
+        ever known.
+      </p>
+      <p>
+        Clean water is more than an environmental concern; it is a matter of
+        dignity, health, and survival. ICAN remains committed to championing <strong
+          >SDG 6 – Clean Water and Sanitation</strong
+        > and
+        <strong>SDG 14 – Life Below Water</strong> through tangible, community-led
+        action.
+      </p>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class='bg-gray-100 py-16'>
+    <div class='max-w-5xl mx-auto px-6'>
+      <h2 class='text-2xl font-bold text-center text-[#074351] mb-8'>
+        Gallery
+      </h2>
+      <div class='grid grid-cols-2 md:grid-cols-3 gap-4'>
+        <img
+          src='/gallery/52.jpg'
+          alt='Beach cleanup activity'
+          class='w-full h-48 object-cover rounded-lg shadow'
+        />
+        <img
+          src='/gallery/44.jpg'
+          alt='Waste sorting'
+          class='w-full h-48 object-cover rounded-lg shadow'
+        />
+        <img
+          src='/gallery/54.jpg'
+          alt='Participants'
+          class='w-full h-48 object-cover rounded-lg shadow'
+        />
+        <img
+          src='/gallery/46.jpg'
+          alt='Weighing waste'
+          class='w-full h-48 object-cover rounded-lg shadow'
+        />
+        <img
+          src='/gallery/53.jpg'
+          alt='Plastic collection'
+          class='w-full h-48 object-cover rounded-lg shadow'
+        />
+        <img
+          src='/gallery/55.jpg'
+          alt='Lake view'
+          class='w-full h-48 object-cover rounded-lg shadow'
+        />
+      </div>
+    </div>
+  </section>
+
+
+</BaseLayout>
