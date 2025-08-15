@@ -1,149 +1,118 @@
 <section class='bg-white py-16'>
-  <!-- CSS for the scrolling animation -->
-  <style>
-    @keyframes scroll {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
-    }
-    .animate-scroll {
-      animation: scroll 20s linear infinite;
-    }
-  </style>
-
   <div class='overflow-hidden relative'>
-    <!-- The main container for the scrolling logos -->
-    <div class='whitespace-nowrap animate-scroll flex items-center gap-8 px-4'>
-      <!-- This block is the first set of logos -->
-      <div class='flex items-center gap-8 shrink-0'>
-        <img
-          src='/logos/catag.jpg'
-          alt='Logo 1'
-          class='h-20 w-auto object-contain'
-          loading='lazy'
-        />
-        <img
-          src='/logos/gok.jpg'
-          alt='Logo 2'
-          class='h-20 w-auto object-contain'
-          loading='lazy'
-        />
-        <img
-          src='/logos/shofco.png'
-          alt='Logo 4'
-          class='h-20 w-auto object-contain'
-          loading='lazy'
-        />
-        <img
-          src='/logos/nacada.png'
-          alt='Logo 5'
-          class='h-20 w-auto object-contain'
-          loading='lazy'
-        />
-        <img
-          src='/logos/hbc.png'
-          alt='Logo 6'
-          class='h-20 w-auto object-contain'
-          loading='lazy'
-        />
-        <img
-          src='/logos/scouts.png'
-          alt='Logo 7'
-          class='h-20 w-auto object-contain'
-          loading='lazy'
-        />
-        <img
-          src='/logos/jonathan.jpg'
-          alt='Logo 8'
-          class='h-20 w-auto object-contain'
-          loading='lazy'
-        />
-        <img
-          src='/logos/redcross.png'
-          alt='Logo 9'
-          class='h-20 w-auto object-contain'
-          loading='lazy'
-        />
-        <img
-          src='/logos/nema.png'
-          alt='Logo 10'
-          class='h-20 w-auto object-contain'
-          loading='lazy'
-        />
-        <img
-          src='/logos/pelican.jpg'
-          alt='Logo 11'
-          class='h-20 w-auto object-contain'
-          loading='lazy'
-        />
-      </div>
-
-      <!-- This is the second, identical set of logos. It's needed for the seamless looping effect. -->
-      <div class='flex items-center gap-8 shrink-0'>
-        <img
-          src='/logos/catag.jpg'
-          alt='Logo 1'
-          class='h-20 w-auto object-contain'
-          loading='lazy'
-        />
-        <img
-          src='/logos/gok.jpg'
-          alt='Logo 2'
-          class='h-20 w-auto object-contain'
-          loading='lazy'
-        />
-        <img
-          src='/logos/shofco.png'
-          alt='Logo 4'
-          class='h-20 w-auto object-contain'
-          loading='lazy'
-        />
-        <img
-          src='/logos/nacada.png'
-          alt='Logo 5'
-          class='h-20 w-auto object-contain'
-          loading='lazy'
-        />
-        <img
-          src='/logos/hbc.png'
-          alt='Logo 6'
-          class='h-20 w-auto object-contain'
-          loading='lazy'
-        />
-        <img
-          src='/logos/scouts.png'
-          alt='Logo 7'
-          class='h-20 w-auto object-contain'
-          loading='lazy'
-        />
-        <img
-          src='/logos/jonathan.jpg'
-          alt='Logo 8'
-          class='h-20 w-auto object-contain'
-          loading='lazy'
-        />
-        <img
-          src='/logos/redcross.png'
-          alt='Logo 9'
-          class='h-20 w-auto object-contain'
-          loading='lazy'
-        />
-        <img
-          src='/logos/nema.png'
-          alt='Logo 10'
-          class='h-20 w-auto object-contain'
-          loading='lazy'
-        />
-        <img
-          src='/logos/pelican.jpg'
-          alt='Logo 11'
-          class='h-20 w-auto object-contain'
-          loading='lazy'
-        />
-      </div>
+    <!--
+      This is the main container for the logos.
+      It will hold two identical tracks for the looping effect.
+    -->
+    <div id='logo-track' class='flex items-center gap-8 px-4'>
+      <!--
+        The logos are placed directly inside this container.
+        We don't need to duplicate the HTML manually; JavaScript will handle that.
+      -->
+      <img
+        src='/logos/catag.jpg'
+        alt='Logo 1'
+        class='h-20 w-auto object-contain shrink-0'
+        loading='lazy'
+      />
+      <img
+        src='/logos/gok.jpg'
+        alt='Logo 2'
+        class='h-20 w-auto object-contain shrink-0'
+        loading='lazy'
+      />
+      <img
+        src='/logos/shofco.png'
+        alt='Logo 4'
+        class='h-20 w-auto object-contain shrink-0'
+        loading='lazy'
+      />
+      <img
+        src='/logos/nacada.png'
+        alt='Logo 5'
+        class='h-20 w-auto object-contain shrink-0'
+        loading='lazy'
+      />
+      <img
+        src='/logos/hbc.png'
+        alt='Logo 6'
+        class='h-20 w-auto object-contain shrink-0'
+        loading='lazy'
+      />
+      <img
+        src='/logos/scouts.png'
+        alt='Logo 7'
+        class='h-20 w-auto object-contain shrink-0'
+        loading='lazy'
+      />
+      <img
+        src='/logos/jonathan.jpg'
+        alt='Logo 8'
+        class='h-20 w-auto object-contain shrink-0'
+        loading='lazy'
+      />
+      <img
+        src='/logos/redcross.png'
+        alt='Logo 9'
+        class='h-20 w-auto object-contain shrink-0'
+        loading='lazy'
+      />
+      <img
+        src='/logos/nema.png'
+        alt='Logo 10'
+        class='h-20 w-auto object-contain shrink-0'
+        loading='lazy'
+      />
+      <img
+        src='/logos/pelican.jpg'
+        alt='Logo 11'
+        class='h-20 w-auto object-contain shrink-0'
+        loading='lazy'
+      />
     </div>
   </div>
 </section>
+
+<script is:inline>
+  // Get the logo track container
+  const logoTrack = document.getElementById('logo-track');
+
+  // To create a seamless loop, we need to duplicate the logos.
+  // We'll create a clone of the original logo track.
+  // This line has been removed: const logoTrackClone = logoTrack.cloneNode(true);
+
+  // Set initial position
+  let x = 0;
+  const speed = 0.5; // Adjust this value to change the scrolling speed.
+  let isPaused = false;
+
+  // The animation loop function
+  const animateScroll = () => {
+    if (!isPaused) {
+      // Move the logos to the left
+      x -= speed;
+
+      // Check if the first track has moved completely out of view.
+      // `logoTrack.scrollWidth` gives us the total width of the content.
+      // If the scroll position is less than half the total width, it means
+      // the first set of logos is out of view, and we can reset the position.
+      if (Math.abs(x) >= logoTrack.scrollWidth / 2) {
+        x = 0; // Reset position to start of the second track
+      }
+
+      // Apply the transformation to both tracks
+      logoTrack.style.transform = `translateX(${x}px)`;
+      // This line has been removed: logoTrackClone.style.transform = `translateX(${x}px)`;
+    }
+
+    // Request the next animation frame
+    window.requestAnimationFrame(animateScroll);
+  };
+
+  // Add event listeners to pause the animation on hover
+  logoTrack.parentNode.addEventListener('mouseenter', () => (isPaused = true));
+  logoTrack.parentNode.addEventListener('mouseleave', () => (isPaused = false));
+
+  // Start the animation loop
+  window.requestAnimationFrame(animateScroll);
+</script>
