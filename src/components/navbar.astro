@@ -4,16 +4,12 @@
   aria-label='Main Navigation'>
   <div
     class='max-w-screen-xl mx-auto flex items-center justify-between px-4 py-4 md:py-4'>
-    <!-- Logo -->
+    <!-- Logo - Always on the far left -->
     <a href='/' class='flex items-center space-x-2'>
-      <img
-        src='/img/logo-min.png'
-        alt='ICAN Logo'
-        class='h-10 w-auto'
-      />
+      <img src='/img/logo-min.png' alt='ICAN Logo' class='h-10 w-auto' />
     </a>
 
-    <!-- Mobile toggle -->
+    <!-- Mobile Toggler - Only visible on mobile -->
     <button
       id='mobile-menu-toggle'
       class='md:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-[#074351]'
@@ -33,7 +29,7 @@
       </svg>
     </button>
 
-    <!-- Menu -->
+    <!-- Mobile and Desktop menu container -->
     <ul
       id='nav-menu'
       class='hidden absolute top-[70px] left-0 w-full bg-white md:relative md:top-auto md:left-auto md:w-auto md:flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6 font-medium px-4 py-4 md:p-0'>
@@ -55,7 +51,7 @@
           </svg>
         </a>
         <ul
-          class='w-full bg-white shadow-lg rounded hidden submenu md:w-48 md:absolute md:left-0 md:top-full md:mt-0 group-hover:md:block md:z-10'>
+          class='w-full bg-white hidden submenu md:w-48 md:absolute md:left-0 md:top-full md:mt-0 group-hover:md:block md:z-10'>
           <li>
             <a
               href='/about-us/organization'
@@ -106,7 +102,7 @@
           </svg>
         </a>
         <ul
-          class='w-full bg-white shadow-lg rounded hidden submenu md:w-48 md:absolute md:left-0 md:top-full md:mt-0 group-hover:md:block md:z-10'>
+          class='w-full bg-white hidden submenu md:w-48 md:absolute md:left-0 md:top-full md:mt-0 group-hover:md:block md:z-10'>
           <li>
             <a
               href='/what-we-do/programs'
@@ -139,7 +135,7 @@
           </svg>
         </a>
         <ul
-          class='w-full bg-white shadow-lg rounded hidden submenu md:w-48 md:absolute md:left-0 md:top-full md:mt-0 group-hover:md:block md:z-10'>
+          class='w-full bg-white hidden submenu md:w-48 md:absolute md:left-0 md:top-full md:mt-0 group-hover:md:block md:z-10'>
           <li>
             <a href='/resources/news' class='block px-4 py-2 hover:bg-gray-100'
               >News</a
@@ -159,16 +155,13 @@
           </li>
         </ul>
       </li>
-    </ul>
-
-    <!-- Donate Button (Only on md+) -->
-    <div class='md:block'>
+      <!-- Donate Button - Only visible on desktop -->
       <a
         href='/donate'
-        class='btn-secondary font-semibold flex ml-4 py-2 px-4 rounded-md transition'
+        class='btn-secondary font-semibold hidden md:flex ml-4 py-2 px-4 rounded-md transition'
         >DONATE</a
       >
-    </div>
+    </ul>
   </div>
 </nav>
 
@@ -176,12 +169,21 @@
   // Get references to the main menu and the toggle button
   const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
   const navMenu = document.getElementById('nav-menu');
-  const menuIcon = document.getElementById('menu-icon');
   const hamburgerIcon = document.getElementById('hamburger');
   const closeIcon = document.getElementById('close');
 
+  // Function to close the mobile menu
+  const closeMobileMenu = () => {
+    navMenu.classList.add('hidden');
+    mobileMenuToggle.setAttribute('aria-expanded', 'false');
+    hamburgerIcon.classList.remove('hidden');
+    closeIcon.classList.add('hidden');
+  };
+
   // Handle click on the main mobile menu toggle
-  mobileMenuToggle.addEventListener('click', () => {
+  mobileMenuToggle.addEventListener('click', (event) => {
+    // Stop event propagation to prevent the document listener from closing the menu immediately
+    event.stopPropagation();
     const isExpanded =
       mobileMenuToggle.getAttribute('aria-expanded') === 'true' || false;
 
@@ -194,6 +196,19 @@
     // Toggle between hamburger and close icons
     hamburgerIcon.classList.toggle('hidden');
     closeIcon.classList.toggle('hidden');
+  });
+
+  // Handle clicks outside the menu and toggle button
+  document.addEventListener('click', (event) => {
+    // Check if the click is outside the nav menu and outside the toggle button
+    if (
+      !navMenu.contains(event.target) &&
+      !mobileMenuToggle.contains(event.target)
+    ) {
+      if (!navMenu.classList.contains('hidden')) {
+        closeMobileMenu();
+      }
+    }
   });
 
   // Handle click on dropdown toggles
@@ -222,10 +237,7 @@
     // Check if the click was on a link
     if (e.target.tagName === 'A' && window.innerWidth < 768) {
       // Close the main menu and reset the toggle button state
-      navMenu.classList.add('hidden');
-      mobileMenuToggle.setAttribute('aria-expanded', 'false');
-      hamburgerIcon.classList.remove('hidden');
-      closeIcon.classList.add('hidden');
+      closeMobileMenu();
     }
   });
 </script>

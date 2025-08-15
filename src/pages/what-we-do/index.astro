@@ -8,29 +8,7 @@ const breadcrumbItems = [
   { href: '/what-we-do', label: 'What We Do' },
 ];
 
-const pillars = [
-  {
-    title: 'Health & Wellbeing',
-    image: '/img/charity-min.jpg',
-    description:
-      'Promoting equitable access to healthcare, education, and dignity for all.',
-    link: '/what-we-do/programs/health',
-  },
-  {
-    title: 'Environmental Sustainability',
-    image: '/gallery/33.jpg',
-    description:
-      'Empowering communities to restore and protect their natural ecosystems.',
-    link: '/what-we-do/programs/environment',
-  },
-  {
-    title: 'Economic Development',
-    image: '/img/soko.jpg',
-    description:
-      'Building resilient livelihoods through entrepreneurship and innovation.',
-    link: '/what-we-do/programs/ubuntu-soko',
-  },
-];
+
 ---
 
 <BaseLayout title='What We Do'>
@@ -139,12 +117,11 @@ const pillars = [
     </div>
 
     <div class='grid gap-8 md:grid-cols-3'>
-      <!-- Card 1: Annual Reports -->
       <div
         class='group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 flex flex-col'>
         <div class='overflow-hidden'>
           <img
-            src='/img/h1.jpg'
+            src='/img/h3.jpg'
             alt='health and wellbeing'
             class='w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105'
           />
@@ -165,12 +142,11 @@ const pillars = [
         </div>
       </div>
 
-      <!-- Card 2: ICAN History -->
       <div
         class='group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 flex flex-col'>
         <div class='overflow-hidden'>
           <img
-            src='/img/cleaning2-min.jpg'
+            src='/gallery/33.jpg'
             alt='environmental sustainability'
             class='w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105'
           />
@@ -191,7 +167,6 @@ const pillars = [
         </div>
       </div>
 
-      <!-- Card 3: Mission, Vision & Values -->
       <div
         class='group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 flex flex-col'>
         <div class='overflow-hidden'>
