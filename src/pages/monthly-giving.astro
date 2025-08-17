@@ -3,301 +3,297 @@ import BaseLayout from '../layout/BaseLayout.astro';
 ---
 
 <BaseLayout title='Monthly Giving | ICAN'>
-  <main class='bg-teal-50'>
-    <!-- Donation form -->
-    <section
-      class='max-w-4xl mx-auto py-16 px-6 bg-gray-100 rounded-lg shadow-lg'>
-      <h1 class='text-4xl font-bold text-[#074351] mb-6 text-center'>
-        Support Us Monthly
-      </h1>
-      <p
-        class='text-gray-700 mb-8 text-center max-w-xl mx-auto leading-relaxed'>
-        Join our community of monthly donors who make sustainable change
-        possible. Your recurring support helps us plan and expand our programs
-        to build stronger communities.
-      </p>
-
-      <form
-        action='https://usebasin.com/f/0f3b05b0860a'
-        method='POST'
-        class='space-y-8'>
-        <!-- Donation Amount -->
-        <fieldset class='mb-6'>
-          <legend class='text-lg font-semibold text-[#074351] mb-4'
-            >Choose Your Monthly Donation</legend
-          >
-          <div class='flex flex-wrap gap-4'>
-            <label
-              class='cursor-pointer flex items-center space-x-2 rounded border border-gray-300 px-4 py-2 hover:border-[#074351] transition'>
-              <input
-                type='radio'
-                name='amount'
-                value='500'
-                required
-                class='form-radio text-[#074351]'
-              />
-              <span>KES 500</span>
-            </label>
-            <label
-              class='cursor-pointer flex items-center space-x-2 rounded border border-gray-300 px-4 py-2 hover:border-[#074351] transition'>
-              <input
-                type='radio'
-                name='amount'
-                value='1000'
-                required
-                class='form-radio text-[#074351]'
-              />
-              <span>KES 1,000</span>
-            </label>
-            <label
-              class='cursor-pointer flex items-center space-x-2 rounded border border-gray-300 px-4 py-2 hover:border-[#074351] transition'>
-              <input
-                type='radio'
-                name='amount'
-                value='2000'
-                required
-                class='form-radio text-[#074351]'
-              />
-              <span>KES 2,000</span>
-            </label>
-            <label
-              class='cursor-pointer flex items-center space-x-2 rounded border border-gray-300 px-4 py-2 hover:border-[#074351] transition'>
-              <input
-                type='radio'
-                name='amount'
-                value='other'
-                required
-                class='form-radio text-[#074351]'
-              />
-              <span>Other Amount</span>
-            </label>
-          </div>
-          <input
-            type='number'
-            name='customAmount'
-            min='100'
-            placeholder='Enter custom amount'
-            class='mt-4 w-full rounded-md border border-gray-300 px-4 py-2 focus:ring-[#074351] focus:border-[#074351] transition disabled:opacity-50'
-            disabled
-          />
-        </fieldset>
-
-        <!-- Donor Details -->
-        <div class='grid grid-cols-1 md:grid-cols-2 gap-6'>
-          <div>
-            <label
-              for='firstName'
-              class='block text-sm font-semibold text-gray-700 mb-1'
-              >First Name</label
-            >
-            <input
-              type='text'
-              id='firstName'
-              name='firstName'
-              required
-              placeholder='Your first name'
-              class='w-full rounded-md border border-gray-300 px-4 py-2 focus:ring-[#074351] focus:border-[#074351] transition'
-            />
-          </div>
-          <div>
-            <label
-              for='lastName'
-              class='block text-sm font-semibold text-gray-700 mb-1'
-              >Last Name</label
-            >
-            <input
-              type='text'
-              id='lastName'
-              name='lastName'
-              required
-              placeholder='Your last name'
-              class='w-full rounded-md border border-gray-300 px-4 py-2 focus:ring-[#074351] focus:border-[#074351] transition'
-            />
-          </div>
-          <div>
-            <label
-              for='email'
-              class='block text-sm font-semibold text-gray-700 mb-1'
-              >Email</label
-            >
-            <input
-              type='email'
-              id='email'
-              name='email'
-              required
-              placeholder='you@example.com'
-              class='w-full rounded-md border border-gray-300 px-4 py-2 focus:ring-[#074351] focus:border-[#074351] transition'
-            />
-          </div>
-          <div>
-            <label
-              for='phone'
-              class='block text-sm font-semibold text-gray-700 mb-1'
-              >Phone</label
-            >
-            <input
-              type='tel'
-              id='phone'
-              name='phone'
-              placeholder='+254712345678'
-              class='w-full rounded-md border border-gray-300 px-4 py-2 focus:ring-[#074351] focus:border-[#074351] transition'
-            />
-          </div>
-        </div>
-
-        <!-- Payment Method -->
-        <fieldset>
-          <legend class='text-lg font-semibold text-[#074351] mb-4'
-            >Payment Method</legend
-          >
-          <div class='flex flex-col md:flex-row gap-6'>
-            <label class='flex items-center space-x-3 cursor-pointer'>
-              <input
-                type='radio'
-                name='paymentMethod'
-                value='mpesa'
-                required
-                class='form-radio text-[#074351]'
-              />
-              <span>M-Pesa Paybill</span>
-            </label>
-            <label class='flex items-center space-x-3 cursor-pointer'>
-              <input
-                type='radio'
-                name='paymentMethod'
-                value='bank'
-                required
-                class='form-radio text-[#074351]'
-              />
-              <span>Bank Transfer</span>
-            </label>
-          </div>
-        </fieldset>
-
-        <!-- Submit -->
-        <div class='text-center'>
-          <button
-            type='submit'
-            class='btn-primary btn-primary font-semibold text-lg px-8 py-3 rounded-md shadow transition'>
-            Start Monthly Donation
-          </button>
-        </div>
-      </form>
-    </section>
-
-    <script is:inline>
-      const amountRadios = document.querySelectorAll('input[name="amount"]');
-      const customAmountInput = document.querySelector(
-        'input[name="customAmount"]'
-      );
-
-      amountRadios.forEach((radio) => {
-        radio.addEventListener('change', () => {
-          if (radio.value === 'other' && radio.checked) {
-            customAmountInput.disabled = false;
-            customAmountInput.focus();
-          } else {
-            customAmountInput.disabled = true;
-            customAmountInput.value = '';
-          }
-        });
-      });
-    </script>
-
-    <!-- Pledge -->
-    <section class='py-20 px-6 text-gray-800'>
-      <div class='max-w-3xl mx-auto text-center mb-12'>
-        <h1 class='text-4xl font-bold mb-4 text-[#074351]'>
+  <main class='bg-teal-50 py-16'>
+    <div class='max-w-4xl mx-auto px-6'>
+      <!-- Section Header -->
+      <div class='text-center mb-12'>
+        <h1 class='text-4xl font-bold text-[#074351] mb-4'>
           Become a Monthly Donor
         </h1>
-        <p class='text-lg'>
+        <p class='text-lg text-gray-700 max-w-xl mx-auto leading-relaxed'>
           Your recurring support empowers us to plan long-term and deepen our
           impact in communities across Kenya and beyond.
         </p>
       </div>
 
-      <div class='max-w-4xl mx-auto grid md:grid-cols-2 gap-10'>
-        <!-- Donation Instructions -->
-        <div class='border rounded-xl p-6 bg-white shadow-lg'>
-          <h2 class='text-xl font-semibold mb-4 text-[#248d87]'>
-            Support via Bank or M-Pesa
-          </h2>
-          <div class='space-y-6 text-left'>
-            <div>
-              <h3 class='font-bold mb-1'>Bank Transfer</h3>
-              <p>
-                <strong>Bank:</strong> Equity Bank<br />
-                <strong>Account Name:</strong> INUANA COMMUNITY ACTION NETWORK CBO<br />
-                <strong>Account Number:</strong> 0980285579857<br />
-                <strong>Branch:</strong> HOMABAY<br />
-                <strong>SWIFT Code:</strong> EQBLKENA
-              </p>
+      <!-- The Donation Form Container -->
+      <div class='bg-gray-200 rounded-lg p-6 md:p-10'>
+        <form
+          id='donation-form'
+          action='https://formspree.io/f/mqalopwl'
+          method='POST'
+          class='space-y-8'>
+          <!-- Donation Amount Fieldset -->
+          <fieldset class='mb-6'>
+            <legend class='text-lg font-semibold text-[#074351] mb-4'>
+              Choose Your Monthly Donation
+            </legend>
+            <div class='flex flex-wrap gap-4'>
+              <label
+                class='cursor-pointer flex items-center space-x-2 rounded-lg border border-gray-300 px-4 py-2 hover:border-[#074351] transition'>
+                <input
+                  type='radio'
+                  name='amount'
+                  value='500'
+                  required
+                  class='form-radio text-[#074351]'
+                />
+                <span>KES 500</span>
+              </label>
+              <label
+                class='cursor-pointer flex items-center space-x-2 rounded-lg border border-gray-300 px-4 py-2 hover:border-[#074351] transition'>
+                <input
+                  type='radio'
+                  name='amount'
+                  value='1000'
+                  required
+                  class='form-radio text-[#074351]'
+                />
+                <span>KES 1,000</span>
+              </label>
+              <label
+                class='cursor-pointer flex items-center space-x-2 rounded-lg border border-gray-300 px-4 py-2 hover:border-[#074351] transition'>
+                <input
+                  type='radio'
+                  name='amount'
+                  value='2000'
+                  required
+                  class='form-radio text-[#074351]'
+                />
+                <span>KES 2,000</span>
+              </label>
+              <label
+                class='cursor-pointer flex items-center space-x-2 rounded-lg border border-gray-300 px-4 py-2 hover:border-[#074351] transition'>
+                <input
+                  type='radio'
+                  name='amount'
+                  value='other'
+                  required
+                  class='form-radio text-[#074351]'
+                />
+                <span>Other Amount</span>
+              </label>
             </div>
-            <div>
-              <h3 class='font-bold mb-1'>M-Pesa Paybill</h3>
-              <p>
-                <strong>Paybill Number:</strong> 247247<br />
-                <strong>Account:</strong> 579857
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Pledge Form -->
-        <div class='border rounded-xl p-6 bg-white shadow-lg'>
-          <h2 class='text-xl font-semibold mb-4 text-[#248d87]'>
-            Monthly Pledge Form
-          </h2>
-          <form
-            class='space-y-4'
-            id='contactForm'
-            action='https://usebasin.com/f/0f3b05b0860a'
-            method='POST'
-            data-basin-form>
-            <input
-              type='text'
-              name='name'
-              required
-              placeholder='Full Name'
-              class='w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#248d87]'
-            />
-            <input
-              type='email'
-              name='email'
-              required
-              placeholder='Email Address'
-              class='w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#248d87]'
-            />
             <input
               type='number'
-              name='amount'
-              required
-              placeholder='Amount (KES)'
-              class='w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#248d87]'
+              name='customAmount'
+              min='100'
+              placeholder='Enter custom amount'
+              class='mt-4 w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-[#074351] focus:border-[#074351] transition disabled:opacity-50'
+              disabled
             />
-            <select
-              name='frequency'
-              required
-              class='w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#248d87]'>
-              <option value=''>Select Frequency</option>
-              <option value='monthly'>Monthly</option>
-              <option value='quarterly'>Quarterly</option>
-              <option value='annually'>Annually</option>
-            </select>
-            <label class='flex items-start space-x-2 text-sm'>
-              <input type='checkbox' required class='mt-1' />
-              <span
-                >I consent to be contacted by ICAN regarding this pledge.</span
+          </fieldset>
+
+          <!-- Donor Details Fieldset -->
+          <fieldset class='grid grid-cols-1 md:grid-cols-2 gap-6'>
+            <div>
+              <label
+                for='firstName'
+                class='block text-sm font-semibold text-gray-700 mb-1'
+                >First Name</label
               >
-            </label>
+              <input
+                type='text'
+                id='firstName'
+                name='firstName'
+                required
+                placeholder='Your first name'
+                class='w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-[#074351] focus:border-[#074351] transition'
+              />
+            </div>
+            <div>
+              <label
+                for='lastName'
+                class='block text-sm font-semibold text-gray-700 mb-1'
+                >Last Name</label
+              >
+              <input
+                type='text'
+                id='lastName'
+                name='lastName'
+                required
+                placeholder='Your last name'
+                class='w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-[#074351] focus:border-[#074351] transition'
+              />
+            </div>
+            <div>
+              <label
+                for='email'
+                class='block text-sm font-semibold text-gray-700 mb-1'
+                >Email</label
+              >
+              <input
+                type='email'
+                id='email'
+                name='email'
+                required
+                placeholder='you@example.com'
+                class='w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-[#074351] focus:border-[#074351] transition'
+              />
+            </div>
+            <div>
+              <label
+                for='phone'
+                class='block text-sm font-semibold text-gray-700 mb-1'
+                >Phone (optional)</label
+              >
+              <input
+                type='tel'
+                id='phone'
+                name='phone'
+                placeholder='+254712345678'
+                class='w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-[#074351] focus:border-[#074351] transition'
+              />
+            </div>
+          </fieldset>
+
+          <!-- Payment Method Fieldset -->
+          <fieldset>
+            <legend class='text-lg font-semibold text-[#074351] mb-4'>
+              Payment Method
+            </legend>
+            <div class='flex flex-col md:flex-row gap-6'>
+              <label class='flex items-center space-x-3 cursor-pointer'>
+                <input
+                  type='radio'
+                  name='paymentMethod'
+                  value='mpesa'
+                  required
+                  class='form-radio text-[#074351]'
+                />
+                <span>M-Pesa Paybill</span>
+              </label>
+              <label class='flex items-center space-x-3 cursor-pointer'>
+                <input
+                  type='radio'
+                  name='paymentMethod'
+                  value='bank'
+                  required
+                  class='form-radio text-[#074351]'
+                />
+                <span>Bank Transfer</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- Dynamic Payment Instructions (initially hidden) -->
+          <div
+            id='mpesa-instructions'
+            class='hidden bg-white rounded-lg p-6 shadow-md border border-dashed border-[#248d87]'>
+            <h3 class='font-bold mb-2 text-[#248d87]'>
+              M-Pesa Paybill Instructions
+            </h3>
+            <p>
+              <strong>Paybill Number:</strong> 247247<br />
+              <strong>Account:</strong> 579857
+            </p>
+          </div>
+
+          <div
+            id='bank-instructions'
+            class='hidden bg-white rounded-lg p-6 shadow-md border border-dashed border-[#248d87]'>
+            <h3 class='font-bold mb-2 text-[#248d87]'>
+              Bank Transfer Instructions
+            </h3>
+            <p>
+              <strong>Bank:</strong> Equity Bank<br />
+              <strong>Account Name:</strong> INUANA COMMUNITY ACTION NETWORK CBO<br
+              />
+              <strong>Account Number:</strong> 0980285579857<br />
+              <strong>Branch:</strong> HOMABAY<br />
+              <strong>SWIFT Code:</strong> EQBLKENA
+            </p>
+          </div>
+
+          <!-- Submit Button -->
+          <div class='text-center'>
             <button
               type='submit'
-              class='w-full btn-secondary font-semibold py-2 rounded-md transition'>
-              Submit Pledge
+              class='w-full md:w-auto btn-primary font-semibold text-lg px-8 py-3 rounded-md shadow transition bg-[#248d87] hover:bg-[#1a6e69] text-white'>
+              Submit Donation Pledge
             </button>
-          </form>
-        </div>
+          </div>
+          <div
+            id='status-message'
+            class='text-center mt-4 text-sm font-semibold'>
+          </div>
+        </form>
       </div>
-    </section>
+    </div>
   </main>
+
+  <script is:inline>
+    const amountRadios = document.querySelectorAll('input[name="amount"]');
+    const customAmountInput = document.querySelector(
+      'input[name="customAmount"]'
+    );
+    const paymentMethodRadios = document.querySelectorAll(
+      'input[name="paymentMethod"]'
+    );
+    const mpesaInstructions = document.getElementById('mpesa-instructions');
+    const bankInstructions = document.getElementById('bank-instructions');
+    const form = document.getElementById('donation-form');
+    const statusMessage = document.getElementById('status-message');
+
+    // Logic to enable/disable the custom amount input field
+    amountRadios.forEach((radio) => {
+      radio.addEventListener('change', () => {
+        customAmountInput.disabled = radio.value !== 'other';
+        if (radio.value === 'other') {
+          customAmountInput.focus();
+        } else {
+          customAmountInput.value = '';
+        }
+      });
+    });
+
+    // Logic to show/hide payment instructions based on radio selection
+    paymentMethodRadios.forEach((radio) => {
+      radio.addEventListener('change', () => {
+        mpesaInstructions.classList.add('hidden');
+        bankInstructions.classList.add('hidden');
+
+        if (radio.value === 'mpesa') {
+          mpesaInstructions.classList.remove('hidden');
+        } else if (radio.value === 'bank') {
+          bankInstructions.classList.remove('hidden');
+        }
+      });
+    });
+
+    // Simple form submission logic for Formspree
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formUrl = form.action;
+      const formData = new FormData(form);
+
+      statusMessage.textContent = 'Submitting...';
+      statusMessage.style.color = '#074351';
+
+      try {
+        const response = await fetch(formUrl, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            Accept: 'application/json',
+          },
+        });
+
+        if (response.ok) {
+          statusMessage.textContent =
+            'Success! Your donation pledge has been submitted.';
+          statusMessage.style.color = '#248d87';
+          form.reset();
+        } else {
+          statusMessage.textContent = 'An error occurred. Please try again.';
+          statusMessage.style.color = '#ef4444';
+        }
+      } catch (error) {
+        console.error('Submission failed:', error);
+        statusMessage.textContent = 'An error occurred. Please try again.';
+        statusMessage.style.color = '#ef4444';
+      }
+    });
+  </script>
 </BaseLayout>

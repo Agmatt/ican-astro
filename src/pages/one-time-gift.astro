@@ -3,82 +3,186 @@ import BaseLayout from '../layout/BaseLayout.astro';
 ---
 
 <BaseLayout title='One-Time Gift | ICAN'>
-  <section class='bg-teal-0 py-16 px-4 lg:px-24'>
-    <div class='max-w-4xl mx-auto text-center'>
-      <h1 class='text-4xl font-bold text-[#074351] mb-4'>
-        Make a One-Time Gift
-      </h1>
-      <p class='text-gray-700 text-lg max-w-2xl mx-auto'>
-        Your one-time donation helps ICAN create immediate and lasting change in
-        our communities. Every gift, no matter the size, makes a difference.
-      </p>
-    </div>
+  <main class='bg-teal-50 py-16'>
+    <div class='max-w-4xl mx-auto px-6'>
+      <div class='text-center mb-12'>
+        <h1 class='text-4xl font-bold text-[#074351] mb-4'>
+          Make a One-Time Gift
+        </h1>
+        <p class='text-gray-700 text-lg max-w-2xl mx-auto'>
+          Your one-time donation helps ICAN create immediate and lasting change
+          in our communities. Every gift, no matter the size, makes a
+          difference.
+        </p>
+      </div>
 
-    <!-- Donation Container -->
-    <div class='mt-12 bg-white rounded-xl shadow-lg p-8 max-w-3xl mx-auto'>
-      <!-- Suggested Amounts -->
-      <div class='flex flex-wrap gap-4 justify-center'>
-        {
-          ['10', '25', '50', '100'].map((amount) => (
+      <!-- Donation Container -->
+      <div
+        class='bg-gray-100 rounded-lg shadow-lg p-6 md:p-10 max-w-3xl mx-auto'>
+        <form
+          id='one-time-donation-form'
+          action='YOUR_FORMSPREE_URL'
+          method='POST'
+          class='space-y-8'>
+          <!-- Suggested Amounts -->
+          <div class='flex flex-wrap gap-4 justify-center mb-6'>
             <button
-              class='px-6 py-3 bg-[#074351] text-white rounded-lg hover:bg-[#096078] focus:outline-none'
-              onClick={`document.getElementById('amount').value='${amount}'`}>
-              ${amount}
+              type='button'
+              data-amount='10'
+              class='px-6 py-3 bg-[#074351] text-white rounded-lg hover:bg-[#096078] focus:outline-none transition'
+              >KES 10</button
+            >
+            <button
+              type='button'
+              data-amount='25'
+              class='px-6 py-3 bg-[#074351] text-white rounded-lg hover:bg-[#096078] focus:outline-none transition'
+              >KES 25</button
+            >
+            <button
+              type='button'
+              data-amount='50'
+              class='px-6 py-3 bg-[#074351] text-white rounded-lg hover:bg-[#096078] focus:outline-none transition'
+              >KES 50</button
+            >
+            <button
+              type='button'
+              data-amount='100'
+              class='px-6 py-3 bg-[#074351] text-white rounded-lg hover:bg-[#096078] focus:outline-none transition'
+              >KES 100</button
+            >
+          </div>
+
+          <!-- Custom Amount -->
+          <div>
+            <label for='amount' class='block text-gray-700 font-medium mb-2'
+              >Enter Custom Amount</label
+            >
+            <input
+              type='number'
+              id='amount'
+              name='amount'
+              placeholder='e.g. 250'
+              class='w-full border border-gray-300 rounded-lg p-3 focus:ring-[#074351] focus:border-[#074351]'
+            />
+          </div>
+
+          <!-- Donor Details -->
+          <fieldset class='grid grid-cols-1 md:grid-cols-2 gap-6'>
+            <div>
+              <label
+                for='firstName'
+                class='block text-sm font-semibold text-gray-700 mb-1'
+                >First Name</label
+              >
+              <input
+                type='text'
+                id='firstName'
+                name='firstName'
+                required
+                placeholder='Your first name'
+                class='w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-[#074351] focus:border-[#074351] transition'
+              />
+            </div>
+            <div>
+              <label
+                for='lastName'
+                class='block text-sm font-semibold text-gray-700 mb-1'
+                >Last Name</label
+              >
+              <input
+                type='text'
+                id='lastName'
+                name='lastName'
+                required
+                placeholder='Your last name'
+                class='w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-[#074351] focus:border-[#074351] transition'
+              />
+            </div>
+            <div>
+              <label
+                for='email'
+                class='block text-sm font-semibold text-gray-700 mb-1'
+                >Email</label
+              >
+              <input
+                type='email'
+                id='email'
+                name='email'
+                required
+                placeholder='you@example.com'
+                class='w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-[#074351] focus:border-[#074351] transition'
+              />
+            </div>
+            <div>
+              <label
+                for='phone'
+                class='block text-sm font-semibold text-gray-700 mb-1'
+                >Phone (optional)</label
+              >
+              <input
+                type='tel'
+                id='phone'
+                name='phone'
+                placeholder='+254712345678'
+                class='w-full rounded-lg border border-gray-300 px-4 py-2 focus:ring-[#074351] focus:border-[#074351] transition'
+              />
+            </div>
+          </fieldset>
+
+          <!-- Payment Methods -->
+          <div class='mt-8 grid md:grid-cols-2 gap-6'>
+            <div class='bg-gray-50 p-4 rounded-lg border border-gray-200'>
+              <h3 class='font-bold text-[#074351] mb-2'>Bank Transfer</h3>
+              <p class='text-sm text-gray-700'>
+                Account Name: INUANA COMMUNITY ACTION NETWORK CBO
+              </p>
+              <p class='text-sm text-gray-700'>Account Number: 0980285579857</p>
+              <p class='text-sm text-gray-700'>Bank: Equity Bank</p>
+            </div>
+
+            <div class='bg-gray-50 p-4 rounded-lg border border-gray-200'>
+              <h3 class='font-bold text-[#074351] mb-2'>M-Pesa Paybill</h3>
+              <p class='text-sm text-gray-700'>Paybill: 247247</p>
+              <p class='text-sm text-gray-700'>Account: 579857</p>
+            </div>
+          </div>
+
+          <!-- Donate Button -->
+          <div class='mt-8 text-center'>
+            <button
+              type='submit'
+              class='px-8 py-4 w-full md:w-auto btn-primary text-lg font-semibold rounded-lg transition bg-[#248d87] hover:bg-[#1a6e69] text-white'>
+              Donate Now
             </button>
-          ))
+          </div>
+        </form>
+      </div>
+
+      <!-- Impact Statement -->
+      <div class='mt-16 text-center max-w-2xl mx-auto'>
+        <h2 class='text-2xl font-bold text-[#074351] mb-4'>Your Impact</h2>
+        <p class='text-gray-700'>
+          Every donation goes directly to supporting programs in health,
+          environment, and economic empowerment. Together, we are creating
+          stronger, sustainable communities.
+        </p>
+      </div>
+    </div>
+  </main>
+  <script>
+    // Get all the suggested amount buttons
+    const amountButtons = document.querySelectorAll('.flex.flex-wrap button');
+    const customAmountInput = document.getElementById('amount');
+
+    // Add a click event listener to each button
+    amountButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        // Check if the data-amount attribute exists on the button
+        const amountValue = button.dataset.amount;
+        if (amountValue) {
+          customAmountInput.value = parseInt(amountValue, 10);
         }
-      </div>
-
-      <!-- Custom Amount -->
-      <div class='mt-6'>
-        <label for='amount' class='block text-gray-700 font-medium mb-2'
-          >Enter Custom Amount</label
-        >
-        <input
-          type='number'
-          id='amount'
-          name='amount'
-          placeholder='e.g. 250'
-          class='w-full border border-gray-300 rounded-lg p-3 focus:ring-[#074351] focus:border-[#074351]'
-        />
-      </div>
-
-      <!-- Payment Methods -->
-      <div class='mt-8 grid md:grid-cols-2 gap-6'>
-        <div class='bg-gray-50 p-4 rounded-lg border border-gray-200'>
-          <h3 class='font-bold text-[#074351] mb-2'>Bank Transfer</h3>
-          <p class='text-sm text-gray-700'>
-            Account Name: INUANA COMMUNITY ACTION NETWORK CBO
-          </p>
-          <p class='text-sm text-gray-700'>Account Number: 0980285579857</p>
-          <p class='text-sm text-gray-700'>Bank: Equity Bank</p>
-        </div>
-
-        <div class='bg-gray-50 p-4 rounded-lg border border-gray-200'>
-          <h3 class='font-bold text-[#074351] mb-2'>M-Pesa Paybill</h3>
-          <p class='text-sm text-gray-700'>Paybill: 247247</p>
-          <p class='text-sm text-gray-700'>Account: 579857</p>
-        </div>
-      </div>
-
-      <!-- Donate Button -->
-      <div class='mt-8 text-center'>
-        <button
-          type='submit'
-          class='px-8 py-4 btn-primary text-lg font-semibold rounded-lg transition'>
-          Donate Now
-        </button>
-      </div>
-    </div>
-
-    <!-- Impact Statement -->
-    <div class='mt-16 text-center max-w-2xl mx-auto'>
-      <h2 class='text-2xl font-bold text-[#074351] mb-4'>Your Impact</h2>
-      <p class='text-gray-700'>
-        Every donation goes directly to supporting programs in health,
-        environment, and economic empowerment. Together, we are creating
-        stronger, sustainable communities.
-      </p>
-    </div>
-  </section>
+      });
+    });
+  </script>
 </BaseLayout>
